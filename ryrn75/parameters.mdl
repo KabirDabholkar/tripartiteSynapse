@@ -1,0 +1,238 @@
+/* 3D diffusion constants */
+	D_Ca = 2.2e-6
+	D_Glu = 2.2e-6
+	D_IP3 = 2.8e-6  // Hernjak et al., 2005, Biophys J.
+	D_calmodulin = 0
+	D_cbp = 0
+	//D_calbindin = 0
+	D_calbindin = 0.28e-6 // Schmidt et al. 2003, J. Physiol.
+
+/* 2D diffusion constants */
+	D_mGluR = 0
+	D_mGluR_Glu = 0 
+	//D_mGluR = 1e-10    /* nominal D, Shea et al., 1997, Biophys J. */
+	//D_mGluR_Glu = 1e-10    // nominal D, Shea et al., 1997, Biophys J.
+	D_mGluR_Glu_Gp = 1e-10    // nominal D, Shea et al., 1997, Biophys J.
+	D_mGluR_Gp = 1e-10    // nominal D, Shea et al., 1997, Biophys J.
+	D_Gp = 1e-10    // nominal D, Shea et al., 1997, Biophys J.
+	D_aGp = 1e-10    // nominal D, Shea et al., 1997, Biophys J.
+	//D_PLC = 1e-10    // nominal D, Shea et al., 1997, Biophys J.
+	//D_PLC_Ca = 1e-10    // nominal D, Shea et al., 1997, Biophys J.
+	D_PLC = 0
+	D_PLC_Ca = 0
+	D_PLC_Ca_aGp = 1e-10    // nominal D, Shea et al., 1997, Biophys J.
+	D_PIP2 = 1e-10    // nominal D, Shea et al., 1997, Biophys J.
+	D_PLC_aGp = 1e-10    // nominal D, Shea et al., 1997, Biophys J.
+	D_PLC_aGp_PIP2 = 1e-10    // nominal D, Shea et al., 1997, Biophys J.
+	D_PLC_Ca_aGp_PIP2 = 1e-10    // nominal D, Shea et al., 1997, Biophys J.
+	//D_PLC_Ca_PIP2 = 1e-10    // nominal D, Shea et al., 1997, Biophys J.
+	D_PLC_Ca_PIP2 = 0
+
+
+/* quantal size parameters */
+/* from Franks et al., 2001, Biophys J. */
+	n_Glu_neuron =  2000
+
+/* from Chen et al., 2005, J. Neurosci */
+	//n_Glu_astrocyte =  200000   // if large vesicles release 10% of contents
+	n_Glu_astrocyte =  20000   // if large vesicles release 10x small vesicles
+
+
+/* Molecule distribution parameters: */
+/* Astrocyte */
+	/*
+	mGluR_density_astrocyte = 300
+	GluT_density_astrocyte = 5000
+	PMCA_density_astrocyte = 180 // required for recovery after transient
+	ER_leak_density_astrocyte = 0
+	Gp_density_astrocyte = 1700 // Kim Blackwell: 25uM placed on surface
+	PLC_density_astrocyte = 340 // Kim Blackwell: 5uM placed on surface
+	IP3R_number_astrocyte = 40
+	//SERCA_density_astrocyte = 1973 // Means et al., 2006, Biophys J.
+	SERCA_density_astrocyte = 6072 // equivalent to 15um in cytoplasm
+	*/
+	
+	/* override above defaults */
+	mGluR_density_astrocyte = 0
+	GluT_density_astrocyte = 1000
+	PMCA_density_astrocyte = 0
+	ER_leak_density_astrocyte = 0
+	Gp_density_astrocyte = 0
+	PLC_density_astrocyte = 0
+	IP3R_number_astrocyte = 0
+	SERCA_density_astrocyte = 0
+
+
+/* Presynaptic */
+	mGluR_density_tot_presynaptic = 1000 // 13.3uM placed on surface
+	//mGluR_density_tot_presynaptic = 300 // 4uM placed on surface
+	//mGluR_density_tot_presynaptic = 300 // 4uM placed on surface
+	//mGluR_density_tot_presynaptic = 150 // 2uM placed on surface
+	//mGluR_density_tot_presynaptic = 25 // needed to balance tonic level of ip3
+	Gp_density_tot_presynaptic = 1875 // Kim Blackwell: 25uM placed on surface
+	
+	/* Equilibrium fractions of mGluR, mGluR_Gp, and Gp @ 4uM mGluR0 and 25uM Gp0*/
+	mGluR_density_presynaptic = 0.0725*mGluR_density_tot_presynaptic
+	mGluR_Gp_density_presynaptic = 0.9275*mGluR_density_tot_presynaptic
+	Gp_density_presynaptic = Gp_density_tot_presynaptic-0.9275*mGluR_density_tot_presynaptic
+	PMCA_density_presynaptic = 180 // required for recovery after transient
+	ER_leak_density_presynaptic = 0
+	//PLC_density_tot_presynaptic = 375 // Kim Blackwell: 5uM placed on surface
+	PLC_density_tot_presynaptic = 60 // Bhalla: 0.8uM placed on surface
+	PLC_density_presynaptic = 0.49*PLC_density_tot_presynaptic
+	PLC_CA_density_presynaptic = 0.147*PLC_density_tot_presynaptic
+	PLC_CA_PIP2_density_presynaptic = 0.363*PLC_density_tot_presynaptic
+
+	ryr_num = 75
+	ryr_distance = 350
+	ryr_number_presynaptic = ryr_num
+	ip3r_num = 50
+	ip3r_distance = 0
+	IP3R_number_presynaptic = ip3r_num
+	vdcc_num = 80
+	vdcc_distance = 350
+	VDCC_number_presynaptic = vdcc_num
+	
+	//SERCA_density_presynaptic = 1973 // Means et al., 2006, Biophys J.
+	serca_conc_tot = 15e-6 // surface molecule but pretend 15uM in cytoplasm
+	ip3_conc_presynaptic = 160e-9 // ask Suhita
+	ip3_conc_clamp_presynaptic = 160e-9 
+	ca_conc_presynaptic = 100e-9 // from various refs
+	ca_conc_base_presynaptic = 100e-9 // Ca base level with PMCA pump alone
+	//ca_conc_presynaptic_er = 60e-6 // Higgins et al., 2006, Biophys J.
+	ca_conc_presynaptic_er = 250e-6 // La Farla, 2002, Nat Rev Neurosci
+	mGluR_density_presynaptic = mGluR_density_tot_presynaptic
+
+	/* override above defaults */
+	
+	//serca_conc_tot = 0
+	//ca_conc_presynaptic_er = 0
+	//ryr_number_presynaptic = 0
+	
+	mGluR_density_tot_presynaptic = 0
+	mGluR_density_presynaptic = 0
+	Gp_density_tot_presynaptic = 0
+	mGluR_Gp_density_presynaptic = 0
+	Gp_density_presynaptic = 0
+	
+	PLC_density_presynaptic = 0
+	PLC_CA_density_presynaptic = 0
+	PLC_CA_PIP2_density_presynaptic = 0
+	
+	ip3_conc_presynaptic = 0
+	ip3_conc_clamp_presynaptic = 0
+	
+	IP3R_number_presynaptic = 0
+	
+
+/* calbindin equilibrium fractions at [calbindin_high0medium0]o = 45 uM
+   and [Ca]i = ~100nm */
+	calbindin_conc_tot = 45e-6
+	presynaptic_calbindin_conc_tot = calbindin_conc_tot
+	astrocyte_calbindin_conc_tot = 0
+	//astrocyte_calbindin_conc_tot = calbindin_conc_tot
+	
+	/* validated values from Matlab and MCell: */
+	calbindin_high0medium0_feq=0.700409325
+	calbindin_high0medium1_feq=0.085336358
+	calbindin_high1medium0_feq=0.14808246
+	calbindin_high1medium1_feq=0.01801301
+	calbindin_high0medium2_feq=0.010576062
+	calbindin_high2medium0_feq=0.0313985617
+	calbindin_high1medium2_feq=0.002197908
+	calbindin_high2medium1_feq=0.003894579
+	calbindin_high2medium2_feq=4.60491e-04
+
+	/* Our original values: */
+	calbindin_high0medium0_feq=0.542
+	calbindin_high0medium1_feq=0.132
+	calbindin_high1medium0_feq=0.229
+	calbindin_high1medium1_feq=0.0557
+	calbindin_high0medium2_feq=0.008
+	calbindin_high2medium0_feq=0.0242
+	calbindin_high1medium2_feq=0.00338
+	calbindin_high2medium1_feq=0.00589
+	calbindin_high2medium2_feq=0.000358
+
+
+	/* calbindin equilibrium fractions at [calbindin_high0medium0]o = 45 uM
+	   and [Ca]i = ~200nM */
+	/*
+	calbindin_conc_tot = 45e-6
+	presynaptic_calbindin_conc_tot = calbindin_conc_tot
+	astrocyte_calbindin_conc_tot = calbindin_conc_tot
+	// Probably wrong values:
+	calbindin_high0medium0_feq=0.32
+	calbindin_high0medium1_feq=0.16
+	calbindin_high1medium0_feq=0.27
+	calbindin_high1medium1_feq=0.13
+	calbindin_high0medium2_feq=0.018
+	calbindin_high2medium0_feq=0.052
+	calbindin_high1medium2_feq=0.018
+	calbindin_high2medium1_feq=0.027
+	calbindin_high2medium2_feq=0.003
+	*/
+
+/* SERCA pump equilibrium fractions at [Ca]c = 100nM and [Ca]e = 60uM */
+	er_vol=(3.9*0.1*0.1)
+	presynaptic_vol=(4*0.5*0.5-er_vol)
+	er_vfrac=er_vol/presynaptic_vol
+	serca_number_presynaptic=serca_conc_tot*presynaptic_vol/(1e15/6.02205e23)
+	/* our numbers: */
+	/*
+	serca_x1_feq=0.798
+	serca_x1a_feq=0.191
+	serca_x2_feq=0.0113
+	serca_y1_feq=0.0160*er_vfrac
+	serca_y1a_feq=0.00858*er_vfrac
+	serca_y2_feq=0.00120*er_vfrac
+	*/
+
+	/* MCell with original rates eq at 100nM Ca, 60uM Cae, and IP3R inactive: */
+	/*
+	serca_x1_feq=0.765947
+	serca_x1a_feq=0.201601
+	serca_x2_feq=0.013385
+	serca_y1_feq=0.002551
+	serca_y1a_feq=0.008863
+	serca_y2_feq=0.007653
+	*/
+
+	/* ODE solution with original rates at 100nM Ca, 60uM Cae. IP3R inactive: */
+	/*
+	serca_x1_feq=0.76329632
+	serca_x1a_feq=0.20354182
+	serca_x2_feq=0.01356752
+	serca_y1_feq=0.00263311
+	serca_y1a_feq=0.00911067
+	serca_y2_feq=0.00785056
+	*/
+
+	/* ODE solution, new rates K1^2 = Keff^2 100nM Ca, 60uM Cae. IP3R inactive: */
+	/*
+	serca_x1_feq=0.7762297
+	serca_x1a_feq=0.1854762
+	serca_x2_feq=0.01104523
+	serca_y1_feq=0.01868377
+	serca_y1a_feq=0.00768773
+	serca_y2_feq=0.00087737
+	*/
+
+	/* ODE solution, new rates K1^2 = Keff^2 100nM Ca, 250uM Cae. IP3R inactive: */
+	
+	serca_x1_feq = 0.75554529
+	serca_x1a_feq = 0.18054556
+	serca_x2_feq = 0.010757505
+	serca_y1_feq = 0.015718635
+	serca_y1a_feq = 0.026363904
+	serca_y2_feq = 0.011069105
+	
+	/* ODE solution, updated rates K1^2 = Keff^2 100nM Ca, 250uM Cae with f = 2.55, p = 10. IP3R inactive: */
+	/*
+	serca_x1_feq = 0.88862969
+	serca_x1a_feq = 0.08330317
+	serca_x2_feq = 0.0019522717
+	serca_y1_feq = 0.0026758922
+	serca_y1a_feq = 0.011367198
+	serca_y2_feq = 0.012071782
+	*/

@@ -1,0 +1,42 @@
+//
+sprintf(my_seed,"%05g",SEED)
+
+iterations = 110e3
+
+INCLUDE_FILE = "../outputLoc.mdl"
+INCLUDE_FILE = "../initialization.mdl"
+INCLUDE_FILE = "parameters.mdl"
+/* Modifications in Parameters */
+	VDCC_number_presynaptic = 90
+	
+	n_Glu_neuron =  1 //2000
+	GluT_density_astrocyte = 0.1 //1000
+
+
+INCLUDE_FILE = "rxn_rate_constants.mdl"
+/* Modifications in Reaction Rate Constants */
+
+
+/* Output Folder */
+    isi = "80"
+    sprintf(VDCC, "%g", VDCC_number_presynaptic)
+    fname = "RSI" & isi & "dist"
+	output_folder = outputLoc & "ppf/" &fname& "/s_" & "V" & VDCC & "_" & my_seed
+
+/* Rates for P/Q-type Voltage Dependent Calcium Channels */
+/* From Bischoffberger et al., 2005, , Biophys. J.*/
+
+	k_VDCC_PQ_C01 = "../vdcc_dat/VDCC_PQ_C01_" & isi & "ms_ppf.dat"
+	k_VDCC_PQ_C12 = "../vdcc_dat/VDCC_PQ_C12_" & isi & "ms_ppf.dat"
+	k_VDCC_PQ_C23 = "../vdcc_dat/VDCC_PQ_C23_" & isi & "ms_ppf.dat"
+	k_VDCC_PQ_C34 = "../vdcc_dat/VDCC_PQ_C34_" & isi & "ms_ppf.dat"
+	k_VDCC_PQ_C43 = "../vdcc_dat/VDCC_PQ_C43_" & isi & "ms_ppf.dat"
+	k_VDCC_PQ_C32 = "../vdcc_dat/VDCC_PQ_C32_" & isi & "ms_ppf.dat"
+	k_VDCC_PQ_C21 = "../vdcc_dat/VDCC_PQ_C21_" & isi & "ms_ppf.dat"
+	k_VDCC_PQ_C10 = "../vdcc_dat/VDCC_PQ_C10_" & isi & "ms_ppf.dat"
+	k_VDCC_PQ_Ca = "../vdcc_dat/VDCC_PQ_Ca_" & isi & "ms_ppf.dat"
+
+INCLUDE_FILE = "triggered_release.inc.mdl"
+
+INCLUDE_FILE = "rxn_outputRS.mdl"
+//INCLUDE_FILE = "viz_output.mdl"

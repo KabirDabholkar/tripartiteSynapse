@@ -1,0 +1,1211 @@
+//
+DEFINE_MOLECULES {
+
+ Ca {DIFFUSION_CONSTANT_3D = D_Ca CUSTOM_TIME_STEP = 1e-7}
+ Cae {DIFFUSION_CONSTANT_3D = D_Ca CUSTOM_TIME_STEP = 1e-7}
+ Glu {DIFFUSION_CONSTANT_3D = D_Glu}
+ IP3 {DIFFUSION_CONSTANT_3D = D_IP3 CUSTOM_TIME_STEP = 1e-7}
+ calmodulin.B0 {DIFFUSION_CONSTANT_3D = D_calmodulin CUSTOM_SPACE_STEP = 0.020 TARGET_ONLY}
+ calmodulin.B1 {DIFFUSION_CONSTANT_3D = D_calmodulin CUSTOM_SPACE_STEP = 0.020 TARGET_ONLY}
+ calmodulin.B2 {DIFFUSION_CONSTANT_3D = D_calmodulin CUSTOM_SPACE_STEP = 0.020 TARGET_ONLY}
+ calmodulin.B3 {DIFFUSION_CONSTANT_3D = D_calmodulin CUSTOM_SPACE_STEP = 0.020 TARGET_ONLY}
+ calmodulin.B4 {DIFFUSION_CONSTANT_3D = D_calmodulin CUSTOM_SPACE_STEP = 0.020 TARGET_ONLY}
+ fast_sp.U {DIFFUSION_CONSTANT_3D = D_cbp CUSTOM_SPACE_STEP = 0.020 TARGET_ONLY}
+ fast_sp.B {DIFFUSION_CONSTANT_3D = D_cbp CUSTOM_SPACE_STEP = 0.020 TARGET_ONLY}
+ medium_sp.U {DIFFUSION_CONSTANT_3D = D_cbp CUSTOM_SPACE_STEP = 0.020 TARGET_ONLY}
+ medium_sp.B {DIFFUSION_CONSTANT_3D = D_cbp CUSTOM_SPACE_STEP = 0.020 TARGET_ONLY}
+ slow_sp.U {DIFFUSION_CONSTANT_3D = D_cbp CUSTOM_SPACE_STEP = 0.020 TARGET_ONLY}
+ slow_sp.B {DIFFUSION_CONSTANT_3D = D_cbp CUSTOM_SPACE_STEP = 0.020 TARGET_ONLY}
+ v_slow_sp.U {DIFFUSION_CONSTANT_3D = D_cbp CUSTOM_SPACE_STEP = 0.020 TARGET_ONLY}
+ v_slow_sp.B {DIFFUSION_CONSTANT_3D = D_cbp CUSTOM_SPACE_STEP = 0.020 TARGET_ONLY}
+ calbindin.high0medium0 {DIFFUSION_CONSTANT_3D = D_calbindin CUSTOM_SPACE_STEP = 0.100 TARGET_ONLY}
+ calbindin.high0medium1 {DIFFUSION_CONSTANT_3D = D_calbindin CUSTOM_SPACE_STEP = 0.100 TARGET_ONLY}
+ calbindin.high0medium2 {DIFFUSION_CONSTANT_3D = D_calbindin CUSTOM_SPACE_STEP = 0.100 TARGET_ONLY}
+ calbindin.high1medium0 {DIFFUSION_CONSTANT_3D = D_calbindin CUSTOM_SPACE_STEP = 0.100 TARGET_ONLY}
+ calbindin.high1medium1 {DIFFUSION_CONSTANT_3D = D_calbindin CUSTOM_SPACE_STEP = 0.100 TARGET_ONLY}
+ calbindin.high1medium2 {DIFFUSION_CONSTANT_3D = D_calbindin CUSTOM_SPACE_STEP = 0.100 TARGET_ONLY}
+ calbindin.high2medium0 {DIFFUSION_CONSTANT_3D = D_calbindin CUSTOM_SPACE_STEP = 0.100 TARGET_ONLY}
+ calbindin.high2medium1 {DIFFUSION_CONSTANT_3D = D_calbindin CUSTOM_SPACE_STEP = 0.100 TARGET_ONLY}
+ calbindin.high2medium2 {DIFFUSION_CONSTANT_3D = D_calbindin CUSTOM_SPACE_STEP = 0.100 TARGET_ONLY}
+
+ SERCA_X1 {DIFFUSION_CONSTANT_2D = 0}
+ SERCA_X1A {DIFFUSION_CONSTANT_2D = 0}
+ SERCA_X2 {DIFFUSION_CONSTANT_2D = 0}
+ SERCA_Y1 {DIFFUSION_CONSTANT_2D = 0}
+ SERCA_Y1A {DIFFUSION_CONSTANT_2D = 0}
+ SERCA_Y2 {DIFFUSION_CONSTANT_2D = 0}
+
+ PM_leak {DIFFUSION_CONSTANT_2D = 0}
+ ER_leak {DIFFUSION_CONSTANT_2D = 0}
+
+ PMCA_0 {DIFFUSION_CONSTANT_2D = 0}
+ PMCA_1 {DIFFUSION_CONSTANT_2D = 0}
+ PMCA_2 {DIFFUSION_CONSTANT_2D = 0}
+
+ mGluR {DIFFUSION_CONSTANT_2D = D_mGluR CUSTOM_SPACE_STEP = 0.020}
+ mGluR.Glu {DIFFUSION_CONSTANT_2D = D_mGluR_Glu CUSTOM_SPACE_STEP = 0.020}
+ mGluR.Glu.Glu {DIFFUSION_CONSTANT_2D = D_mGluR_Glu CUSTOM_SPACE_STEP = 0.020}
+ mGluR.Glu.Gp {DIFFUSION_CONSTANT_2D = D_mGluR_Glu_Gp CUSTOM_SPACE_STEP = 0.020}
+ mGluR.Gp {DIFFUSION_CONSTANT_2D = D_mGluR_Gp CUSTOM_SPACE_STEP = 0.020}
+
+ Gp {DIFFUSION_CONSTANT_2D = D_Gp CUSTOM_SPACE_STEP = 0.020}
+ aGp {DIFFUSION_CONSTANT_2D = D_aGp CUSTOM_SPACE_STEP = 0.020}
+ PLC {DIFFUSION_CONSTANT_2D = D_PLC CUSTOM_SPACE_STEP = 0.020}
+ PLC.Ca {DIFFUSION_CONSTANT_2D = D_PLC_Ca CUSTOM_SPACE_STEP = 0.020}
+ PLC.Ca.aGp {DIFFUSION_CONSTANT_2D = D_PLC_Ca_aGp CUSTOM_SPACE_STEP = 0.020}
+ PIP2 {DIFFUSION_CONSTANT_2D = D_PIP2 CUSTOM_SPACE_STEP = 0.020}
+ PLC.aGp {DIFFUSION_CONSTANT_2D = D_PLC_aGp CUSTOM_SPACE_STEP = 0.020}
+ PLC.aGp.PIP2 {DIFFUSION_CONSTANT_2D = D_PLC_aGp_PIP2 CUSTOM_SPACE_STEP = 0.020}
+ PLC.Ca.aGp.PIP2 {DIFFUSION_CONSTANT_2D = D_PLC_Ca_aGp_PIP2 CUSTOM_SPACE_STEP = 0.020}
+ PLC.Ca.PIP2 {DIFFUSION_CONSTANT_2D = D_PLC_Ca_PIP2 CUSTOM_SPACE_STEP = 0.020}
+
+ GluT_0 {DIFFUSION_CONSTANT_2D = 0}
+ GluT_1 {DIFFUSION_CONSTANT_2D = 0}
+ GluT_2 {DIFFUSION_CONSTANT_2D = 0}
+ 
+ VDCC_L.C {DIFFUSION_CONSTANT_2D = 0}
+ VDCC_L.O {DIFFUSION_CONSTANT_2D = 0}
+ VDCC_PQ.C {DIFFUSION_CONSTANT_2D = 0}
+ VDCC_PQ.O {DIFFUSION_CONSTANT_2D = 0}
+
+ VDCC_PQ_C0 {DIFFUSION_CONSTANT_2D = 0}
+ VDCC_PQ_C1 {DIFFUSION_CONSTANT_2D = 0}
+ VDCC_PQ_C2 {DIFFUSION_CONSTANT_2D = 0}
+ VDCC_PQ_C3 {DIFFUSION_CONSTANT_2D = 0}
+ VDCC_PQ_O {DIFFUSION_CONSTANT_2D = 0}
+
+ NMDA_H.CU {DIFFUSION_CONSTANT_2D = 0}
+ NMDA_H.CM {DIFFUSION_CONSTANT_2D = 0}
+ NMDA_H.C1 {DIFFUSION_CONSTANT_2D = 0}
+ NMDA_H.C2 {DIFFUSION_CONSTANT_2D = 0}
+ NMDA_H.C3 {DIFFUSION_CONSTANT_2D = 0}
+ NMDA_H.O1 {DIFFUSION_CONSTANT_2D = 0}
+ NMDA_H.O2 {DIFFUSION_CONSTANT_2D = 0}
+
+ NMDA_M.CU {DIFFUSION_CONSTANT_2D = 0}
+ NMDA_M.CM {DIFFUSION_CONSTANT_2D = 0}
+ NMDA_M.C1 {DIFFUSION_CONSTANT_2D = 0}
+ NMDA_M.C2 {DIFFUSION_CONSTANT_2D = 0}
+ NMDA_M.C3 {DIFFUSION_CONSTANT_2D = 0}
+ NMDA_M.O1 {DIFFUSION_CONSTANT_2D = 0}
+ NMDA_M.O2 {DIFFUSION_CONSTANT_2D = 0}
+
+ NMDA_L.CU {DIFFUSION_CONSTANT_2D = 0}
+ NMDA_L.CM {DIFFUSION_CONSTANT_2D = 0}
+ NMDA_L.C1 {DIFFUSION_CONSTANT_2D = 0}
+ NMDA_L.C2 {DIFFUSION_CONSTANT_2D = 0}
+ NMDA_L.C3 {DIFFUSION_CONSTANT_2D = 0}
+ NMDA_L.O1 {DIFFUSION_CONSTANT_2D = 0}
+ NMDA_L.O2 {DIFFUSION_CONSTANT_2D = 0}
+
+
+ RyRC1_L {DIFFUSION_CONSTANT_2D = 0}
+ RyRC2_L {DIFFUSION_CONSTANT_2D = 0}
+ RyRC3_L {DIFFUSION_CONSTANT_2D = 0}
+ RyRC4_L {DIFFUSION_CONSTANT_2D = 0}
+ RyRC5_L {DIFFUSION_CONSTANT_2D = 0}
+ RyRO1_L {DIFFUSION_CONSTANT_2D = 0}
+ RyRO2_L {DIFFUSION_CONSTANT_2D = 0}
+ RyRO3_L {DIFFUSION_CONSTANT_2D = 0}
+
+ RyRC1_H1 {DIFFUSION_CONSTANT_2D = 0}
+ RyRC2_H1 {DIFFUSION_CONSTANT_2D = 0}
+ RyRC3_H1 {DIFFUSION_CONSTANT_2D = 0}
+ RyRC4_H1 {DIFFUSION_CONSTANT_2D = 0}
+ RyRO1_H1 {DIFFUSION_CONSTANT_2D = 0}
+ RyRO2_H1 {DIFFUSION_CONSTANT_2D = 0}
+
+}
+
+
+INCLUDE_FILE = "../ip3r_3su_mol_octal.mdl"
+INCLUDE_FILE = "../ip3r_3su_rxn_octal.mdl"
+
+/*
+INCLUDE_FILE = "transmitter_trigger_complex_mol.mdl"
+INCLUDE_FILE = "transmitter_trigger_complex_rxn.mdl"
+INCLUDE_FILE = "transmitter_trigger_complex_mol_sakmann.mdl"
+INCLUDE_FILE = "transmitter_trigger_complex_rxn_sakmann.mdl"
+INCLUDE_FILE = "transmitter_trigger_complex_mol_neher.mdl"
+INCLUDE_FILE = "transmitter_trigger_complex_rxn_neher.mdl"
+INCLUDE_FILE = "transmitter_trigger_mol_sudhof.mdl"
+INCLUDE_FILE = "transmitter_trigger_rxn_sudhof.mdl"
+INCLUDE_FILE = "transmitter_trigger_complex_mol_7_sudhof.mdl"
+INCLUDE_FILE = "transmitter_trigger_complex_rxn_sudhof.mdl"
+INCLUDE_FILE = "transmitter_trigger_complex_mol_2_sudhof_v2.mdl"
+INCLUDE_FILE = "transmitter_trigger_complex_mol_7_sudhof_v2.mdl"
+INCLUDE_FILE = "transmitter_trigger_complex_mol_25_sudhof_v2.mdl"
+INCLUDE_FILE = "transmitter_trigger_complex_mol_15_sudhof_v2.mdl"
+INCLUDE_FILE = "transmitter_trigger_complex_mol_15d7_sudhof_v2.mdl"
+INCLUDE_FILE = "transmitter_trigger_complex_mol_13_sudhof_v2.mdl"
+INCLUDE_FILE = "transmitter_trigger_complex_mol_25d20_sudhof_v2.mdl"
+INCLUDE_FILE = "transmitter_trigger_complex_mol_25d15_sudhof_v2.mdl"
+INCLUDE_FILE = "transmitter_trigger_complex_mol_25d10_sudhof_v2.mdl"
+INCLUDE_FILE = "transmitter_trigger_complex_mol_25d7_sudhof_v2.mdl"
+INCLUDE_FILE = "transmitter_trigger_complex_mol_25d5_sudhof_v2.mdl"
+INCLUDE_FILE = "transmitter_trigger_complex_mol_25d3_sudhof_v2.mdl"
+INCLUDE_FILE = "transmitter_trigger_complex_mol_25d2_sudhof_v2.mdl"
+INCLUDE_FILE = "transmitter_trigger_complex_mol_25d1_sudhof_v2.mdl"
+INCLUDE_FILE = "transmitter_trigger_complex_rxn_sudhof_v2.mdl"
+INCLUDE_FILE = "transmitter_trigger_complex_mol_7_sudhof_v2_no_refrac.mdl"
+*/
+
+//INCLUDE_FILE = "../transmitter_trigger_complex_mol_15d7_sudhof_v2.mdl"
+INCLUDE_FILE = "../transmitter_trigger_complex_rxn_sudhof_v2.mdl"
+
+
+DEFINE_SURFACE_CLASSES {
+  transp {
+    TRANSPARENT = ALL_MOLECULES
+  }
+  axon_segment_end {
+      REFLECTIVE = ALL_MOLECULES
+//    CLAMP_CONCENTRATION Ca, = ca_conc_presynaptic
+//    CLAMP_CONCENTRATION IP3, = ip3_conc_clamp_presynaptic
+  }
+  er_segment_end {
+//    REFLECTIVE = ALL_MOLECULES
+//    CLAMP_CONCENTRATION Cae, = ca_conc_presynaptic_er
+  }
+}
+
+DEFINE_REACTIONS {
+
+/* Ca flux through open IP3R */
+//   Cae, + IP3R_110110110' -> IP3R_110110110' + Ca' [k_IP3R_Ca_flux] : IP3R_Ca_flux
+   Cae, + IP3R_666' -> IP3R_666' + Ca' [k_IP3R_Ca_flux] : IP3R_Ca_flux
+
+/* RyR2 channel; Saftenku et al., BioPhysJ 2001 */
+/* L mode: */
+ Ca' + RyRC1_L' <-> RyRC2_L' [>k_RyRC1C2_L, < k_RyRC2C1_L]
+ Ca' + RyRC2_L' <-> RyRC3_L' [>k_RyRC2C3_L, < k_RyRC3C2_L]
+ RyRC2_L' <-> RyRC5_L' [>k_RyRC2C5_L, < k_RyRC5C2_L]
+ RyRC3_L' <-> RyRO1_L' [>k_RyRC3O1_L, < k_RyRO1C3_L]
+ RyRC3_L' <-> RyRO2_L' [>k_RyRC3O2_L, < k_RyRO2C3_L]
+ RyRC3_L' <-> RyRO3_L' [>k_RyRC3O3_L, < k_RyRO3C3_L]
+ RyRO2_L' <-> RyRC4_L' [>k_RyRO2C4_L, < k_RyRC4O2_L]
+ RyRO3_L' <-> RyRC4_L' [>k_RyRO3C4_L, < k_RyRC4O3_L]
+
+/* H1 mode: */
+ Ca' + RyRC1_H1' <-> RyRC2_H1' [>k_RyRC1C2_H1, < k_RyRC2C1_H1]
+ Ca' + RyRC2_H1' <-> RyRC3_H1' [>k_RyRC2C3_H1, < k_RyRC3C2_H1]
+ Ca' + RyRC2_H1' <-> RyRO1_H1' [>k_RyRC2O1_H1, < k_RyRO1C2_H1]
+ Ca' + RyRC3_H1' <-> RyRO2_H1' [>k_RyRC3O2_H1, < k_RyRO2C3_H1]
+ RyRO2_H1' <-> RyRC4_H1' [>k_RyRO2C4_H1, < k_RyRC4O2_H1]
+
+/* L to H1 transitions */
+ Ca' + RyRC1_L' <-> RyRC2_H1' [>k_RyRC1C2_LH1, < k_RyRC2C1_H1L]
+ Ca' + RyRC2_L' <-> RyRC3_H1' [>k_RyRC2C3_LH1, < k_RyRC3C2_H1L]
+ Ca' + RyRC3_L' <-> RyRC4_H1' [>k_RyRC3C4_LH1, < k_RyRC4C3_H1L]
+
+/* RyR Ca Flux. Note: bidirectional flux */
+ Cae, + RyRO1_L' -> Ca' + RyRO1_L' [k_RyR_Ca_flux] : ryro1_l_ca_flux_out
+ Ca' + RyRO1_L' -> Cae, + RyRO1_L' [k_RyR_Ca_flux] : ryro1_l_ca_flux_in
+
+ Cae, + RyRO2_L' -> Ca' + RyRO2_L' [k_RyR_Ca_flux] : ryro2_l_ca_flux_out
+ Ca' + RyRO2_L' -> Cae, + RyRO2_L' [k_RyR_Ca_flux] : ryro2_l_ca_flux_in
+
+ Cae, + RyRO3_L' -> Ca' + RyRO3_L' [k_RyR_Ca_flux] : ryro3_l_ca_flux_out
+ Ca' + RyRO3_L' -> Cae, + RyRO3_L' [k_RyR_Ca_flux] : ryro3_l_ca_flux_in
+
+ Cae, + RyRO1_H1' -> Ca' + RyRO1_H1' [k_RyR_Ca_flux] : ryro1_h1_ca_flux_out
+ Ca' + RyRO1_H1' -> Cae, + RyRO1_H1' [k_RyR_Ca_flux] : ryro1_h1_ca_flux_in
+
+ Cae, + RyRO2_H1' -> Ca' + RyRO2_H1' [k_RyR_Ca_flux] : ryro2_h1_ca_flux_out
+ Ca' + RyRO2_H1' -> Cae, + RyRO2_H1' [k_RyR_Ca_flux] : ryro2_h1_ca_flux_in
+
+
+/* 6-step Buffering SERCA Pump */
+/* From Higgins et al, 2006, Biophys. J. */
+/* Note: ignores Ca in the ER, assume constant Ca in ER */
+/*
+   Ca' + SERCA_X1' <-> SERCA_X1A' [>2*k_SERCA_X1_X1A, <k_SERCA_X1A_X1]
+   Ca' + SERCA_X1A' <-> SERCA_X2' [>k_SERCA_X1A_X2, <2*k_SERCA_X2_X1A]
+   SERCA_X2' <-> SERCA_Y2' [>k_SERCA_X2_Y2, <k_SERCA_Y2_X2]
+   SERCA_Y2' <-> SERCA_Y1A' [>2*k_SERCA_Y2_Y1A, <k_SERCA_Y1A_Y2]
+   SERCA_Y1A' <-> SERCA_Y1' [>k_SERCA_Y1A_Y1, <2*k_SERCA_Y1_Y1A]
+   SERCA_Y1' <-> SERCA_X1'  [>k_SERCA_Y1_X1, <k_SERCA_X1_Y1]
+*/
+
+/* 6-step Buffering SERCA Pump */
+/* From Higgins et al, 2006, Biophys. J. */
+/* Note: includes Cae in the ER */
+   Ca' + SERCA_X1' <-> SERCA_X1A' [>k_SERCA_X1_X1A, <k_SERCA_X1A_X1]
+   Ca' + SERCA_X1A' <-> SERCA_X2' [>k_SERCA_X1A_X2, <k_SERCA_X2_X1A]
+   SERCA_X2' -> SERCA_Y2' [k_SERCA_X2_Y2] : serca_x2_y2
+   SERCA_Y2' -> SERCA_X2' [k_SERCA_Y2_X2] : serca_y2_x2
+   SERCA_Y2' <-> Cae, + SERCA_Y1A' [>k_SERCA_Y2_Y1A, <k_SERCA_Y1A_Y2]
+   SERCA_Y1A' <-> Cae, + SERCA_Y1' [>k_SERCA_Y1A_Y1, <k_SERCA_Y1_Y1A]
+   SERCA_Y1' <-> SERCA_X1'  [>k_SERCA_Y1_X1, <k_SERCA_X1_Y1]
+
+/* 4-step Buffering SERCA Pump */
+/* From Higgins et al, 2006, Biophys. J. */
+/* Note: includes Ca in the ER */
+/*
+   Ca' + SERCA_X1' <-> SERCA_X1A' [>2*k_SERCA_X1_X1A, <k_SERCA_X1A_X1]
+   Ca' + SERCA_X1A' <-> SERCA_X2' [>k_SERCA_X1A_X2, <2*k_SERCA_X2_X1A]
+   SERCA_X2' <-> SERCA_Y2' [>k_SERCA_X2_Y2, <k_SERCA_Y2_X2]
+   SERCA_Y2' <-> Ca, + SERCA_Y1A' [>2*k_SERCA_Y2_Y1A, <k_SERCA_Y1A_Y2]
+   SERCA_Y1A' <-> Ca, + SERCA_Y1' [>k_SERCA_Y1A_Y1, <2*k_SERCA_Y1_Y1A]
+   SERCA_Y1' <-> SERCA_X1'  [>k_SERCA_Y1_X1, <k_SERCA_X1_Y1]
+*/
+
+
+/* Ca leak from extracellular to cytoplasm */
+/* Not needed if PMCA pump has built-in leak */
+   PM_leak' -> PM_leak' + Ca, [k_PM_leak]
+
+
+/* Ca leak from ER to cytoplasm */
+   ER_leak' -> ER_leak' + Ca, [k_ER_leak]
+
+
+/* PMCA pump with built-in leak */
+   Ca, + PMCA_0' -> PMCA_1' [k_PMCA_0_1] : PMCA_Ca_flux_out
+   PMCA_1' -> Ca, + PMCA_0' [k_PMCA_1_0] : PMCA_Ca_flux_in
+   PMCA_1' -> PMCA_2' [k_PMCA_1_2]
+   PMCA_2' -> PMCA_0' [k_PMCA_2_0]
+   PMCA_0' -> PMCA_0' + Ca, [k_PMCA_0_leak] : PMCA_Ca_leak_flux
+   
+/* Activation of mGluR and IP3 production with negative cooperativity */
+/* Activation by first Glu binding: */
+   Glu' + mGluR' <-> mGluR.Glu' [>k_mGluR_fGlu, <k_mGluR_bGlu]
+   mGluR.Glu' -> mGluR' + Glu' + IP3, [k_mGluR_Glu_IP3] : ip3_create_1
+
+/* Activation by second Glu binding exhibits negative cooperativity: */
+   Glu' + mGluR.Glu' <-> mGluR.Glu.Glu' [>k_mGluR_Glu_fGlu, <k_mGluR_Glu_bGlu]
+   mGluR.Glu.Glu' -> mGluR.Glu' + Glu' + IP3, [k_mGluR_Glu_Glu_IP3] : ip3_create_2
+
+  /* Ca binding to PLC */
+     Ca, + PLC' <-> PLC.Ca' [>k_PLC_fCa, <k_PLC_bCa]
+
+  /* IP3 production through PLC.Ca catalysis of PIP2 */
+  /* Assume [PIP2] is constant */
+     PLC.Ca' <-> PLC.Ca.PIP2' [>k_PLC_Ca_fPIP2, <k_PLC_Ca_bPIP2]
+     PLC.Ca.PIP2' -> PLC.Ca' + IP3, [k_PLC_Ca_PIP2_IP3] : ip3_create_3
+
+
+/*
+  /* Bhalla-Iyengar mGluR, Gp pathway: */
+
+  /* Glu binding to mGluR*/
+     Glu' + mGluR' <-> mGluR.Glu' [>k_mGluR_fGlu, <k_mGluR_bGlu]
+
+  /* Gp binding to mGluR*/
+     mGluR' + Gp' <-> mGluR.Gp' [>k_mGluR_fGp, <k_mGluR_bGp]
+
+  /* Gp binding to mGluR.Glu*/
+     mGluR.Glu' + Gp' <-> mGluR.Glu.Gp' [>k_mGluR_Glu_fGp, <k_mGluR_Glu_bGp]
+
+  /* Glu binding to mGluR.Gp*/
+     Glu' + mGluR.Gp' <-> mGluR.Glu.Gp' [>k_mGluR_Gp_fGlu, <k_mGluR_Gp_bGlu]
+
+  /* Ca binding to PLC */
+     Ca, + PLC' <-> PLC.Ca' [>k_PLC_fCa, <k_PLC_bCa]
+
+  /* aGp binding to PLC */
+     mGluR.Glu.Gp' + PLC' <-> PLC.aGp' [>k_PLC_faGp, <k_PLC_baGp]
+
+  /* Ca binding to PLC.aGp */
+     Ca, + PLC.aGp' <-> PLC.Ca.aGp' [>k_PLC_aGp_fCa, <k_PLC_aGp_bCa]
+
+  /* aGp binding to PLC.Ca */
+     mGluR.Glu.Gp' + PLC.Ca' <-> PLC.Ca.aGp' [>k_PLC_Ca_faGp, <k_PLC_Ca_baGp]
+
+  /* IP3 production through PLC.Ca catalysis of PIP2 */
+  /* Assume [PIP2] is constant */
+     PLC.Ca' <-> PLC.Ca.PIP2' [>k_PLC_Ca_fPIP2, <k_PLC_Ca_bPIP2]
+     PLC.Ca.PIP2' -> PLC.Ca' + IP3, [k_PLC_Ca_PIP2_IP3]
+
+  /* IP3 production through activated PLC.Ca.aGp catalysis of PIP2 */
+  /* Assume [PIP2] is constant */
+     PLC.Ca.aGp' <-> PLC.Ca.aGp.PIP2' [>k_PLC_Ca_aGp_fPIP2, <k_PLC_Ca_aGp_bPIP2]
+     PLC.Ca.aGp.PIP2' -> PLC.Ca.aGp' + IP3, [k_PLC_Ca_aGp_PIP2_IP3]
+*/
+
+
+/*
+  /* Kim Blackwell's mGluR, Gp pathway: */
+
+  /* Activation of mGluR and G-protein*/
+     Glu' + mGluR' <-> mGluR.Glu' [>k_mGluR_fGlu, <k_mGluR_bGlu]
+     mGluR.Glu' + Gp' <-> mGluR.Glu.Gp' [>k_mGluR_Glu_fGp, <k_mGluR_Glu_bGp]
+     mGluR.Glu.Gp' -> mGluR.Glu' + aGp' [k_mGluR_Glu_Gp_aGp]
+
+  /* aGp activation of PLC */
+     aGp' + PLC' <-> PLC.aGp' [>k_PLC_faGp, <k_PLC_baGp]
+
+  /* IP3 production through activated PLC.aGp catalysis of PIP2 */
+  /* Explicitly include [PIP2] in reaction */
+  /*
+     PLC.aGp' + PIP2' <-> PLC.aGp.PIP2' [>k_PLC_aGp_fPIP2, <k_PLC_aGp_bPIP2]
+     PLC.aGp.PIP2' -> PLC.aGp' + IP3, [k_PLC_aGp_PIP2_IP3]
+  */
+
+  /* IP3 production through activated PLC.aGp catalysis of PIP2 */
+  /* Assume [PIP2] is constant */
+     PLC.aGp' <-> PLC.aGp.PIP2' [>k_PLC_aGp_fPIP2, <k_PLC_aGp_bPIP2]
+     PLC.aGp.PIP2' -> PLC.aGp' + IP3, [k_PLC_aGp_PIP2_IP3]
+
+  /* aGp Inactivation */
+    aGp' -> Gp' [k_aGp_inact]
+
+*/
+
+/* IP3 Degradation */
+  IP3 -> NULL [k_IP3_degrade]
+
+
+/* Glutamate Transporters */
+/* From Geiger et al, 1999, Handbook of Exp. Pharm. */
+   Glu' + GluT_0' <-> GluT_1'  [>k_GluT_0_1, <k_GluT_1_0]
+   GluT_1'-> GluT_2'           [k_GluT_1_2]
+   GluT_2'-> GluT_0'           [k_GluT_2_0]
+
+/* L-type Voltage Dependent Calcium Channels */
+  VDCC_L.C' -> VDCC_L.O'        ["../vdcc_dat/vdcc_l_activation_rate.dat"]
+  VDCC_L.O' -> VDCC_L.O'+ Ca,    ["../vdcc_dat/vdcc_l_IV_2.5.dat"]
+  VDCC_L.O' -> VDCC_L.C'        [1000]
+
+/* P/Q-type Voltage Dependent Calcium Channels */
+/*
+  VDCC_PQ.C' -> VDCC_PQ.O'        ["../vdcc_pq_activation_rate.dat"]
+  VDCC_PQ.O' -> VDCC_PQ.O'+ Ca,    ["../vdcc_pq_IV_2.5.dat"]
+  VDCC_PQ.O' -> VDCC_PQ.C'        [1000]
+*/
+
+/* P/Q-type Voltage Dependent Calcium Channels */
+/* From Bischoffberger et al., 2005, , Biophys. J.*/
+  VDCC_PQ_C0' <-> VDCC_PQ_C1'     [>k_VDCC_PQ_C01, <k_VDCC_PQ_C10]
+  VDCC_PQ_C1' <-> VDCC_PQ_C2'     [>k_VDCC_PQ_C12, <k_VDCC_PQ_C21]
+  VDCC_PQ_C2' <-> VDCC_PQ_C3'     [>k_VDCC_PQ_C23, <k_VDCC_PQ_C32]
+  VDCC_PQ_C3' <-> VDCC_PQ_O'      [>k_VDCC_PQ_C34, <k_VDCC_PQ_C43]
+  VDCC_PQ_O' -> VDCC_PQ_O' + Ca,  [k_VDCC_PQ_Ca] : VDCC_Ca_flux
+
+
+/* NMDAR activation by Glu from Popescu et al., 2004, Nature */
+  NMDA_H.CU' + Glu' -> NMDA_H.CM'[NMDA_H_CU_CM ]
+  NMDA_H.CM' + Glu' -> NMDA_H.C1'[NMDA_H_CM_C1 ]
+  NMDA_H.CM'  -> NMDA_H.CU'[NMDA_H_CM_CU ]
+  NMDA_H.C1'  -> NMDA_H.CM'[NMDA_H_C1_CM ]
+  NMDA_H.C1'  -> NMDA_H.C2'[NMDA_H_C1_C2 ]
+  NMDA_H.C2'  -> NMDA_H.C1'[NMDA_H_C2_C1 ]
+  NMDA_H.C2'  -> NMDA_H.C3'[NMDA_H_C2_C3 ]
+  NMDA_H.C3'  -> NMDA_H.C2'[NMDA_H_C3_C2 ]
+  NMDA_H.C3'  -> NMDA_H.O1'[NMDA_H_C3_O1 ]
+  NMDA_H.O1'  -> NMDA_H.O2'[NMDA_H_O1_O2 ]
+  NMDA_H.O1'  -> NMDA_H.C3'[NMDA_H_O1_C3 ]
+  NMDA_H.O2'  -> NMDA_H.O1'[NMDA_H_O2_O1 ]
+  NMDA_H.O1'  -> NMDA_H.O1'+Ca,[NMDA_GENERATE_CA]
+  NMDA_H.O2'  -> NMDA_H.O2'+Ca,[NMDA_GENERATE_CA]
+
+  NMDA_M.CU' + Glu' -> NMDA_M.CM'[NMDA_M_CU_CM ]
+  NMDA_M.CM' + Glu' -> NMDA_M.C1'[NMDA_M_CM_C1 ]
+  NMDA_M.CM'  -> NMDA_M.CU'[NMDA_M_CM_CU ]
+  NMDA_M.C1'  -> NMDA_M.CM'[NMDA_M_C1_CM ]
+  NMDA_M.C1'  -> NMDA_M.C2'[NMDA_M_C1_C2 ]
+  NMDA_M.C2'  -> NMDA_M.C1'[NMDA_M_C2_C1 ]
+  NMDA_M.C2'  -> NMDA_M.C3'[NMDA_M_C2_C3 ]
+  NMDA_M.C3'  -> NMDA_M.C2'[NMDA_M_C3_C2 ]
+  NMDA_M.C3'  -> NMDA_M.O1'[NMDA_M_C3_O1 ]
+  NMDA_M.O1'  -> NMDA_M.O2'[NMDA_M_O1_O2 ]
+  NMDA_M.O1'  -> NMDA_M.C3'[NMDA_M_O1_C3 ]
+  NMDA_M.O2'  -> NMDA_M.O1'[NMDA_M_O2_O1 ]
+  NMDA_M.O1'  -> NMDA_M.O1'+Ca,[NMDA_GENERATE_CA/1.5]
+  NMDA_M.O2'  -> NMDA_M.O2'+Ca,[NMDA_GENERATE_CA/1.5]
+
+  NMDA_L.CU' + Glu' -> NMDA_L.CM'[NMDA_L_CU_CM ]
+  NMDA_L.CM' + Glu' -> NMDA_L.C1'[NMDA_L_CM_C1 ]
+  NMDA_L.CM'  -> NMDA_L.CU'[NMDA_L_CM_CU ]
+  NMDA_L.C1'  -> NMDA_L.CM'[NMDA_L_C1_CM ]
+  NMDA_L.C1'  -> NMDA_L.C2'[NMDA_L_C1_C2 ]
+  NMDA_L.C2'  -> NMDA_L.C1'[NMDA_L_C2_C1 ]
+  NMDA_L.C2'  -> NMDA_L.C3'[NMDA_L_C2_C3 ]
+  NMDA_L.C3'  -> NMDA_L.C2'[NMDA_L_C3_C2 ]
+  NMDA_L.C3'  -> NMDA_L.O1'[NMDA_L_C3_O1 ]
+  NMDA_L.O1'  -> NMDA_L.O2'[NMDA_L_O1_O2 ]
+  NMDA_L.O1'  -> NMDA_L.C3'[NMDA_L_O1_C3 ]
+  NMDA_L.O2'  -> NMDA_L.O1'[NMDA_L_O2_O1 ]
+  NMDA_L.O1'  -> NMDA_L.O1'+Ca,[NMDA_GENERATE_CA]
+  NMDA_L.O2'  -> NMDA_L.O2'+Ca,[NMDA_GENERATE_CA]
+
+/* --------- CBPs; fast, medium, slow & v_slow -------- */
+  fast_sp.U + Ca -> fast_sp.B [fast_on]
+  fast_sp.B -> fast_sp.U + Ca [fast_off]
+
+  medium_sp.U + Ca -> medium_sp.B [medium_on]
+  medium_sp.B -> medium_sp.U + Ca [medium_off]
+
+  slow_sp.U + Ca -> slow_sp.B [slow_on]
+  slow_sp.B -> slow_sp.U + Ca [slow_off]
+
+  v_slow_sp.U + Ca -> v_slow_sp.B [v_slow_on]
+  v_slow_sp.B -> v_slow_sp.U + Ca [v_slow_off]
+
+
+/* -------- Calcium Binding Protein Calbindin ------ */
+  calbindin.high0medium0+Ca->calbindin.high1medium0[2*calbindin_high_on]
+  calbindin.high1medium0->calbindin.high0medium0+Ca[calbindin_high_off]
+  calbindin.high1medium0+Ca->calbindin.high2medium0[calbindin_high_on]
+  calbindin.high2medium0->calbindin.high1medium0+Ca[2*calbindin_high_off]
+  calbindin.high0medium1+Ca->calbindin.high1medium1[2*calbindin_high_on]
+  calbindin.high1medium1->calbindin.high0medium1+Ca[calbindin_high_off]
+  calbindin.high1medium1+Ca->calbindin.high2medium1[calbindin_high_on]
+  calbindin.high2medium1->calbindin.high1medium1+Ca[2*calbindin_high_off]
+  calbindin.high0medium2+Ca->calbindin.high1medium2[2*calbindin_high_on]
+  calbindin.high1medium2->calbindin.high0medium2+Ca[calbindin_high_off]
+  calbindin.high1medium2+Ca->calbindin.high2medium2[calbindin_high_on]
+  calbindin.high2medium2->calbindin.high1medium2+Ca[2*calbindin_high_off]
+
+  calbindin.high0medium0+Ca->calbindin.high0medium1[2*calbindin_medium_on]
+  calbindin.high0medium1->calbindin.high0medium0+Ca[calbindin_medium_off]
+  calbindin.high0medium1+Ca->calbindin.high0medium2[calbindin_medium_on]
+  calbindin.high0medium2->calbindin.high0medium1+Ca[2*calbindin_medium_off]
+  calbindin.high1medium0+Ca->calbindin.high1medium1[2*calbindin_medium_on]
+  calbindin.high1medium1->calbindin.high1medium0+Ca[calbindin_medium_off]
+  calbindin.high1medium1+Ca->calbindin.high1medium2[calbindin_medium_on]
+  calbindin.high1medium2->calbindin.high1medium1+Ca[2*calbindin_medium_off]
+  calbindin.high2medium0+Ca->calbindin.high2medium1[2*calbindin_medium_on]
+  calbindin.high2medium1->calbindin.high2medium0+Ca[calbindin_medium_off]
+  calbindin.high2medium1+Ca->calbindin.high2medium2[calbindin_medium_on]
+  calbindin.high2medium2->calbindin.high2medium1+Ca[2*calbindin_medium_off]
+
+
+/* ------- Define Calmodulin Reaction ------- */
+  calmodulin.B0 + Ca -> calmodulin.B1      [cam_for_1]
+  calmodulin.B1      -> calmodulin.B0 + Ca [cam_back_1]
+  calmodulin.B1 + Ca -> calmodulin.B2      [cam_for_2]
+  calmodulin.B2      -> calmodulin.B1 + Ca [cam_back_2]
+  calmodulin.B2 + Ca -> calmodulin.B3      [cam_for_3]
+  calmodulin.B3      -> calmodulin.B2 + Ca [cam_back_3]
+  calmodulin.B3 + Ca -> calmodulin.B4      [cam_for_4]
+  calmodulin.B4      -> calmodulin.B3 + Ca [cam_back_4]
+
+}
+
+
+//INCLUDE_FILE = "../tripartite_synapse_v7_rrp_2.geometry.mdl"
+//INCLUDE_FILE = "../tripartite_synapse_v7_rrp_7.geometry.mdl"
+//INCLUDE_FILE = "../tripartite_synapse_v7_rrp_25.geometry.mdl"
+//INCLUDE_FILE = "../tripartite_synapse_v7_rrp_15.geometry.mdl"
+INCLUDE_FILE = "../tripartite_synapse_v7_rrp_15_er_vdcc_junction.geometry.mdl"
+//INCLUDE_FILE = "../tripartite_synapse_v7_rrp_13.geometry.mdl"
+//INCLUDE_FILE = "../tripartite_synapse_v7_rrp_7.geometry.mdl"
+
+/* set up VDCC cluster as single disk placed at desired location near AZ: */
+sprintf(vdcc_disk_file,"../vdcc_disks/vdcc_disk_%g.mdl",VDCC_number_presynaptic)
+INCLUDE_FILE = vdcc_disk_file
+vdcc_disk_scale = SQRT(VDCC_number_presynaptic/(PI*egd))
+vdcc_release_disk OBJECT {
+  vdcc_disk OBJECT vdcc_disk {
+     SCALE = [vdcc_disk_scale,vdcc_disk_scale,vdcc_disk_scale]
+     ROTATE = [0, 1, 0], 90
+     TRANSLATE = [-0.025, vdcc_distance/1000, 0]
+  }
+}
+
+/* set up RyR cluster as single disk placed at desired location on ER: */
+/*
+sprintf(ryr_disk_file,"../ryr_disks/ryr_disk_%g.mdl",ryr_number_presynaptic)
+INCLUDE_FILE = ryr_disk_file
+ryr_disk_scale = 0.010
+ryr_release_disk OBJECT {
+  ryr_disk OBJECT ryr_disk {
+     SCALE = [ryr_disk_scale,20*ryr_disk_scale,ryr_disk_scale]
+     ROTATE = [0, 1, 0], 90
+     TRANSLATE = [-0.075, ryr_distance/1000, 0]
+  }
+}
+*/
+
+/* set up IP3R cluster as single disk placed at desired location on ER: */
+/*
+sprintf(ip3r_disk_file,"../ip3r_disks/ip3r_disk_%g_seed_%s.mdl",IP3R_number_presynaptic,my_seed)
+INCLUDE_FILE = ip3r_disk_file
+ip3r_disk_scale = 0.05
+ip3r_release_disk OBJECT {
+  ip3r_disk OBJECT ip3r_disk {
+     SCALE = [ip3r_disk_scale,ip3r_disk_scale,ip3r_disk_scale]
+     ROTATE = [0, 1, 0], 90
+     TRANSLATE = [-0.075, ip3r_distance/1000, 0]
+  }
+}
+
+ip3_conc_plane POLYGON_LIST {
+  VERTEX_LIST {
+    [0,-ip3r_disk_scale,-ip3r_disk_scale]
+    [0,ip3r_disk_scale,-ip3r_disk_scale]
+    [0,ip3r_disk_scale,ip3r_disk_scale]
+    [0,-ip3r_disk_scale,ip3r_disk_scale]
+  }
+  ELEMENT_CONNECTIONS {
+    [0,1,2]
+    [0,2,3]
+  }
+  DEFINE_SURFACE_REGIONS {
+    reg {
+      ELEMENT_LIST = [ALL_ELEMENTS]
+      SURFACE_CLASS = transp
+    }
+  }
+  TRANSLATE = [-0.215, ip3r_distance/1000, 0]
+}
+*/
+
+
+MODIFY_SURFACE_REGIONS
+{
+ tripartite_synapse.glia_er[ip3r_cluster]
+ {
+   MOLECULE_NUMBER
+   {
+//     IP3R_000000000' = IP3R_number_astrocyte
+     IP3R_000' = IP3R_number_astrocyte
+   }
+ }
+ tripartite_synapse.glia_er[ALL]
+ {
+   MOLECULE_DENSITY
+   {
+     SERCA_X1' = SERCA_density_astrocyte
+   }
+ }
+ tripartite_synapse.presynaptic[clamped_end_1]
+ {
+   SURFACE_CLASS = axon_segment_end
+ }
+ tripartite_synapse.presynaptic[clamped_end_2]
+ {
+   SURFACE_CLASS = axon_segment_end
+ }
+ tripartite_synapse.presynaptic_er[clamped_end_1]
+ {
+   SURFACE_CLASS = er_segment_end
+ }
+ tripartite_synapse.presynaptic_er[clamped_end_2]
+ {
+   SURFACE_CLASS = er_segment_end
+ }
+ tripartite_synapse.presynaptic_er[ALL]
+ {
+   MOLECULE_NUMBER
+   {
+     SERCA_X1' = serca_number_presynaptic*serca_x1_feq
+     SERCA_X1A' = serca_number_presynaptic*serca_x1a_feq
+     SERCA_X2' = serca_number_presynaptic*serca_x2_feq
+     SERCA_Y1' = serca_number_presynaptic*serca_y1_feq
+     SERCA_Y1A' = serca_number_presynaptic*serca_y1a_feq
+     SERCA_Y2' = serca_number_presynaptic*serca_y2_feq
+   }
+ }
+/*
+ tripartite_synapse.postsynaptic[postsynaptic_membrane]
+ {
+   MOLECULE_DENSITY
+   {
+     NMDA_H.CU' = NMDA_H_density_postsynaptic
+   }
+ }
+*/
+}
+
+/* set up IP3Rs as 3 clusters of 50 receptors each, placed on ER regions: */
+/*
+INCLUDE_FILE = "tripartite_synapse.ip3r_clusters_3.mdl"
+*/
+
+
+/* 0 nm distance from trigger */
+/*
+  presynaptic_az_y=0
+*/
+
+/* 20 nm distance from trigger */
+  presynaptic_az_y=0.020
+
+/* 50 nm distance from trigger */
+/*
+  presynaptic_az_y=0.05
+*/
+
+/* 100 nm distance from trigger */
+/*
+  presynaptic_az_y=0.10
+*/
+
+presynaptic_az_z=0
+presynaptic_active_zone RELEASE_SITE {
+  SHAPE = LIST
+  MOLECULE_POSITIONS
+  {
+    az_sudhof' [-0.025,0,0]
+/*
+    VDCC_PQ_C0' [-0.025,presynaptic_az_y,presynaptic_az_z]
+*/
+  }
+  SITE_DIAMETER = 0.02
+}
+
+/* FIXME:
+astrocyte_active_zone RELEASE_SITE {
+  SHAPE = LIST
+  MOLECULE_POSITIONS
+  {
+    RelTrig_00000000' [0.65,0.25,0.55]
+    RelTrig_astro_0' [0.65,0.25,0.55]
+
+    RelTrig_00000000' [0.65,0.55,0.25]
+    RelTrig_astro_0' [0.65,0.55,0.25]
+
+    RelTrig_00000000' [0.65,0.55,0.85]
+    RelTrig_astro_0' [0.65,0.55,0.85]
+
+    RelTrig_00000000' [0.65,0.85,0.55]
+    RelTrig_astro_0' [0.65,0.85,0.55]
+  }
+  SITE_DIAMETER = 0.02*SQRT(15000)
+}
+*/
+
+/*
+presynaptic_release RELEASE_SITE {
+  SHAPE = SPHERICAL
+  LOCATION = [0,0,1e-3]
+  MOLECULE = Glu
+  SITE_DIAMETER = 0
+  NUMBER_TO_RELEASE = n_Glu_neuron
+  RELEASE_PATTERN = trigger_presynaptic
+}
+*/
+
+synchronous_release_sites OBJECT {
+  synchronous_release_site_0 RELEASE_SITE {
+    SHAPE = SPHERICAL
+    LOCATION = [0,0,1e-3]
+    MOLECULE = Glu
+    SITE_DIAMETER = 0
+    NUMBER_TO_RELEASE = n_Glu_neuron
+    RELEASE_PATTERN = synchronous_release_0
+  }
+  synchronous_release_site_1 RELEASE_SITE {
+    SHAPE = SPHERICAL
+    LOCATION = [0,0,1e-3]
+    MOLECULE = Glu
+    SITE_DIAMETER = 0
+    NUMBER_TO_RELEASE = n_Glu_neuron
+    RELEASE_PATTERN = synchronous_release_1
+  }
+  synchronous_release_site_2 RELEASE_SITE {
+    SHAPE = SPHERICAL
+    LOCATION = [0,0,1e-3]
+    MOLECULE = Glu
+    SITE_DIAMETER = 0
+    NUMBER_TO_RELEASE = n_Glu_neuron
+    RELEASE_PATTERN = synchronous_release_2
+  }
+}
+
+asynchronous_release_sites OBJECT {
+  asynchronous_release_site_0 RELEASE_SITE {
+    SHAPE = SPHERICAL
+    LOCATION = [0,0,1e-3]
+    MOLECULE = Glu
+    SITE_DIAMETER = 0
+    NUMBER_TO_RELEASE = n_Glu_neuron
+    RELEASE_PATTERN = asynchronous_release_0
+  }
+  asynchronous_release_site_1 RELEASE_SITE {
+    SHAPE = SPHERICAL
+    LOCATION = [0,0,1e-3]
+    MOLECULE = Glu
+    SITE_DIAMETER = 0
+    NUMBER_TO_RELEASE = n_Glu_neuron
+    RELEASE_PATTERN = asynchronous_release_1
+  }
+  asynchronous_release_site_2 RELEASE_SITE {
+    SHAPE = SPHERICAL
+    LOCATION = [0,0,1e-3]
+    MOLECULE = Glu
+    SITE_DIAMETER = 0
+    NUMBER_TO_RELEASE = n_Glu_neuron
+    RELEASE_PATTERN = asynchronous_release_2
+  }
+  asynchronous_release_site_3 RELEASE_SITE {
+    SHAPE = SPHERICAL
+    LOCATION = [0,0,1e-3]
+    MOLECULE = Glu
+    SITE_DIAMETER = 0
+    NUMBER_TO_RELEASE = n_Glu_neuron
+    RELEASE_PATTERN = asynchronous_release_3
+  }
+  asynchronous_release_site_4 RELEASE_SITE {
+    SHAPE = SPHERICAL
+    LOCATION = [0,0,1e-3]
+    MOLECULE = Glu
+    SITE_DIAMETER = 0
+    NUMBER_TO_RELEASE = n_Glu_neuron
+    RELEASE_PATTERN = asynchronous_release_4
+  }
+/*
+  asynchronous_release_site_5 RELEASE_SITE {
+    SHAPE = SPHERICAL
+    LOCATION = [0,0,1e-3]
+    MOLECULE = Glu
+    SITE_DIAMETER = 0
+    NUMBER_TO_RELEASE = n_Glu_neuron
+    RELEASE_PATTERN = asynchronous_release_5
+  }
+*/
+}
+
+spontaneous_release_site RELEASE_SITE {
+  SHAPE = SPHERICAL
+  LOCATION = [0,0,1e-3]
+  MOLECULE = Glu
+  SITE_DIAMETER = 0
+  NUMBER_TO_RELEASE = n_Glu_neuron
+  RELEASE_PATTERN = spontaneous_release
+}
+
+presynaptic_forced_release RELEASE_SITE {
+  SHAPE = SPHERICAL
+  LOCATION = [-0.024,0,0]
+  MOLECULE = Glu
+  SITE_DIAMETER = 0
+  NUMBER_TO_RELEASE = n_Glu_neuron
+}
+
+
+/*
+astrocytic_release RELEASE_SITE {
+  SHAPE = SPHERICAL
+  LOCATION = [0,0,1e-3]
+  MOLECULE = Glu
+  SITE_DIAMETER = 0
+  NUMBER_TO_RELEASE = n_Glu_astrocyte
+  RELEASE_PATTERN = trigger_astrocytic
+}
+*/
+
+
+INSTANTIATE tripartite_synapse_model OBJECT {
+  tripartite_synapse OBJECT tripartite_synapse {}
+
+//  presynaptic_release OBJECT presynaptic_release {}
+  synchronous_release_sites OBJECT synchronous_release_sites {}
+  asynchronous_release_sites OBJECT asynchronous_release_sites {}
+  spontaneous_release_site OBJECT spontaneous_release_site {}
+  //astrocytic_release OBJECT astrocytic_release {}
+
+
+  //presynaptic_forced_release OBJECT presynaptic_forced_release {}
+
+
+  vdcc_release_disk OBJECT vdcc_release_disk {}
+  //ryr_release_disk OBJECT ryr_release_disk {}
+  //ip3r_release_disk OBJECT ip3r_release_disk {}
+  //ip3_conc_plane OBJECT ip3_conc_plane {}
+  presynaptic_active_zone OBJECT presynaptic_active_zone {}
+  //astrocyte_active_zone OBJECT astrocyte_active_zone {}
+
+
+/* presynaptic PMCA */
+  presynaptic_PMCA RELEASE_SITE {
+    SHAPE = (tripartite_synapse_model.tripartite_synapse.presynaptic[presynaptic_membrane])
+    MOLECULE = PMCA_0'
+    DENSITY = PMCA_density_presynaptic
+  }
+/* presynaptic mGluR */
+  presynaptic_mGluR RELEASE_SITE {
+    SHAPE = (tripartite_synapse_model.tripartite_synapse.presynaptic[presynaptic_membrane])
+    MOLECULE = mGluR'
+    DENSITY = mGluR_density_presynaptic
+  }
+/* presynaptic Gp */
+  presynaptic_Gp RELEASE_SITE {
+    SHAPE = (tripartite_synapse_model.tripartite_synapse.presynaptic[presynaptic_membrane])
+    MOLECULE = Gp'
+    DENSITY = Gp_density_presynaptic
+  }
+/* presynaptic mGluR_Gp */
+  presynaptic_mGluR_Gp RELEASE_SITE {
+    SHAPE = (tripartite_synapse_model.tripartite_synapse.presynaptic[presynaptic_membrane])
+    MOLECULE = mGluR.Gp'
+    DENSITY = mGluR_Gp_density_presynaptic
+  }
+/* presynaptic PLC */
+  presynaptic_PLC RELEASE_SITE {
+    SHAPE = (tripartite_synapse_model.tripartite_synapse.presynaptic[presynaptic_membrane])
+    MOLECULE = PLC'
+    DENSITY = PLC_density_presynaptic
+  }
+/* presynaptic PLC.Ca */
+  presynaptic_PLC_CA RELEASE_SITE {
+    SHAPE = (tripartite_synapse_model.tripartite_synapse.presynaptic[presynaptic_membrane])
+    MOLECULE = PLC.Ca'
+    DENSITY = PLC_CA_density_presynaptic
+  }
+/* presynaptic PLC.Ca.PIP2 */
+  presynaptic_PLC_CA_PIP2 RELEASE_SITE {
+    SHAPE = (tripartite_synapse_model.tripartite_synapse.presynaptic[presynaptic_membrane])
+    MOLECULE = PLC.Ca.PIP2'
+    DENSITY = PLC_CA_PIP2_density_presynaptic
+  }
+
+/* presynaptic cytoplasm Ca concentration */
+  presynaptic_calcium RELEASE_SITE {
+    SHAPE = (
+              tripartite_synapse_model.tripartite_synapse.presynaptic[ALL]
+              -tripartite_synapse_model.tripartite_synapse.presynaptic_er[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_1[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_2[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_3[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_4[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_5[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_6[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_7[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_8[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_9[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_10[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_11[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_12[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_13[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_15[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_18[ALL]
+            )
+    MOLECULE = Ca
+   CONCENTRATION = ca_conc_base_presynaptic
+  }
+/* presynaptic cytoplasm IP3 concentration */
+  presynaptic_ip3 RELEASE_SITE {
+    SHAPE = (
+              tripartite_synapse_model.tripartite_synapse.presynaptic[ALL]
+              -tripartite_synapse_model.tripartite_synapse.presynaptic_er[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_1[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_2[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_3[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_4[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_5[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_6[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_7[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_8[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_9[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_10[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_11[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_12[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_13[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_15[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_18[ALL]
+            )
+    MOLECULE = IP3
+    CONCENTRATION = ip3_conc_presynaptic
+  }
+
+/* presynaptic ER Ca concentration */
+  presynaptic_er_calcium RELEASE_SITE {
+   SHAPE = (tripartite_synapse_model.tripartite_synapse.presynaptic_er[ALL])
+   MOLECULE = Cae
+   CONCENTRATION = ca_conc_presynaptic_er
+  }
+
+/* presynaptic calbindin initial equilibrium conditions: */
+  presynaptic_calbindin_1 RELEASE_SITE {
+    SHAPE = (
+              tripartite_synapse_model.tripartite_synapse.presynaptic[ALL]
+              -tripartite_synapse_model.tripartite_synapse.presynaptic_er[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_1[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_2[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_3[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_4[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_5[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_6[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_7[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_8[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_9[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_10[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_11[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_12[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_13[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_15[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_18[ALL]
+            )
+   MOLECULE = calbindin.high0medium0
+   CONCENTRATION = calbindin_high0medium0_feq*calbindin_conc_tot
+  }
+  presynaptic_calbindin_2 RELEASE_SITE {
+    SHAPE = (
+              tripartite_synapse_model.tripartite_synapse.presynaptic[ALL]
+              -tripartite_synapse_model.tripartite_synapse.presynaptic_er[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_1[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_2[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_3[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_4[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_5[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_6[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_7[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_8[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_9[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_10[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_11[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_12[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_13[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_15[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_18[ALL]
+            )
+   MOLECULE = calbindin.high0medium1
+   CONCENTRATION = calbindin_high0medium1_feq*calbindin_conc_tot
+  }
+  presynaptic_calbindin_3 RELEASE_SITE {
+    SHAPE = (
+              tripartite_synapse_model.tripartite_synapse.presynaptic[ALL]
+              -tripartite_synapse_model.tripartite_synapse.presynaptic_er[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_1[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_2[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_3[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_4[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_5[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_6[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_7[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_8[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_9[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_10[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_11[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_12[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_13[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_15[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_18[ALL]
+            )
+   MOLECULE = calbindin.high0medium2
+   CONCENTRATION = calbindin_high0medium2_feq*calbindin_conc_tot
+  }
+  presynaptic_calbindin_4 RELEASE_SITE {
+    SHAPE = (
+              tripartite_synapse_model.tripartite_synapse.presynaptic[ALL]
+              -tripartite_synapse_model.tripartite_synapse.presynaptic_er[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_1[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_2[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_3[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_4[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_5[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_6[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_7[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_8[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_9[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_10[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_11[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_12[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_13[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_15[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_18[ALL]
+            )
+   MOLECULE = calbindin.high1medium0
+   CONCENTRATION = calbindin_high1medium0_feq*calbindin_conc_tot
+  }
+  presynaptic_calbindin_5 RELEASE_SITE {
+    SHAPE = (
+              tripartite_synapse_model.tripartite_synapse.presynaptic[ALL]
+              -tripartite_synapse_model.tripartite_synapse.presynaptic_er[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_1[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_2[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_3[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_4[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_5[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_6[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_7[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_8[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_9[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_10[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_11[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_12[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_13[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_15[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_18[ALL]
+            )
+   MOLECULE = calbindin.high1medium1
+   CONCENTRATION = calbindin_high1medium1_feq*calbindin_conc_tot
+  }
+  presynaptic_calbindin_6 RELEASE_SITE {
+    SHAPE = (
+              tripartite_synapse_model.tripartite_synapse.presynaptic[ALL]
+              -tripartite_synapse_model.tripartite_synapse.presynaptic_er[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_1[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_2[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_3[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_4[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_5[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_6[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_7[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_8[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_9[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_10[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_11[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_12[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_13[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_15[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_18[ALL]
+            )
+   MOLECULE = calbindin.high1medium2
+   CONCENTRATION = calbindin_high1medium2_feq*calbindin_conc_tot
+  }
+  presynaptic_calbindin_7 RELEASE_SITE {
+    SHAPE = (
+              tripartite_synapse_model.tripartite_synapse.presynaptic[ALL]
+              -tripartite_synapse_model.tripartite_synapse.presynaptic_er[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_1[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_2[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_3[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_4[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_5[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_6[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_7[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_8[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_9[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_10[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_11[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_12[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_13[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_15[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_18[ALL]
+            )
+   MOLECULE = calbindin.high2medium0
+   CONCENTRATION = calbindin_high2medium0_feq*calbindin_conc_tot
+  }
+  presynaptic_calbindin_8 RELEASE_SITE {
+    SHAPE = (
+              tripartite_synapse_model.tripartite_synapse.presynaptic[ALL]
+              -tripartite_synapse_model.tripartite_synapse.presynaptic_er[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_1[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_2[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_3[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_4[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_5[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_6[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_7[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_8[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_9[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_10[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_11[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_12[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_13[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_15[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_18[ALL]
+            )
+   MOLECULE = calbindin.high2medium1
+   CONCENTRATION = calbindin_high2medium1_feq*calbindin_conc_tot
+  }
+  presynaptic_calbindin_9 RELEASE_SITE {
+    SHAPE = (
+              tripartite_synapse_model.tripartite_synapse.presynaptic[ALL]
+              -tripartite_synapse_model.tripartite_synapse.presynaptic_er[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_1[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_2[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_3[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_4[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_5[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_6[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_7[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_8[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_9[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_10[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_11[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_12[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_13[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_15[ALL]
+              -tripartite_synapse_model.tripartite_synapse.vesicle_18[ALL]
+            )
+   MOLECULE = calbindin.high2medium2
+   CONCENTRATION = calbindin_high2medium2_feq*calbindin_conc_tot
+  }
+
+/* glia calbindin initial equilibrium conditions: */
+/*
+  glia_calbindin_1 RELEASE_SITE {
+   SHAPE = (tripartite_synapse_model.tripartite_synapse.glia[ALL]
+     - tripartite_synapse_model.tripartite_synapse.glia_er[ALL])
+   MOLECULE = calbindin.high0medium0
+   CONCENTRATION = calbindin_high0medium0_feq*calbindin_conc_tot
+  }
+  glia_calbindin_2 RELEASE_SITE {
+   SHAPE = (tripartite_synapse_model.tripartite_synapse.glia[ALL]
+     - tripartite_synapse_model.tripartite_synapse.glia_er[ALL])
+   MOLECULE = calbindin.high0medium1
+   CONCENTRATION = calbindin_high0medium1_feq*calbindin_conc_tot
+  }
+  glia_calbindin_3 RELEASE_SITE {
+   SHAPE = (tripartite_synapse_model.tripartite_synapse.glia[ALL]
+     - tripartite_synapse_model.tripartite_synapse.glia_er[ALL])
+   MOLECULE = calbindin.high0medium2
+   CONCENTRATION = calbindin_high0medium2_feq*calbindin_conc_tot
+  }
+  glia_calbindin_4 RELEASE_SITE {
+   SHAPE = (tripartite_synapse_model.tripartite_synapse.glia[ALL]
+     - tripartite_synapse_model.tripartite_synapse.glia_er[ALL])
+   MOLECULE = calbindin.high1medium0
+   CONCENTRATION = calbindin_high1medium0_feq*calbindin_conc_tot
+  }
+  glia_calbindin_5 RELEASE_SITE {
+   SHAPE = (tripartite_synapse_model.tripartite_synapse.glia[ALL]
+     - tripartite_synapse_model.tripartite_synapse.glia_er[ALL])
+   MOLECULE = calbindin.high1medium1
+   CONCENTRATION = calbindin_high1medium1_feq*calbindin_conc_tot
+  }
+  glia_calbindin_6 RELEASE_SITE {
+   SHAPE = (tripartite_synapse_model.tripartite_synapse.glia[ALL]
+     - tripartite_synapse_model.tripartite_synapse.glia_er[ALL])
+   MOLECULE = calbindin.high1medium2
+   CONCENTRATION = calbindin_high1medium2_feq*calbindin_conc_tot
+  }
+  glia_calbindin_7 RELEASE_SITE {
+   SHAPE = (tripartite_synapse_model.tripartite_synapse.glia[ALL]
+     - tripartite_synapse_model.tripartite_synapse.glia_er[ALL])
+   MOLECULE = calbindin.high2medium0
+   CONCENTRATION = calbindin_high2medium0_feq*calbindin_conc_tot
+  }
+  glia_calbindin_8 RELEASE_SITE {
+   SHAPE = (tripartite_synapse_model.tripartite_synapse.glia[ALL]
+     - tripartite_synapse_model.tripartite_synapse.glia_er[ALL])
+   MOLECULE = calbindin.high2medium1
+   CONCENTRATION = calbindin_high2medium1_feq*calbindin_conc_tot
+  }
+  glia_calbindin_9 RELEASE_SITE {
+   SHAPE = (tripartite_synapse_model.tripartite_synapse.glia[ALL]
+     - tripartite_synapse_model.tripartite_synapse.glia_er[ALL])
+   MOLECULE = calbindin.high2medium2
+   CONCENTRATION = calbindin_high2medium2_feq*calbindin_conc_tot
+  }
+*/
+
+  glia_GluT_0 RELEASE_SITE {
+   SHAPE = tripartite_synapse_model.tripartite_synapse.glia[ALL]
+   MOLECULE = GluT_0'
+   DENSITY = GluT_density_astrocyte
+  }
+  
+  glia_PMCA_0 RELEASE_SITE {
+   SHAPE = tripartite_synapse_model.tripartite_synapse.glia[ALL]
+   MOLECULE = PMCA_0'
+   DENSITY = PMCA_density_astrocyte
+  }
+  
+  glia_mGluR RELEASE_SITE {
+   SHAPE = tripartite_synapse_model.tripartite_synapse.glia[ALL]
+   MOLECULE = mGluR'
+   DENSITY = mGluR_density_astrocyte
+  }
+  glia_Gp RELEASE_SITE {
+   SHAPE = tripartite_synapse_model.tripartite_synapse.glia[ALL]
+   MOLECULE = Gp'
+   DENSITY = Gp_density_astrocyte
+  }
+  
+  glia_PLC RELEASE_SITE {
+   SHAPE = tripartite_synapse_model.tripartite_synapse.glia[ALL]
+   MOLECULE = PLC'
+   DENSITY = PLC_density_astrocyte
+  }
+
+}
+
+//INCLUDE_FILE = "rxn_output.mdl"
+//INCLUDE_FILE = "viz_output.mdl"
+

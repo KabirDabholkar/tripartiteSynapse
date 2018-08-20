@@ -1,0 +1,16 @@
+// Reaction Output
+REACTION_DATA_OUTPUT {
+
+	OUTPUT_BUFFER_SIZE = 1000
+	STEP = 10*dt
+	SHOW_EXACT_TIME = OFF
+	HEADER = "#"
+	
+/*	Ca */
+	{	COUNT[Ca, tripartite_synapse_model.tripartite_synapse.presynaptic[active_zone_plane], ESTIMATE_CONCENTRATION]*EXPRESSION[2.0] : "Ca.Conc.az",
+		COUNT[Ca, tripartite_synapse_model.tripartite_synapse.presynaptic] : "Ca.Pre",
+	//	COUNT[Ca, tripartite_synapse_model.tripartite_synapse.postsynaptic] : "Ca.Post",
+		COUNT[Cae, tripartite_synapse_model.tripartite_synapse.presynaptic_er] : "Ca.ER"
+	}	=> output_folder &"/dat/ca.dat"
+}
+
