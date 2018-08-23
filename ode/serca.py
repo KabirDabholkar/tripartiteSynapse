@@ -5,7 +5,7 @@ import numpy as np
 
 cai = 100.0e-9
 cae = 1.0e-6
-
+print 'abracadbra'
 # Reaction Rates
 kx1_x1a=2*1.0e8
 kx1a_x2=1.0e8
@@ -76,7 +76,7 @@ K4 = kx1_y1/ky1_x1
 #print(K1**2*K2*K3**2*K4)
 cae_ss = cai/(K1*K3*sqrt(K2*K4))
 print("cae_ss = %g" %(cae_ss))
-
+print 'aaa'
 '''
 for i in range(6):
 	plot(t,sol[:,i])

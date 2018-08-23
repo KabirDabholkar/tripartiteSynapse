@@ -3,31 +3,30 @@ from matplotlib.pyplot import *
 import numpy as np
 
 cai = 100.0e-9
-cae = 1000.0e-6
+cae = 750.0e-6
 nserca = 8678.0
 
 # Reaction Rates
-kx0_x1=2*1.0e8
-kx1_x2=1.0e8
-kx1_x0=83.666
-kx2_x1=2*83.666
+kx1_x1a=2*1.0e8
+kx1a_x2=1.0e8
+kx1a_x1=83.666
+kx2_x1a=2*83.666
 kx2_y2=0.6
 ky2_x2=0.097
-ky2_y1=2*30.015
-ky1_y0=30.015
-ky1_y2=1.0e5
-ky0_y1=2*1.0e5
-ky0_x0=0.4
-kx0_y0=1.20e-3
+ky2_y1a=2*30.015
+ky1a_y1=30.015
+ky1a_y2=1.0e5
+ky1_y1a=2*1.0e5
+ky1_x1=0.4
+kx1_y1=1.20e-3
 
-f=1
-
+f = 1
 #modification in reaction rates
 kx2_y2=0.6
 ky2_x2=4.118
 
-ky0_x0=f*0.4
-kx0_y0=f*1.20e-3
+ky1_x1=f*0.4
+kx1_y1=f*1.20e-3
 
 # Volume Normalisations
 vol_er = (3.9*0.1*0.1) # all units in um
@@ -43,19 +42,19 @@ ncae = cae*vol_er*6.022*1e8
 
 # SERCA ODE model
 def serca_ode(v ,t):
-	fx0, fx1, fx2,	fy0, fy1, fy2, ncae = v 
+	fx1, fx1a, fx2,	fy1, fy1a, fy2, ncae = v 
 	
-	dx0 = fx0*(-kx0_x1*ncai-kx0_y0)+fx1*kx1_x0+fy0*ky0_x0
-	dx1 = fx1*(-kx1_x2*ncai-kx1_x0)+fx0*ncai*kx0_x1+fx2*kx2_x1
-	dx2 = fx2*(-kx2_y2-kx2_x1)+fx1*ncai*kx1_x2+fy2*ky2_x2
+	dx1 = fx1*(-kx1_x1a*ncai-kx1_y1)+fx1a*kx1a_x1+fy1*ky1_x1
+	dx1a = fx1a*(-kx1a_x2*ncai-kx1a_x1)+fx1*ncai*kx1_x1a+fx2*kx2_x1a
+	dx2 = fx2*(-kx2_y2-kx2_x1a)+fx1a*ncai*kx1a_x2+fy2*ky2_x2
 
-	dy0 = fy0*(-ky0_y1*ncae-ky0_x0)+fy1*ky1_y0+fx0*kx0_y0
-	dy1 = fy1*(-ky1_y2*ncae-ky1_y0)+fy0*ncae*ky0_y1+fy2*ky2_y1
-	dy2 = fy2*(-ky2_x2-ky2_y1)+fy1*ncae*ky1_y2+fx2*kx2_y2
+	dy1 = fy1*(-ky1_y1a*ncae-ky1_x1)+fy1a*ky1a_y1+fx1*kx1_y1
+	dy1a = fy1a*(-ky1a_y2*ncae-ky1a_y1)+fy1*ncae*ky1_y1a+fy2*ky2_y1a
+	dy2 = fy2*(-ky2_x2-ky2_y1a)+fy1a*ncae*ky1a_y2+fx2*kx2_y2
 	
-	dcae = -ncae*(fy1*ky1_y2 + fy0*ky0_y1) + (fy1*ky1_y0 + fy2*ky2_y1)
+	dcae = -ncae*(fy1a*ky1a_y2 + fy1*ky1_y1a) + (fy1a*ky1a_y1 + fy2*ky2_y1a)
 
-	return [dx0, dx1, dx2, dy0, dy1, dy2, dcae]
+	return [dx1, dx1a, dx2, dy1, dy1a, dy2, dcae]
 	
 # Initial Conditions
 v0 = [0.75554529, 0.18054556, 0.010757505, 0.015718635, 0.026363904, 0.011069105]
@@ -69,7 +68,7 @@ t = np.linspace(0, tf, tf/tstep+1)
 # Solve ODE
 sol = odeint(serca_ode, v0, t)
 
-label = ['x0', 'x1', 'x2', 'y0', 'y1', 'y2', 'ncae']
+label = ['x1', 'x1a', 'x2', 'y1', 'y1a', 'y2', 'ncae']
 for i in range(6):
 	plot(t,sol[:,i], label=label[i])
 #show()
