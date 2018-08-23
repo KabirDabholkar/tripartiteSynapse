@@ -58,12 +58,12 @@ def serca_ode(v ,t):
 	return [dx0, dx1, dx2, dy0, dy1, dy2, dcae]
 	
 # Initial Conditions
-v0 = [0.75554529, 0.18054556, 0.010757505, 0.015718635, 0.026363904, 0.011069105]
+v0 = [1.0/6.0,1.0/6.0,1.0/6.0,1.0/6.0,1.0/6.0,1.0/6.0]
 v0 = [i*nserca for i in v0]
 v0.append(ncae)
 
-tstep = 10e-5
-tf = 1
+tstep = 10e-9
+tf = 1e-6
 t = np.linspace(0, tf, tf/tstep+1)
 
 # Solve ODE
