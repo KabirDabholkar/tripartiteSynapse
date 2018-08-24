@@ -65,6 +65,14 @@ v0[6]=cae
 print v0
 tstep = 10e-5
 tf = 1
+=======
+v0 = [1.0/6.0,1.0/6.0,1.0/6.0,1.0/6.0,1.0/6.0,1.0/6.0]
+v0 = [i*nserca for i in v0]
+v0.append(ncae)
+
+tstep = 10e-9
+tf = 1e-6
+>>>>>>> b85051865927441d22e8c5eec85eeaa916b78677
 t = np.linspace(0, tf, tf/tstep+1)
 
 # Solve ODE
