@@ -58,9 +58,9 @@ def serca_ode(v ,t):
 
 print serca_ode([4,5,3,6,4,3,2],5)
 # Initial Conditions
-v0 = [0.75554529, 0.18054556, 0.010757505, 0.015718635, 0.026363904, 0.011069105]
-v0 = [i*nserca for i in v0]
-v0.append(ncae)
+v0 = np.array([0.75554529, 0.18054556, 0.010757505, 0.015718635, 0.026363904, 0.011069105,1])
+v0 = v0*nserca/(vol_er/1e18)/N_avo
+v0[6]=cae
 
 tstep = 10e-5
 tf = 1
