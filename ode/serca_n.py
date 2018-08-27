@@ -57,12 +57,12 @@ def serca_ode(v ,t):
 	dcae = -ca_e*(y1*ky1_y2 + y0*ky0_y1) + (y1*ky1_y0 + y2*ky2_y1)
 
 	return [dx0, dx1, dx2, dy0, dy1, dy2, dcae]
-
+#just comparing if the serca_ode() function in serca_n1.py serca_n.py are the same. I changed only variable names.
 print serca_ode([4,5,3,6,4,3,2],5)
 # Initial Conditions
 v0 = np.array([0.75554529, 0.18054556, 0.010757505, 0.015718635, 0.026363904, 0.011069105,1])
 v0 = v0*nserca/(vol_er/1e18)/N_avo
-v0[6]=ca_e
+v0[6]=cae
 
 tstep = 10e-5
 tf = 1
