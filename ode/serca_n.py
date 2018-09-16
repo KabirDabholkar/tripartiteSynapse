@@ -21,6 +21,7 @@ ky0_y1=2*1.0e5
 ky0_x0=0.4
 kx0_y0=1.20e-3
 
+'''
 f=1
 
 #modification in reaction rates
@@ -29,6 +30,7 @@ ky2_x2=4.118
 
 ky0_x0=f*0.4
 kx0_y0=f*1.20e-3
+'''
 
 # Volume Normalisations
 vol_er = (3.9*0.1*0.1) # all units in um
@@ -62,27 +64,27 @@ def serca_ode(v ,t):
 
 
 #just comparing if the serca_ode() function in serca_n1.py serca_n.py are the same. I changed only variable names.
-print serca_ode([4,5,3,6,4,3,2],5)
+#serca_ode([4,5,3,6,4,3,2],5)
 # Initial Conditions
 v0 = np.array([0.75554529, 0.18054556, 0.010757505, 0.015718635, 0.026363904, 0.011069105,1])
 v0 = v0*nserca/(vol_er/1e18)/N_avo
 v0[6]=cae
 
-tstep = 10e-5
-tf = 1
-
+tstep = 10e-9
+tf = 10-6
+'''
 v0 = [1.0/6.0,1.0/6.0,1.0/6.0,1.0/6.0,1.0/6.0,1.0/6.0]
 v0 = [i*nserca for i in v0]
 v0.append(ncae)
 
-tstep = 10e-9
-tf = 1e-6
-
+#tstep = 1e-6
+#tf = 1e-3
+'''
 t = np.linspace(0, tf, tf/tstep+1)
 
 # Solve ODE
 sol = odeint(serca_ode, v0, t)
-
+print sol[-1,6]
 label = ['x0', 'x1', 'x2', 'y0', 'y1', 'y2', 'cae']
 a_ca=subplot(3,1,3)
 a_ca.plot(t,sol[:,6], label=label[6])

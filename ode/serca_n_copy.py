@@ -3,7 +3,7 @@ from matplotlib.pyplot import *
 import numpy as np
 
 cai = 100.0e-9
-cae = 750.0e-6
+cae = 1e-6
 nserca = 8678.0
 
 # Reaction Rates
@@ -37,8 +37,8 @@ ctot = ntot/vol_tot
 fvol_cyt = vol_cyt/vol_tot
 fvol_er = vol_er/vol_tot
 
-ncai = cai*vol_cyt*6.022*1e8
-ncae = cae*vol_er*6.022*1e8
+ncai = cai#*vol_cyt*6.022*1e8
+ncae = cae#*vol_er*6.022*1e8
 
 # SERCA ODE model
 def serca_ode(v ,t):
@@ -57,12 +57,13 @@ def serca_ode(v ,t):
 	return [dx1, dx1a, dx2, dy1, dy1a, dy2, dcae]
 	
 # Initial Conditions
-v0 = [0.75554529, 0.18054556, 0.010757505, 0.015718635, 0.026363904, 0.011069105]
-v0 = [i*nserca for i in v0]
+v0 = [1,0,0,0,0,0]
+#v0 = [i*nserca for i in v0]
 v0.append(ncae)
 
-tstep = 10e-5
-tf = 1
+tstep = 10e-4
+tf = 100
+
 t = np.linspace(0, tf, tf/tstep+1)
 
 # Solve ODE
@@ -73,6 +74,8 @@ for i in range(6):
 	plot(t,sol[:,i], label=label[i])
 #show()
 #close()
-plot(t,sol[:,6]/23.45, label='Cae')
+print sol[:,6]#/23.5
+plot(t,sol[:,6], label='Cae')#/23.45
 legend()
 show()
+

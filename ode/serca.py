@@ -5,7 +5,7 @@ import numpy as np
 
 cai = 100.0e-9
 cae = 1.0e-6
-print 'abracadbra'
+
 # Reaction Rates
 kx1_x1a=2*1.0e8
 kx1a_x2=1.0e8
@@ -24,6 +24,7 @@ f = 1
 #modification in reaction rates
 kx2_y2=0.6
 ky2_x2=4.118
+
 
 ky1_x1=f*0.4
 kx1_y1=f*1.20e-3
@@ -57,7 +58,7 @@ def serca_ode(v ,t):
 # Initial Conditions
 #v0 = [0.75554529, 0.18054556, 0.010757505, 0.015718635, 0.026363904, 0.011069105, cae]
 #v0 = [0.79150804, 0.18920662, 0.011307258, 0.0023747239, 0.0039558979, 0.0016474684, cae]
-v0 = [0.4, 0.1, 0.0, 0.4, 0.1, 0.0, cae]
+v0 = [1, 0, 0.0, 0, 0, 0.0, cae]
 
 tstep = 1e-4
 tf = 50
@@ -76,12 +77,12 @@ K4 = kx1_y1/ky1_x1
 #print(K1**2*K2*K3**2*K4)
 cae_ss = cai/(K1*K3*sqrt(K2*K4))
 print("cae_ss = %g" %(cae_ss))
-print 'aaa'
+
 '''
 for i in range(6):
 	plot(t,sol[:,i])
 show()
-close()
+#close()
 '''
 grid(True)
 plot(t,sol[:,6])

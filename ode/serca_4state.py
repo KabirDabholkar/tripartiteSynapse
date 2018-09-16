@@ -33,7 +33,7 @@ def func_tbs(params, value):
 
 #print func_tbs([5,10],value)
 
-sol=optimize.root(func_tbs,initials,args=(eq_value,),method='hybr',jac=False,tol=1e-3)
+#sol=optimize.root(func_tbs,initials,args=(eq_value,),method='hybr',jac=False,tol=1e-3)
 #plot(odeint(ode,t0_cond,t,args=tuple(sol['x'])))
 #plot(odeint(ode,t0_cond,t,args=tuple([1,1,1,1,1,1,1,1])))
 #show()
