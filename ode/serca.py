@@ -8,7 +8,7 @@ cae = 1.0e-6
 
 # Reaction Rates
 kx1_x1a=2*1.0e8
-kx1a_x2=1.0e8
+kx1a_x2=2.0e8
 kx1a_x1=83.666
 kx2_x1a=2*83.666
 kx2_y2=0.6
@@ -60,13 +60,13 @@ def serca_ode(v ,t):
 #v0 = [0.79150804, 0.18920662, 0.011307258, 0.0023747239, 0.0039558979, 0.0016474684, cae]
 v0 = [1, 0, 0.0, 0, 0, 0.0, cae]
 
-tstep = 1e-4
-tf = 50
+tstep = 1e-2
+tf = 100
 t = np.linspace(0, tf, tf/tstep+1)
 
 # Solve ODE
 sol = odeint(serca_ode, v0, t)
-
+'''
 # calculate cae_ss, steady-state ER calcium at zero flux through pump
 # from Higgins et al., 2006 p.155
 K1 = sqrt((kx2_x1a*kx1a_x1)/(kx1_x1a*kx1a_x2))
@@ -82,8 +82,13 @@ print("cae_ss = %g" %(cae_ss))
 for i in range(6):
 	plot(t,sol[:,i])
 show()
+<<<<<<< HEAD
 #close()
 '''
+=======
+close()
+
+>>>>>>> a0fa3171283afb8fc60d69b413e6f6ed779875de
 grid(True)
 plot(t,sol[:,6])
 show()
