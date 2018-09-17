@@ -66,11 +66,11 @@ tf = 100
 t = np.arange(0, tf, tstep)
 
 # Solve ODE
-'''
+
 f_range = np.arange(1,13,0.1)
 eq_cae=[]
 for f in f_range:
-	k['kx1_x1a']=f*k_orig['kx1_x1a']
+	k['kx2_y2']=f*k_orig['kx2_y2']
 	sol = odeint(serca_ode, v0, t)
 	print f,sol[-1,-1]
 	print k
@@ -80,17 +80,18 @@ grid(True)
 plot(f_range,eq_cae)
 show()	
 	
+
+#main stuff 
 '''
-
-
 def func_tbs(f,eq_value):
 	print f[0]
-	k['kx1_x1a']=f[0]*k_orig['kx1_x1a']
+	k['kx2_y2']=f[0]*k_orig['kx2_y2']
 	sol = odeint(serca_ode, v0, t)
 	return sol[-1,-1]-eq_value
 
 SOL=fsolve(func_tbs,3.0,args=(5.0e-4,))
-	
+
+'''
 '''	
 k['kx1a_x2']=3.0*k_orig['kx1a_x2']
 sol = odeint(serca_ode, v0, t)

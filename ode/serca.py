@@ -6,9 +6,11 @@ import numpy as np
 cai = 100.0e-9
 cae = 1.0e-6
 
+f=3.0**(2.0/3.0)
+
 # Reaction Rates
-kx1_x1a=2*1.0e8
-kx1a_x2=2.0e8
+kx1_x1a=2*1.0e8*f
+kx1a_x2=1.0e8*f
 kx1a_x1=83.666
 kx2_x1a=2*83.666
 kx2_y2=0.6
@@ -22,12 +24,11 @@ kx1_y1=1.20e-3
 
 f = 1
 #modification in reaction rates
-kx2_y2=0.6
+kx2_y2=0.6*f
 ky2_x2=4.118
 
 
-ky1_x1=f*0.4
-kx1_y1=f*1.20e-3
+
 
 # Volume Normalisations
 vol_er = (3.9*0.1*0.1)
@@ -82,13 +83,9 @@ print("cae_ss = %g" %(cae_ss))
 for i in range(6):
 	plot(t,sol[:,i])
 show()
-<<<<<<< HEAD
-#close()
-'''
-=======
-close()
 
->>>>>>> a0fa3171283afb8fc60d69b413e6f6ed779875de
+#close()
+
 grid(True)
 plot(t,sol[:,6])
 show()
