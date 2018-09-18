@@ -196,6 +196,13 @@ B = matrix([[0.0],
 det = linalg.det(A)
 X = linalg.solve(A,B)
 
+
+#### modified #####
+fx1, fx1a, fx2, fy1, fy1a, fy2 = X
+print "d[Cae]/dt = ",-cae_ss*(fy1a*ky1a_y2 + fy1*ky1_y1a) + (fy1a*ky1a_y1 + fy2*ky2_y1a),'\n'
+#### end modify ########
+
+
 print("Det(A):")
 print(det)
 print("X:")

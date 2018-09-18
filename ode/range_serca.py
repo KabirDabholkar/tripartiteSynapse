@@ -4,6 +4,7 @@ from matplotlib.pyplot import *
 from math import *
 import numpy as np
 
+
 cai = 100.0e-9
 cae = 1.0e-6
 
@@ -20,14 +21,8 @@ k_orig={
 	'ky1a_y2' : 1.0e5,
 	'ky1_y1a' : 2*1.0e5,
 	'ky1_x1' : 0.4,
-	'kx1_y1' : 1.20e-3,
-	'kca' : 18.0 #update
+	'kx1_y1' : 1.20e-3
 }
-
-#########for 750
-for par in ['kx1_x1a','kx1a_x2','kx2_y2']:
-	k_orig[par]=k_orig[par]*3.0**(2.0/3.0) #multiplier
-
 k=k_orig.copy()
 
 #modification in reaction rates
@@ -48,15 +43,7 @@ def serca_ode(v,t):
 	fx1, fx1a, fx2,	fy1, fy1a, fy2, cae = v 
 	for key in k.keys():
 		exec(key + " = "+str(k[key]))
-	'''
-	dx1 = fx1*(-kx1_x1a*cai-kx1_y1)+fx1a*kx1a_x1+fy1*ky1_x1
-	dx1a = fx1a*(-kx1a_x2*cai-kx1a_x1)+fx1*cai*kx1_x1a+fx2*kx2_x1a
-	dx2 = fx2*(-kx2_y2-kx2_x1a)+fx1a*cai*kx1a_x2+fy2*ky2_x2
-
-	dy1 = fy1*(-ky1_y1a*cae-ky1_x1)+fy1a*ky1a_y1+fx1*kx1_y1
-	dy1a = fy1a*(-ky1a_y2*cae-ky1a_y1)+fy1*cae*ky1_y1a+fy2*ky2_y1a
-	dy2 = fy2*(-ky2_x2-ky2_y1a)+fy1a*cae*ky1a_y2+fx2*kx2_y2
-	'''
+	
 	dx1 = fx1*(-kx1_x1a*cai-kx1_y1)+fx1a*kx1a_x1+fy1*ky1_x1
 	dx1a = fx1a*(-kx1a_x2*cai-kx1a_x1)+fx1*cai*kx1_x1a+fx2*kx2_x1a
 	dx2 = fx2*(-kx2_y2-kx2_x1a)+fx1a*cai*kx1a_x2+fy2*ky2_x2
@@ -65,7 +52,7 @@ def serca_ode(v,t):
 	dy1a = fy1a*(-ky1a_y2*cae-ky1a_y1)+fy1*cae*ky1_y1a+fy2*ky2_y1a
 	dy2 = fy2*(-ky2_x2-ky2_y1a)+fy1a*cae*ky1a_y2+fx2*kx2_y2
 	
-	dcae = -cae*(fy1a*ky1a_y2 + fy1*ky1_y1a) + (fy1a*ky1a_y1 + fy2*ky2_y1a) + kca*(cai - cae)
+	dcae = -cae*(fy1a*ky1a_y2 + fy1*ky1_y1a) + (fy1a*ky1a_y1 + fy2*ky2_y1a)
 	#print dcae
 
 	return [dx1, dx1a, dx2, dy1, dy1a, dy2, dcae]
@@ -81,31 +68,36 @@ t = np.arange(0, tf, tstep)
 
 # Solve ODE
 
-f_range = np.arange(0,50,5)
-eq_cae=[]
-for f in f_range:
-	k['kca']=f#*k_orig['kca']
-	sol = odeint(serca_ode, v0, t)
-	print f,sol[-1,-1]
-	print k
-	eq_cae.append(sol[-1,-1])
+f_range = np.arange(1,13,0.1)
 
-grid(True)
-plot(f_range,eq_cae)
-show()	
-'''	
+for par in k.keys():
+	eq_cae=[]
+	for f in f_range:
+		k[par]=f*k_orig[par]
+		sol = odeint(serca_ode, v0, t)
+		print f,sol[-1,-1]
+		#print k
+		eq_cae.append(sol[-1,-1])
+	print np.shape(eq_cae), np.shape(f_range)
+	grid(True)
+	plot(f_range,eq_cae)
+	title(par)
+	savefig("./plots/"+par+".png")
+	close()
+
+	
 
 #main stuff 
-
+'''
 def func_tbs(f,eq_value):
 	print f[0]
-	k['kca']=f[0]#*k_orig['kca']
+	k['kx2_y2']=f[0]*k_orig['kx2_y2']
 	sol = odeint(serca_ode, v0, t)
 	return sol[-1,-1]-eq_value
 
-SOL=fsolve(func_tbs,1,args=(250.0e-6,))
-#'''
+SOL=fsolve(func_tbs,3.0,args=(5.0e-4,))
 
+'''
 '''	
 k['kx1a_x2']=3.0*k_orig['kx1a_x2']
 sol = odeint(serca_ode, v0, t)

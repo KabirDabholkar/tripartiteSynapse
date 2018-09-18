@@ -6,14 +6,14 @@ import numpy as np
 cai = 100.0e-9
 cae = 1.0e-6
 
-f=3.0**(2.0/3.0)
+f=3.0**(2.0/3.0) #multiplier 
 
 # Reaction Rates
 kx1_x1a=2*1.0e8*f
 kx1a_x2=1.0e8*f
 kx1a_x1=83.666
 kx2_x1a=2*83.666
-kx2_y2=0.6
+kx2_y2=0.6*f
 ky2_x2=0.097
 ky2_y1a=2*30.015
 ky1a_y1=30.015
@@ -22,11 +22,11 @@ ky1_y1a=2*1.0e5
 ky1_x1=0.4
 kx1_y1=1.20e-3
 
-f = 1
-#modification in reaction rates
-kx2_y2=0.6*f
-ky2_x2=4.118
 
+#modification in reaction rates
+
+ky2_x2=4.118
+kca = 40.45
 
 
 
@@ -51,7 +51,7 @@ def serca_ode(v ,t):
 	dy1a = fy1a*(-ky1a_y2*cae-ky1a_y1)+fy1*cae*ky1_y1a+fy2*ky2_y1a
 	dy2 = fy2*(-ky2_x2-ky2_y1a)+fy1a*cae*ky1a_y2+fx2*kx2_y2
 	
-	dcae = -cae*(fy1a*ky1a_y2 + fy1*ky1_y1a) + (fy1a*ky1a_y1 + fy2*ky2_y1a)
+	dcae = -cae*(fy1a*ky1a_y2 + fy1*ky1_y1a) + (fy1a*ky1a_y1 + fy2*ky2_y1a) + kca*(cai - cae)
 	#print dcae
 
 	return [dx1, dx1a, dx2, dy1, dy1a, dy2, dcae]
@@ -80,9 +80,9 @@ cae_ss = cai/(K1*K3*sqrt(K2*K4))
 print("cae_ss = %g" %(cae_ss))
 
 '''
-for i in range(6):
-	plot(t,sol[:,i])
-show()
+#for i in range(6):
+	#plot(t,sol[:,i])
+#show()
 
 #close()
 
