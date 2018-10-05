@@ -177,7 +177,7 @@ DEFINE_REACTIONS {
 
 
 /* Ca leak from ER to cytoplasm */
-   ER_leak' -> ER_leak' + Ca, [k_ER_leak]
+   Cae' + ER_leak' -> ER_leak' + Ca, [k_ER_leak] : ER_leak_Ca_flux
 
 
 /* PMCA pump with built-in leak */
@@ -563,6 +563,13 @@ INSTANTIATE tripartite_synapse_model OBJECT {
     SHAPE = (tripartite_synapse_model.tripartite_synapse.presynaptic[presynaptic_membrane])
     MOLECULE = PMCA_0'
     DENSITY = PMCA_density_presynaptic
+  }
+
+/* ER Leak */
+  presynaptic_ER_leak RELEASE_SITE {
+    SHAPE = (tripartite_synapse_model.tripartite_synapse.presynaptic_er[ALL])
+    MOLECULE = ER_leak'
+    DENSITY = ER_leak_density_presynaptic
   }
 
 /* presynaptic cytoplasm Ca concentration */

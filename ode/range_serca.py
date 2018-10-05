@@ -78,12 +78,14 @@ for par in k.keys():
 		sol = odeint(serca_ode, v0, t)
 		print f,sol[-1,-1]
 		#print k
-		eq_cae.append(sol[-1,-1])
+		eq_cae.append(sol[-1,-1]*1e6) #units update
 	print np.shape(eq_cae), np.shape(f_range)
-	grid(True)
+	#grid(True)
 	plot(f_range,eq_cae)
-	title(par)
-	savefig("./plots/"+par+".png")
+	title('Effect of change in '+par+' on ER Ca2+ SS concentration')
+	xlabel('(k_new)/(k_old)')
+	ylabel('Steady state [Ca_e] (uM)')
+	savefig("./plots/"+par+".png",dpi=200)
 	close()
 
 	

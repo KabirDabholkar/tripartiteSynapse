@@ -1,0 +1,3 @@
+Normal refilling time: 13.65333755683606
+SERCA Overload(2x) + leak, refilling time: 9.968077295365859
+SERCA Overload(3x) + leak, refilling time: 8.216510920869712

@@ -26,7 +26,7 @@ k_orig={
 
 #########for 750
 for par in ['kx1_x1a','kx1a_x2','kx2_y2']:
-	k_orig[par]=k_orig[par]*3.0**(2.0/3.0) #multiplier
+	k_orig[par]=k_orig[par]*2.0**(2.0/3.0) #multiplier
 
 k=k_orig.copy()
 
@@ -80,7 +80,7 @@ tf = 100
 t = np.arange(0, tf, tstep)
 
 # Solve ODE
-
+'''
 f_range = np.arange(0,50,5)
 eq_cae=[]
 for f in f_range:
