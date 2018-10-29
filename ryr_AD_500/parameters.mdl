@@ -178,7 +178,7 @@ INCLUDE_FILE = "../outputLoc.mdl"
 	ca_conc_presynaptic = 100e-9 // from various refs
 	ca_conc_base_presynaptic = 100e-9 // Ca base level with PMCA pump alone
 	//ca_conc_presynaptic_er = 60e-6 // Higgins et al., 2006, Biophys J.
-	ca_conc_presynaptic_er = 250e-6 // La Farla, 2002, Nat Rev Neurosci
+	ca_conc_presynaptic_er = 500e-6 //2x overload // La Farla, 2002, Nat Rev Neurosci
 	mGluR_density_presynaptic = mGluR_density_tot_presynaptic
 
 
@@ -252,5 +252,3 @@ INCLUDE_FILE = "../outputLoc.mdl"
 	calbindin_high2medium1_feq=0.027
 	calbindin_high2medium2_feq=0.003
 	*/
-
-

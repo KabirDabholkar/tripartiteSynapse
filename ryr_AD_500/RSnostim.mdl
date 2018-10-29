@@ -1,7 +1,7 @@
 //
 sprintf(my_seed,"%05g",SEED)
 
-iterations = 10e3
+iterations = 100e3
 
 INCLUDE_FILE = "../outputLoc.mdl"
 INCLUDE_FILE = "../initialization.mdl"

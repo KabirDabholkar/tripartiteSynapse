@@ -21,12 +21,12 @@ k_orig={
 	'ky1_y1a' : 2*1.0e5,
 	'ky1_x1' : 0.4,
 	'kx1_y1' : 1.20e-3,
-	'kca' : 18.0 #update
+	'kca' : 1.0 #update
 }
 
 #########for 750
 for par in ['kx1_x1a','kx1a_x2','kx2_y2']:
-	k_orig[par]=k_orig[par]*2.0**(2.0/3.0) #multiplier
+	k_orig[par]=k_orig[par]*1.0**(2.0/3.0) #multiplier
 
 k=k_orig.copy()
 
