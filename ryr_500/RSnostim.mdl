@@ -1,7 +1,7 @@
 //
 sprintf(my_seed,"%05g",SEED)
 
-iterations = 100e3
+iterations = 1000e3
 
 INCLUDE_FILE = "../outputLoc.mdl"
 INCLUDE_FILE = "../initialization.mdl"
@@ -20,7 +20,7 @@ INCLUDE_FILE = "rxn_rate_constants.mdl"
 /* Output Folder */
     //isi = "40"
 	sprintf(VDCC, "%g", VDCC_number_presynaptic)
-   	fname = "RSnostim" & "V" & VDCC
+   	fname = "RSnostim_500_long"
 	output_folder = outputLoc & "ppf/" &fname& "/s_" & my_seed
 
 /* Rates for P/Q-type Voltage Dependent Calcium Channels */

@@ -156,11 +156,11 @@ INCLUDE_FILE = "../outputLoc.mdl"
 	//ER Leak
 	ER_leak_density_presynaptic = serca_number_presynaptic/10/er_area //549.367  Taking 1/10 of SERCA density. Need to show calculations.
 	presynaptic_ER_leak_conc=serca_number_presynaptic/10/(er_vol*1e-15)/6.02205e23 //molar
-	//fheader = fopen(outputLoc & "values.txt", "w")
-	//sprintf(v1,"Presynaptic ER Leak Surface Density  = %g \n",ER_leak_density_presynaptic)
-	//sprintf(v2,"Presynaptic ER Leak Conc = %g \n",presynaptic_ER_leak_conc)
-	//fprintf(fheader, v1)
-	//fprintf(fheader, v2)
+	fheader = fopen(outputLoc & "values.txt", "w")
+	sprintf(v1,"Presynaptic ER Leak Surface Density  = %g \n",ER_leak_density_presynaptic)
+	sprintf(v2,"Presynaptic ER Leak Conc = %g \n",presynaptic_ER_leak_conc)
+	fprintf(fheader, v1)
+	fprintf(fheader, v2)
 	
 	ryr_num = 150
 	ryr_distance = 350
@@ -178,7 +178,7 @@ INCLUDE_FILE = "../outputLoc.mdl"
 	ca_conc_presynaptic = 100e-9 // from various refs
 	ca_conc_base_presynaptic = 100e-9 // Ca base level with PMCA pump alone
 	//ca_conc_presynaptic_er = 60e-6 // Higgins et al., 2006, Biophys J.
-	ca_conc_presynaptic_er = 250e-6 // La Farla, 2002, Nat Rev Neurosci
+	ca_conc_presynaptic_er = 250e-6 //2x overload // La Farla, 2002, Nat Rev Neurosci
 	mGluR_density_presynaptic = mGluR_density_tot_presynaptic
 
 
@@ -252,5 +252,3 @@ INCLUDE_FILE = "../outputLoc.mdl"
 	calbindin_high2medium1_feq=0.027
 	calbindin_high2medium2_feq=0.003
 	*/
-
-

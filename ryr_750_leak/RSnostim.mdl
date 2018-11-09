@@ -15,12 +15,13 @@ INCLUDE_FILE = "parameters.mdl"
 
 INCLUDE_FILE = "rxn_rate_constants.mdl"
 /* Modifications in Reaction Rate Constants */
-
+k_PMCA_0_1 = 0
+k_PMCA_0_leak = 0
 
 /* Output Folder */
     //isi = "40"
 	sprintf(VDCC, "%g", VDCC_number_presynaptic)
-   	fname = "RSnostim" & "V" & VDCC
+   	fname = "RSnostim_750_leak_noPMCA"
 	output_folder = outputLoc & "ppf/" &fname& "/s_" & my_seed
 
 /* Rates for P/Q-type Voltage Dependent Calcium Channels */
