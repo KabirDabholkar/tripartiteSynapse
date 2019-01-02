@@ -177,8 +177,8 @@ DEFINE_REACTIONS {
 
 
 /* Ca leak from ER to cytoplasm */
-   Cae, + ER_leak' -> ER_leak' + Ca' [k_ER_leak] : ER_leak_Ca_flux
-
+   Cae, + ER_leak' -> ER_leak' + Ca' [k_ER_leak] : ER_leak_Ca_flux_out
+   Cae' + ER_leak' -> ER_leak' + Ca, [k_ER_leak] : ER_leak_Ca_flux_in
 
 /* PMCA pump with built-in leak */
    Ca, + PMCA_0' -> PMCA_1' [k_PMCA_0_1] : PMCA_Ca_flux_out

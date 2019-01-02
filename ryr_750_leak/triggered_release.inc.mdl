@@ -176,8 +176,9 @@ DEFINE_REACTIONS {
    PM_leak' -> PM_leak' + Ca, [k_PM_leak]
 
 
-/* Ca leak from ER to cytoplasm */
-   Cae, + ER_leak' -> ER_leak' + Ca' [k_ER_leak] : ER_leak_Ca_flux
+/* Ca leak from ER to cytoplasm */  
+   Cae, + ER_leak' -> ER_leak' + Ca' [k_ER_leak] : ER_leak_Ca_flux_out
+   Ca' + ER_leak' -> ER_leak' + Cae, [k_ER_leak] : ER_leak_Ca_flux_in //added backward reaction
 
 
 /* PMCA pump with built-in leak */

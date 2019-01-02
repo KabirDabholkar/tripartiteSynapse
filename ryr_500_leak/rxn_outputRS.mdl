@@ -125,7 +125,8 @@ REACTION_DATA_OUTPUT {
 	{	COUNT[PMCA_Ca_flux_out, WORLD] - COUNT[PMCA_Ca_flux_in, WORLD] : "PMCAFlux",
 		COUNT[PMCA_Ca_leak_flux, WORLD] : "PMCAleakFlux",
 //		COUNT[PM_leak_Ca_flux, WORLD] : "PMleakFlux",
-		COUNT[ER_leak_Ca_flux, WORLD] : "ERleakFlux" 
+		COUNT[ER_leak_Ca_flux_in, WORLD] : "ERleakFluxIn"
+		COUNT[ER_leak_Ca_flux_out, WORLD] : "ERleakFluxOut" 
 	} => output_folder &"/dat/pmca&leak_ca_flux.dat"
 
 
