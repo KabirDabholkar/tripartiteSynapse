@@ -1,7 +1,7 @@
 //
 sprintf(my_seed,"%05g",SEED)
 
-iterations = 100e3
+iterations = 15000e3
 
 INCLUDE_FILE = "../outputLoc.mdl"
 INCLUDE_FILE = "../initialization.mdl"
@@ -12,18 +12,21 @@ INCLUDE_FILE = "parameters.mdl"
 	n_Glu_neuron =  1 //2000
 	GluT_density_astrocyte = 0.1 //1000
 
+	ca_conc_presynaptic_er=0 //empty ER!
 
+sm=100 //multiply all serca parameters
 INCLUDE_FILE = "rxn_rate_constants.mdl"
 /* Modifications in Reaction Rate Constants */
-k_PMCA_0_1 = 0
-k_PMCA_0_leak = 0
+//k_PMCA_0_1 = 0
+//k_PMCA_0_leak = 0
 
 
 /* Output Folder */
     //isi = "40"
 	sprintf(VDCC, "%g", VDCC_number_presynaptic)
-   	fname = "RSnostim_750_noPMCA"
-	output_folder = outputLoc & "ppf/" &fname& "/s_" & my_seed
+   	fname = "RSnostim_750_emptyER_sm"
+	sprintf(s_mult, "%g", sm)
+	output_folder = outputLoc & "ppf/" & fname & "/sm" & s_mult &"/s_" & my_seed
 
 /* Rates for P/Q-type Voltage Dependent Calcium Channels */
 /* From Bischoffberger et al., 2005, , Biophys. J.*/

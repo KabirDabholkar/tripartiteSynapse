@@ -39,17 +39,20 @@ def array_to_txtfile(arr,file):
 #data_shape=np.loadtxt(os.path.join(os.path.join(rxn_path,seed_folders[0]),file_names[0])).shape
 #print data_shape
 #start=time.time()
-times=np.loadtxt(file_names[0]).T[0]
+times=np.loadtxt(file_names[0]).T[0]#[0:22600]
 
 data=[]
-for file_name in file_names:	
-	data.append(get_data(file_name))
+for file_name in file_names:
+	col=get_data(file_name)#[0:22600]	
+	data.append(col)
+	print col.shape
+	
 avg=np.average(data,axis=0)
 std=np.std(data,axis=0)
 #concentration in millimoles
-avg*=1e15/N_avo/vol_er
+avg*=1e15/N_avo/vol_er*1e6 #micromolar
 std*=1e15/N_avo/vol_er
-f=open(os.path.join(avg_path,"avg.dat"),'w')
+f=open(os.path.join(avg_path,"ca_er.dat"),'w')
 array_to_txtfile(np.stack([times,avg,std],axis=-1),f)
 f.close()
 
