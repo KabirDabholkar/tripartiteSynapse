@@ -329,6 +329,7 @@ vdcc_release_disk OBJECT {
 }
 
 /* set up RyR cluster as single disk placed at desired location on ER: */
+
 sprintf(ryr_disk_file,"../ryr_disks/ryr_disk_%g.mdl",ryr_number_presynaptic)
 INCLUDE_FILE = ryr_disk_file
 ryr_disk_scale = 0.010
@@ -553,7 +554,7 @@ INSTANTIATE tripartite_synapse_model OBJECT {
   //presynaptic_forced_release OBJECT presynaptic_forced_release {}
 
   vdcc_release_disk OBJECT vdcc_release_disk {}
-  ryr_release_disk OBJECT ryr_release_disk {}
+  //ryr_release_disk OBJECT ryr_release_disk {}
   presynaptic_active_zone OBJECT presynaptic_active_zone {}
   //astrocyte_active_zone OBJECT astrocyte_active_zone {}
 

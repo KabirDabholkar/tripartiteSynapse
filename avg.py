@@ -7,6 +7,7 @@ import pickle as pkl
 
 N_avo=6.0221409e23
 vol_er = 3.9*0.1*0.1
+vol_cyt = (4.0*0.5*0.5-vol_er)
 
 #get data location
 with open("outputLoc.mdl",'r') as f:
@@ -30,7 +31,7 @@ for s in seed_folders:
 	file_names.append(os.path.join(dir,os.path.join(s+'/dat/ca.dat')))
 
 def get_data(file_name):
-	return np.loadtxt(file_name).T[3]
+	return np.loadtxt(file_name).T[2]
 
 def array_to_txtfile(arr,file):
     for line in arr:
@@ -50,9 +51,9 @@ for file_name in file_names:
 avg=np.average(data,axis=0)
 std=np.std(data,axis=0)
 #concentration in millimoles
-avg*=1e15/N_avo/vol_er*1e6 #micromolar
-std*=1e15/N_avo/vol_er
-f=open(os.path.join(avg_path,"ca_er.dat"),'w')
+avg*=1e15/N_avo/vol_cyt*1e6 #micromolar
+std*=1e15/N_avo/vol_cyt*1e6
+f=open(os.path.join(avg_path,"ca_cyt.dat"),'w')
 array_to_txtfile(np.stack([times,avg,std],axis=-1),f)
 f.close()
 
