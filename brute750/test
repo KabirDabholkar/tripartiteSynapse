@@ -1,0 +1,2 @@
+pdsh -w cn[001-109] "ls -l /apps/bin/mcell"
+/usr/bin/SSH-KEYGEN-USER

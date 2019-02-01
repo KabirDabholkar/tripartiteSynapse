@@ -1,7 +1,6 @@
-//
 sprintf(my_seed,"%05g",SEED)
 
-iterations = 20000e3
+iterations = 1000e3
 
 INCLUDE_FILE = "../outputLoc.mdl"
 INCLUDE_FILE = "../initialization.mdl"
@@ -15,7 +14,9 @@ INCLUDE_FILE = "parameters.mdl"
 	ca_conc_presynaptic_er=700e-6 //empty ER!
 	//ryr_number_presynaptic = 0 //no RYR
 
-sm=5 //multiply all serca parameters
+f=15 
+
+sm=3 //multiply all serca parameters
 
 INCLUDE_FILE = "rxn_rate_constants.mdl"
 /* Modifications in Reaction Rate Constants */
