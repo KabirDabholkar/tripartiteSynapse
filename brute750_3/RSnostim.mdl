@@ -12,10 +12,10 @@ INCLUDE_FILE = "parameters.mdl"
 	n_Glu_neuron =  1 //2000
 	GluT_density_astrocyte = 0.1 //1000
 
-	ca_conc_presynaptic_er=700e-6 //empty ER!
+	ca_conc_presynaptic_er=0//e-6 //empty ER!
 	//ryr_number_presynaptic = 0 //no RYR
 
-sm=3 //multiply all serca parameters
+sm=1 //multiply all serca parameters
 
 INCLUDE_FILE = "rxn_rate_constants.mdl"
 /* Modifications in Reaction Rate Constants */
@@ -28,7 +28,7 @@ INCLUDE_FILE = "rxn_rate_constants.mdl"
 	sprintf(VDCC, "%g", VDCC_number_presynaptic)
 	sprintf(s_mult, "%g/", sm)   	
 	sprintf(init_er_conc, "%g", ca_conc_presynaptic_er*1e6)   	
-	fname = "tester/"
+	fname = "brute750_3/"
 	
 	output_folder = outputLoc & "ppf/" & fname & init_er_conc & "/sm" & s_mult &"/s_" & my_seed
 

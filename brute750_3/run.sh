@@ -1,0 +1,1 @@
+parallel --results tout2 mcell33 ::: /home/kabir/tripartiteSynapse/brute750_3/RSnostim_2_750.mdl /home/kabir/tripartiteSynapse/brute750_3/RSnostim_3_750.mdl /home/kabir/tripartiteSynapse/brute750_3/RSnostim_4_750.mdl /home/kabir/tripartiteSynapse/brute750_3/RSnostim_5_750.mdl
