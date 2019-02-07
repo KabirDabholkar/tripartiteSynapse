@@ -1,0 +1,62 @@
+sprintf(my_seed,"%05g",SEED)
+
+    iterations = 2000e3
+
+    INCLUDE_FILE = "../outputLoc.mdl"
+    INCLUDE_FILE = "../initialization.mdl"
+    INCLUDE_FILE = "parameters.mdl"
+    /* Modifications in Parameters */
+        VDCC_number_presynaptic = 40
+
+        n_Glu_neuron =  1 //2000
+        GluT_density_astrocyte = 0.1 //1000
+
+        ca_conc_presynaptic_er = 500e-6     //initial ER conc specified here!!!!!
+        //ryr_number_presynaptic = 0 //no RYR
+
+    f = 4.1                                //SERCA parameter adjustments here!!!!!!!!!!
+
+    sm = 9//multiply all serca parameters
+
+    /*Initial SERCA fractions*/
+    serca_x1_feq = 0.64657755
+    serca_x1a_feq = 0.29015902
+    serca_x2_feq = 0.03641392
+    serca_y1_feq = 0.00403319
+    serca_y1a_feq = 0.01186909
+    serca_y2_feq = 0.01106246
+
+    INCLUDE_FILE = "rxn_rate_constants.mdl"
+    /* Modifications in Reaction Rate Constants */
+    //k_PMCA_0_1 = 0
+    //k_PMCA_0_leak = 0
+
+
+    /* Output Folder */
+            //isi = "40"
+        sprintf(VDCC, "%g", VDCC_number_presynaptic)
+        sprintf(f_mult, "%g", f) 
+        sprintf(s_mult, "%g", sm) 
+        sprintf(init_er_conc, "%g", ca_conc_presynaptic_er*1e6)   	
+        fname = "brute7"
+
+        output_folder = outputLoc & "ppf/" & fname & "/sm" & s_mult & "/" & f_mult & "/" & init_er_conc & "/s_" & my_seed
+
+    /* Rates for P/Q-type Voltage Dependent Calcium Channels */
+    /* From Bischoffberger et al., 2005, , Biophys. J.*/
+
+        k_VDCC_PQ_C01 = 0
+        k_VDCC_PQ_C12 = 0
+        k_VDCC_PQ_C23 = 0
+        k_VDCC_PQ_C34 = 0
+        k_VDCC_PQ_C43 = 0
+        k_VDCC_PQ_C32 = 0
+        k_VDCC_PQ_C21= 0
+        k_VDCC_PQ_C10 = 0
+        k_VDCC_PQ_Ca = 0
+
+    INCLUDE_FILE = "triggered_release.inc.mdl"
+
+    INCLUDE_FILE = "rxn_outputRS.mdl"
+    //INCLUDE_FILE = "viz_output.mdl"
+    

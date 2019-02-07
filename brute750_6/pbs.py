@@ -1,7 +1,7 @@
 #!/usr/bin/python
 #PBS -p 1 
 #PBS -j oe
-#PBS -J 0-3
+#PBS -J 0-9
 
 import os
 
