@@ -1,0 +1,13 @@
+qsub -N RSnostim_sm1_2_750 -v I='/home/subhadra/kabir/tripartiteSynapse/brute750_7/RSnostim_sm1_2_750.mdl' pbs.py
+qsub -N RSnostim_sm1_2.2_750 -v I='/home/subhadra/kabir/tripartiteSynapse/brute750_7/RSnostim_sm1_2.2_750.mdl' pbs.py
+qsub -N RSnostim_sm1_2.4_750 -v I='/home/subhadra/kabir/tripartiteSynapse/brute750_7/RSnostim_sm1_2.4_750.mdl' pbs.py
+qsub -N RSnostim_sm1_2.6_750 -v I='/home/subhadra/kabir/tripartiteSynapse/brute750_7/RSnostim_sm1_2.6_750.mdl' pbs.py
+qsub -N RSnostim_sm1_2.8_750 -v I='/home/subhadra/kabir/tripartiteSynapse/brute750_7/RSnostim_sm1_2.8_750.mdl' pbs.py
+qsub -N RSnostim_sm1_2.9_750 -v I='/home/subhadra/kabir/tripartiteSynapse/brute750_7/RSnostim_sm1_2.9_750.mdl' pbs.py
+qsub -N RSnostim_sm1_3.0_750 -v I='/home/subhadra/kabir/tripartiteSynapse/brute750_7/RSnostim_sm1_3.0_750.mdl' pbs.py
+qsub -N RSnostim_sm1_3.1_750 -v I='/home/subhadra/kabir/tripartiteSynapse/brute750_7/RSnostim_sm1_3.1_750.mdl' pbs.py
+qsub -N RSnostim_sm1_3.2_750 -v I='/home/subhadra/kabir/tripartiteSynapse/brute750_7/RSnostim_sm1_3.2_750.mdl' pbs.py
+qsub -N RSnostim_sm1_3.4_750 -v I='/home/subhadra/kabir/tripartiteSynapse/brute750_7/RSnostim_sm1_3.4_750.mdl' pbs.py
+qsub -N RSnostim_sm1_3.6_750 -v I='/home/subhadra/kabir/tripartiteSynapse/brute750_7/RSnostim_sm1_3.6_750.mdl' pbs.py
+qsub -N RSnostim_sm1_3.8_750 -v I='/home/subhadra/kabir/tripartiteSynapse/brute750_7/RSnostim_sm1_3.8_750.mdl' pbs.py
+qsub -N RSnostim_sm1_4.0_750 -v I='/home/subhadra/kabir/tripartiteSynapse/brute750_7/RSnostim_sm1_4.0_750.mdl' pbs.py

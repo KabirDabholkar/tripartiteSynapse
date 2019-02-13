@@ -21,12 +21,12 @@ k_orig={
 	'ky1_y1a' : 2*1.0e5,
 	'ky1_x1' : 0.4,
 	'kx1_y1' : 1.20e-3,
-	'kca' : 1.0 #update
+	'kca' : 0#1.0 #update
 }
 
 #########for 750
 for par in ['kx1_x1a','kx1a_x2','kx2_y2']:
-	k_orig[par]=k_orig[par]*1.0**(2.0/3.0) #multiplier
+	k_orig[par]=k_orig[par]#*1.0**(2.0/3.0) #multiplier
 
 k=k_orig.copy()
 
@@ -76,7 +76,7 @@ def serca_ode(v,t):
 v0 = [0.4, 0.1, 0.0, 0.4, 0.1, 0.0, cae]
 
 tstep = 1e-2
-tf = 100
+tf = 1000
 t = np.arange(0, tf, tstep)
 
 # Solve ODE
@@ -98,12 +98,13 @@ show()
 #main stuff 
 
 def func_tbs(f,eq_value):
-	print f[0]
-	k['kca']=f[0]#*k_orig['kca']
-	sol = odeint(serca_ode, v0, t)
-	return sol[-1,-1]-eq_value
+    print f[0]
+    #k['kca']=f[0]#*k_orig['kca']
+    k['kx1_xa'],k['kx1a_x2']=k_orig['kx1_x1a']*f[0],k_orig['kx1a_x2']*f[0] 
+    sol = odeint(serca_ode, v0, t)
+    return sol[-1,-1]-eq_value
 
-SOL=fsolve(func_tbs,1,args=(250.0e-6,))
+SOL=fsolve(func_tbs,1,args=(500.0e-6,))
 #'''
 
 '''	
