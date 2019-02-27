@@ -1,3 +1,12 @@
-qsub -N RSnostim_sm70_ic0_fc500long -v I='/home/subhadra/kabir/tripartiteSynapse/brute750_8/RSnostim_sm70_ic0_fc500long.mdl' pbs.py
-qsub -N RSnostim_sm100_ic0_fc500long -v I='/home/subhadra/kabir/tripartiteSynapse/brute750_8/RSnostim_sm100_ic0_fc500long.mdl' pbs.py
-qsub -N RSnostim_sm150_ic0_fc500long -v I='/home/subhadra/kabir/tripartiteSynapse/brute750_8/RSnostim_sm150_ic0_fc500long.mdl' pbs.py
+sed --i 's/^#PBS -J.*/#PBS -J 1-20/' pbs.py
+qsub -N sm50_ic200_fc500 -v I='/home/subhadra/kabir/tripartiteSynapse/brute750_8/RSnostim_sm50_ic200_fc500.mdl' pbs.py
+
+sed --i 's/^#PBS -J.*/#PBS -J 1-20/' pbs.py
+qsub -N sm100_ic200_fc500 -v I='/home/subhadra/kabir/tripartiteSynapse/brute750_8/RSnostim_sm100_ic200_fc500.mdl' pbs.py
+
+sed --i 's/^#PBS -J.*/#PBS -J 1-20/' pbs.py
+qsub -N sm125_ic200_fc500 -v I='/home/subhadra/kabir/tripartiteSynapse/brute750_8/RSnostim_sm125_ic200_fc500.mdl' pbs.py
+
+sed --i 's/^#PBS -J.*/#PBS -J 1-20/' pbs.py
+qsub -N sm150_ic200_fc500 -v I='/home/subhadra/kabir/tripartiteSynapse/brute750_8/RSnostim_sm150_ic200_fc500.mdl' pbs.py
+
