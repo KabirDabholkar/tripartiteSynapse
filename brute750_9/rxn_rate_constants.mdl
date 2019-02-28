@@ -148,9 +148,8 @@
 	d[Cae]/dt=k_leak_uni*([Cae]-[Cai])  but Cai is very small 
 */	
 	
-	k_leak_uni = 0 //40.45 //s^-1  This is calculated from ODE model.
-	k_leak_bi = k_leak_uni/presynaptic_ER_leak_conc
-	k_ER_leak = k_leak_bi //1094396.797  //corresponding to 3x overloaded ER when the leak is switched off. Need to show calculations.
+	
+	k_ER_leak = 0 //1094396.797  
 	fheader = fopen(outputLoc & "values.txt", "a")
 	sprintf(v1,"ER leak reaction constant = %g",k_ER_leak)
 	fprintf(fheader, v1)
