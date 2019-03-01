@@ -29,7 +29,7 @@ sprintf(my_seed,"%05g",SEED)
     INCLUDE_FILE = "rxn_rate_constants.mdl"
     /* Modifications in Reaction Rate Constants */
 
-    k_ER_leak = 100
+    k_ER_leak = 60000
 
 
     /* Output Folder */
