@@ -117,8 +117,8 @@ DEFINE_SURFACE_CLASSES {
 //    REFLECTIVE = ALL_MOLECULES
 //    CLAMP_CONCENTRATION Cae, = ca_conc_presynaptic_er
   }
-	er_clamp {
-			CLAMP_CONCENTRATION Cae, = ca_conc_presynaptic_er      
+  er_clamp {
+      CLAMP_CONCENTRATION Cae, = 266.23221704*e-6 //this is for 250uM ER conc clamp. This is a weird adjustment that had to be made.     
   }
 }
 
