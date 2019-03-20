@@ -1,0 +1,57 @@
+MCell initializing simulation...
+MCell[0]: random sequence 1
+MCell 3.3 (commit: 49ac0e0  date: Fri, 24 Apr 2015 11:17:22 -0400)
+  Running on Toothless at Mon Feb  4 15:44:06 2019
+
+  Copyright (C) 2006 - 2014 by
+    The National Center for Multiscale Modeling of Biological Systems,
+    The Salk Institute for Biological Studies, and
+    Pittsburgh Supercomputing Center, Carnegie Mellon University,
+
+
+**********************************************************************
+MCell development is supported by the NIGMS-funded (P41GM103712)
+National Center for Multiscale Modeling of Biological Systems (MMBioS).
+Please acknowledge MCell in your publications.
+**********************************************************************
+
+
+Reaction probabilities generated for the following reactions:
+	Probability 1.4119e+00 set for Ca{1} + SERCA_X1{1} -> SERCA_X1A{1} 
+
+Surfaces with surface class "axon_segment_end{1}" are REFLECTIVE for volume molecules  calmodulin.B4{0} slow_sp.U{0} calmodulin.B2{0} medium_sp.B{0} calmodulin.B0{0} calbindin.high0medium0{0} Glu{0} calbindin.high1medium0{0} calbindin.high2medium1{0} v_slow_sp.B{0} calbindin.high1medium1{0} fast_sp.B{0} IP3{0} medium_sp.U{0} fast_sp.U{0} calbindin.high1medium2{0} v_slow_sp.U{0} slow_sp.B{0} Cae{0} calbindin.high2medium2{0} calmodulin.B1{0} calbindin.high2medium0{0} calbindin.high0medium2{0} calmodulin.B3{0} calbindin.high0medium1{0} Ca{0}.
+Borders of regions with surface class "axon_segment_end{1}" are REFLECTIVE for surface molecules  X1Y2e{0} RyRC1_H1{0} X3Y0e{0} RyRO2_L{0} X3Y1{0} X5Y2{0} X2Y0e{0} X1Y2r{0} VDCC_PQ.C{0} PMCA_0{0} X2Y0{0} X3Y2r{0} X4Y0{0} RyRO1_H1{0} X1Y1{0} NMDA_L.C3{0} X0Y2e{0} X0Y0r{0} GluT_0{0} X5Y0e{0} PMCA_1{0} NMDA_L.O2{0} NMDA_L.C2{0} GluT_2{0} NMDA_M.C1{0} RyRO1_L{0} RyRC5_L{0} X5Y1{0} NMDA_L.O1{0} NMDA_M.C2{0} PMCA_2{0} NMDA_L.C1{0} X1Y1e{0} X0Y1{0} RyRC3_L{0} X5Y2e{0} X4Y1e{0} X0Y1e{0} X3Y1e{0} X2Y1{0} RyRO2_H1{0} RyRC4_L{0} X0Y0e{0} X5Y0{0} VDCC_PQ_O{0} X2Y2e{0} NMDA_M.CM{0} X2Y2{0} X1Y0e{0} NMDA_M.CU{0} X0Y2{0} X4Y2e{0} X0Y0{0} RyRO3_L{0} SERCA_X1{0} VDCC_PQ_C0{0} X2Y1e{0} ER_leak{0} az_sudhof{0} RyRC4_H1{0} X4Y2r{0} VDCC_PQ_C1{0} X5Y2r{0} NMDA_H.C2{0} VDCC_L.C{0} NMDA_M.O2{0} SERCA_Y1A{0} NMDA_M.C3{0} X4Y2{0} X3Y0{0} VDCC_PQ_C3{0} NMDA_H.CU{0} PM_leak{0} X5Y2ar{0} RyRC1_L{0} X3Y2{0} NMDA_H.C1{0} NMDA_H.CM{0} GluT_1{0} X5Y1e{0} NMDA_H.O1{0} X5Y1r{0} X4Y1{0} VDCC_PQ.O{0} X0Y0d{0} X2Y2r{0} RyRC2_L{0} NMDA_L.CU{0} RyRC2_H1{0} VDCC_L.O{0} X4Y0e{0} X1Y2{0} NMDA_M.O1{0} SERCA_Y2{0} SERCA_X2{0} VDCC_PQ_C2{0} NMDA_H.O2{0} NMDA_L.CM{0} X1Y0{0} SERCA_Y1{0} X0Y2r{0} X5Y0r{0} SERCA_X1A{0} X3Y2e{0} RyRC3_H1{0} NMDA_H.C3{0}.
+
+Surfaces with surface class "transp{1}" are TRANSPARENT for volume molecules  calmodulin.B4{0} slow_sp.U{0} calmodulin.B2{0} medium_sp.B{0} calmodulin.B0{0} calbindin.high0medium0{0} Glu{0} calbindin.high1medium0{0} calbindin.high2medium1{0} v_slow_sp.B{0} calbindin.high1medium1{0} fast_sp.B{0} IP3{0} medium_sp.U{0} fast_sp.U{0} calbindin.high1medium2{0} v_slow_sp.U{0} slow_sp.B{0} Cae{0} calbindin.high2medium2{0} calmodulin.B1{0} calbindin.high2medium0{0} calbindin.high0medium2{0} calmodulin.B3{0} calbindin.high0medium1{0} Ca{0}.
+Borders of regions with surface class "transp{1}" are TRANSPARENT for surface molecules  X1Y2e{0} RyRC1_H1{0} X3Y0e{0} RyRO2_L{0} X3Y1{0} X5Y2{0} X2Y0e{0} X1Y2r{0} VDCC_PQ.C{0} PMCA_0{0} X2Y0{0} X3Y2r{0} X4Y0{0} RyRO1_H1{0} X1Y1{0} NMDA_L.C3{0} X0Y2e{0} X0Y0r{0} GluT_0{0} X5Y0e{0} PMCA_1{0} NMDA_L.O2{0} NMDA_L.C2{0} GluT_2{0} NMDA_M.C1{0} RyRO1_L{0} RyRC5_L{0} X5Y1{0} NMDA_L.O1{0} NMDA_M.C2{0} PMCA_2{0} NMDA_L.C1{0} X1Y1e{0} X0Y1{0} RyRC3_L{0} X5Y2e{0} X4Y1e{0} X0Y1e{0} X3Y1e{0} X2Y1{0} RyRO2_H1{0} RyRC4_L{0} X0Y0e{0} X5Y0{0} VDCC_PQ_O{0} X2Y2e{0} NMDA_M.CM{0} X2Y2{0} X1Y0e{0} NMDA_M.CU{0} X0Y2{0} X4Y2e{0} X0Y0{0} RyRO3_L{0} SERCA_X1{0} VDCC_PQ_C0{0} X2Y1e{0} ER_leak{0} az_sudhof{0} RyRC4_H1{0} X4Y2r{0} VDCC_PQ_C1{0} X5Y2r{0} NMDA_H.C2{0} VDCC_L.C{0} NMDA_M.O2{0} SERCA_Y1A{0} NMDA_M.C3{0} X4Y2{0} X3Y0{0} VDCC_PQ_C3{0} NMDA_H.CU{0} PM_leak{0} X5Y2ar{0} RyRC1_L{0} X3Y2{0} NMDA_H.C1{0} NMDA_H.CM{0} GluT_1{0} X5Y1e{0} NMDA_H.O1{0} X5Y1r{0} X4Y1{0} VDCC_PQ.O{0} X0Y0d{0} X2Y2r{0} RyRC2_L{0} NMDA_L.CU{0} RyRC2_H1{0} VDCC_L.O{0} X4Y0e{0} X1Y2{0} NMDA_M.O1{0} SERCA_Y2{0} SERCA_X2{0} VDCC_PQ_C2{0} NMDA_H.O2{0} NMDA_L.CM{0} X1Y0{0} SERCA_Y1{0} X0Y2r{0} X5Y0r{0} SERCA_X1A{0} X3Y2e{0} RyRC3_H1{0} NMDA_H.C3{0}.
+
+Creating geometry (this may take some time)
+MCell: world bounding box in microns =
+         [ -0.875 -2.04999995 -0.600000024 ] [ 0.574999988 2.04999995 0.600000024 ]
+Creating 519537 subvolumes (61,167,51 per axis).
+Creating 240 memory partitions (5,12,4 per axis).
+Instantiating objects...
+Creating walls...
+Creating edges...
+Running simulation.
+Released 40 molecules from list "tripartite_synapse_model.vdcc_release_disk.vdcc_disk" at iteration 0.
+Released 1 molecules from list "tripartite_synapse_model.presynaptic_active_zone" at iteration 0.
+Released 1411 PMCA_0 from "tripartite_synapse_model.presynaptic_PMCA" at iteration 0.
+Released 868 ER_leak from "tripartite_synapse_model.presynaptic_ER_leak" at iteration 0.
+Released 55 Ca from "tripartite_synapse_model.presynaptic_calcium" at iteration 0.
+Released 17850 Cae from "tripartite_synapse_model.presynaptic_er_calcium" at iteration 0.
+Released 14119 calbindin.high0medium0 from "tripartite_synapse_model.presynaptic_calbindin_1" at iteration 0.
+Released 3441 calbindin.high0medium1 from "tripartite_synapse_model.presynaptic_calbindin_2" at iteration 0.
+Released 212 calbindin.high0medium2 from "tripartite_synapse_model.presynaptic_calbindin_3" at iteration 0.
+Released 5963 calbindin.high1medium0 from "tripartite_synapse_model.presynaptic_calbindin_4" at iteration 0.
+Released 1459 calbindin.high1medium1 from "tripartite_synapse_model.presynaptic_calbindin_5" at iteration 0.
+Released 86 calbindin.high1medium2 from "tripartite_synapse_model.presynaptic_calbindin_6" at iteration 0.
+Released 634 calbindin.high2medium0 from "tripartite_synapse_model.presynaptic_calbindin_7" at iteration 0.
+Released 156 calbindin.high2medium1 from "tripartite_synapse_model.presynaptic_calbindin_8" at iteration 0.
+Released 10 calbindin.high2medium2 from "tripartite_synapse_model.presynaptic_calbindin_9" at iteration 0.
+Released 0 GluT_0 from "tripartite_synapse_model.glia_GluT_0" at iteration 0.
+Released 0 PMCA_0 from "tripartite_synapse_model.glia_PMCA_0" at iteration 0.
+Iterations: 0 of 5000000 
+Iterations: 1000 of 5000000  (14.4459 iter/sec)
+Iterations: 2000 of 5000000  (13.7487 iter/sec)
+Iterations: 3000 of 5000000  (10.5124 iter/sec)IIterations: 4000 of 5000000  (16.0321 iter/sec)
