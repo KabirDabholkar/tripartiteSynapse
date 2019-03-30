@@ -1,7 +1,7 @@
 #!/usr/bin/python
 #PBS -p 1 
 #PBS -j oe
-#PBS -J 1-90
+#PBS -J 1-1000
 
 import os
 
@@ -9,8 +9,8 @@ import os
 seed = os.getenv('PBS_ARRAY_INDEX')
 
 # define bash command
-query = 'python '+os.getenv('I') + seed
-#print query
+query = '/apps/bin/mcell '+os.getenv('I')+' -seed ' + seed
+print query
 
 #print os.getenv('I')
 
