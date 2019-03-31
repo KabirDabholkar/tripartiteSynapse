@@ -83,7 +83,7 @@ def ppf(resample=1000):
     isi = int(dataDirName.split("I")[1].split("V")[0])
     vdcc = int(dataDirName.split("V")[1])
     print('isi: ', isi, 'vdcc: ', vdcc)
-    ns.relppf(isi, vdcc, resample)
+    return(ns.relppf(isi, vdcc, resample))
 
 def ptp():
     n = 20

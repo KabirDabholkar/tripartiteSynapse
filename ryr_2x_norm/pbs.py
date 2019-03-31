@@ -1,5 +1,5 @@
 #!/usr/bin/python
-#PBS -p 1 
+#PBS -p -1 
 #PBS -j oe
 #PBS -J 1-1000
 

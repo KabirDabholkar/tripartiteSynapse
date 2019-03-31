@@ -149,6 +149,7 @@ class analysis:
         os.system("cat " + self.dataPath + "/*/dat/rel.dat > " + self.resultPath + "/vesRel")
         os.system("cat " + self.dataPath + "/*/dat/vdcc.async_*.dat > " + self.resultPath + "/asyncRel")
         os.system("cat " + self.dataPath + "/*/dat/vdcc.sync_*.dat > " + self.resultPath + "/syncRel")
+        return(result)
 
     #   Get Vesicle Release Statistics for PTP
     def relptp(self, n, isi, resample=1000, tc=0.02): # isi in ms
