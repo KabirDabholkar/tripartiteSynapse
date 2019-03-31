@@ -21,7 +21,7 @@ INCLUDE_FILE = "rxn_rate_constants.mdl"
     isi = "120"
     sprintf(VDCC, "%g", VDCC_number_presynaptic)
     fname = "RSI" & isi & "V" & VDCC
-	output_folder = outputLoc & "ppf/" &fname& "/s_" & my_seed
+	output_folder = outputLoc & "ppf/norm/" &fname& "/s_" & my_seed
 
 /* Rates for P/Q-type Voltage Dependent Calcium Channels */
 /* From Bischoffberger et al., 2005, , Biophys. J.*/
