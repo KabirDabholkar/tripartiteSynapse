@@ -1,49 +1,39 @@
 //
 sprintf(my_seed,"%05g",SEED)
 
-iterations = 15000e3
+iterations = 1000e3
 
 INCLUDE_FILE = "../outputLoc.mdl"
 INCLUDE_FILE = "../initialization.mdl"
 INCLUDE_FILE = "parameters.mdl"
 /* Modifications in Parameters */
-	VDCC_number_presynaptic = 40
-
+	VDCC_number_presynaptic = 70
 	
 	n_Glu_neuron =  1 //2000
 	GluT_density_astrocyte = 0.1 //1000
 
-	ca_conc_presynaptic_er=0 //empty ER!
-	ryr_number_presynaptic = 0 //no RYR
 
 INCLUDE_FILE = "rxn_rate_constants.mdl"
 /* Modifications in Reaction Rate Constants */
-//k_PMCA_0_1 = 0
-//k_PMCA_0_leak = 0
-
-//a = 0
-//k_ER_leak=k_leak_bi*0.002768523164372*a //correction using slope analysis
 
 
 /* Output Folder */
-    //isi = "40"
-	sprintf(VDCC, "%g", VDCC_number_presynaptic)
-	//sprintf(aa, "%g", a)
-   	fname = "RSnostim_250_noRYR_emptyER"
-	output_folder = outputLoc & "ppf/" &fname& "/s_" & my_seed
+
+    fname = "RSnostim"
+	output_folder = outputLoc & "ppf/R300ER3x/" &fname& "/s_" & my_seed
 
 /* Rates for P/Q-type Voltage Dependent Calcium Channels */
 /* From Bischoffberger et al., 2005, , Biophys. J.*/
 
-	k_VDCC_PQ_C01 = 0
-	k_VDCC_PQ_C12 = 0
-	k_VDCC_PQ_C23 = 0
-	k_VDCC_PQ_C34 = 0
-	k_VDCC_PQ_C43 = 0
-	k_VDCC_PQ_C32 = 0
-	k_VDCC_PQ_C21 = 0
-	k_VDCC_PQ_C10 = 0
-	k_VDCC_PQ_Ca = 0
+	k_VDCC_PQ_C01 = 0//"../vdcc_dat/VDCC_PQ_C01_" & isi & "ms_ppf.dat"
+	k_VDCC_PQ_C12 = 0//"../vdcc_dat/VDCC_PQ_C12_" & isi & "ms_ppf.dat"
+	k_VDCC_PQ_C23 = 0//"../vdcc_dat/VDCC_PQ_C23_" & isi & "ms_ppf.dat"
+	k_VDCC_PQ_C34 = 0//"../vdcc_dat/VDCC_PQ_C34_" & isi & "ms_ppf.dat"
+	k_VDCC_PQ_C43 = 0//"../vdcc_dat/VDCC_PQ_C43_" & isi & "ms_ppf.dat"
+	k_VDCC_PQ_C32 = 0//"../vdcc_dat/VDCC_PQ_C32_" & isi & "ms_ppf.dat"
+	k_VDCC_PQ_C21 = 0//"../vdcc_dat/VDCC_PQ_C21_" & isi & "ms_ppf.dat"
+	k_VDCC_PQ_C10 = 0//"../vdcc_dat/VDCC_PQ_C10_" & isi & "ms_ppf.dat"
+	k_VDCC_PQ_Ca = 0//"../vdcc_dat/VDCC_PQ_Ca_" & isi & "ms_ppf.dat"
 
 INCLUDE_FILE = "triggered_release.inc.mdl"
 
