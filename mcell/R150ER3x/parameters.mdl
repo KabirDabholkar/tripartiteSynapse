@@ -76,7 +76,7 @@
 	mGluR_Gp_density_presynaptic = 0.9275*mGluR_density_tot_presynaptic
 	Gp_density_presynaptic = Gp_density_tot_presynaptic-0.9275*mGluR_density_tot_presynaptic
 	PMCA_density_presynaptic = 180 // required for recovery after transient
-	ER_leak_density_presynaptic = 0
+	//ER_leak_density_presynaptic = 0
 	//PLC_density_tot_presynaptic = 375 // Kim Blackwell: 5uM placed on surface
 	PLC_density_tot_presynaptic = 60 // Bhalla: 0.8uM placed on surface
 	PLC_density_presynaptic = 0.49*PLC_density_tot_presynaptic

@@ -1,7 +1,7 @@
 //
 DEFINE_MOLECULES {
 
- Ca {DIFFUSION_CONSTANT_3D = D_Ca CUSTOM_TIME_STEP = 1e-7}
+ Ca {DIFFUSION_CONSTANT_3D = D_Ca CUSTOM_TIME_STEP = 5e-8}
  Cae {DIFFUSION_CONSTANT_3D = D_Ca CUSTOM_TIME_STEP = 1e-7}
  Glu {DIFFUSION_CONSTANT_3D = D_Glu}
  IP3 {DIFFUSION_CONSTANT_3D = D_IP3 CUSTOM_TIME_STEP = 1e-7}
@@ -177,7 +177,7 @@ DEFINE_REACTIONS {
 
 
 /* Ca leak from ER to cytoplasm */
-   Cae' + ER_leak' -> ER_leak' + Ca, [k_ER_leak] : ER_leak_Ca_flux
+   Cae, + ER_leak' -> ER_leak' + Ca' [k_ER_leak] : ER_leak_Ca_flux
 
 
 /* PMCA pump with built-in leak */
@@ -329,6 +329,7 @@ vdcc_release_disk OBJECT {
 }
 
 /* set up RyR cluster as single disk placed at desired location on ER: */
+
 sprintf(ryr_disk_file,"../ryr_disks/ryr_disk_%g.mdl",ryr_number_presynaptic)
 INCLUDE_FILE = ryr_disk_file
 ryr_disk_scale = 0.010
