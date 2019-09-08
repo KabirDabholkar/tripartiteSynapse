@@ -1,0 +1,10 @@
+[2019-09-08 17:24:39,793][ERROR][/home/kabir/STEPS/STEPS/src/steps/wmdirect/wmdirect.cpp:315][virtual void steps::wmdirect::Wmdirect::run(double)]: ArgErr: Endtime is before current simulation time 
+[2019-09-08 17:24:51,220][ERROR][/home/kabir/STEPS/STEPS/src/steps/wmdirect/wmdirect.cpp:315][virtual void steps::wmdirect::Wmdirect::run(double)]: ArgErr: Endtime is before current simulation time 
+[2019-09-08 17:25:08,054][ERROR][/home/kabir/STEPS/STEPS/src/steps/geom/geom.cpp:144][void steps::wm::Geom::_checkCompID(const string&) const]: ArgErr: 'comp' is already in use.
+ 
+[2019-09-08 17:55:19,641][ERROR][/home/kabir/STEPS/STEPS/src/steps/model/model.cpp:190][steps::model::Volsys* steps::model::Model::getVolsys(const string&) const]: ArgErr: Model does not contain volume system with name 'ervsys' 
+[2019-09-08 17:55:47,760][ERROR][/home/kabir/STEPS/STEPS/src/steps/model/model.cpp:190][steps::model::Volsys* steps::model::Model::getVolsys(const string&) const]: ArgErr: Model does not contain volume system with name 'cytvsys' 
+[2019-09-08 17:55:56,454][ERROR][/home/kabir/STEPS/STEPS/src/steps/model/model.cpp:190][steps::model::Volsys* steps::model::Model::getVolsys(const string&) const]: ArgErr: Model does not contain volume system with name 'cytvsys' 
+[2019-09-08 17:58:41,144][ERROR][/home/kabir/STEPS/STEPS/src/steps/model/sreac.cpp:203][void steps::model::SReac::setSLHS(const std::vector<steps::model::Spec*>&)]: Assertion failed, please send the log files under .logs/ to developer. 
+[2019-09-08 17:58:50,437][ERROR][/home/kabir/STEPS/STEPS/src/steps/model/model.cpp:214][steps::model::Surfsys* steps::model::Model::getSurfsys(const string&) const]: ArgErr: Model does not contain surface system with name 'cytSurfsys' 
+[2019-09-08 19:12:46,482][ERROR][/home/kabir/STEPS/STEPS/src/steps/model/sreac.cpp:262][void steps::model::SReac::setKcst(double)]: ArgErr: Surface reaction constant can't be negative 

@@ -136,6 +136,7 @@ class analysis:
             #print('num of rel', cp)
             cp = [float(i)/ndirs for i in cp]
             #print('fraction of rel', cp)
+            print('cp:',cp)
             pp = [cp[0]/(cp[0]+cp[1]), cp[1]/(cp[0]+cp[1]), cp[2]/(cp[2]+cp[3]), cp[3]/(cp[2]+cp[3])]
             #print('pp: ', pp)
 
