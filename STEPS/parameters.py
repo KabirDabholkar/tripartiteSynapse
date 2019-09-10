@@ -22,6 +22,7 @@ initV = {
     'cb':       [1.48e-05, 7.00e-06, 8.27e-07, 1.21e-05, 5.74e-06, 6.79e-07,
                  2.49e-06, 1.18e-06, 1.39e-07], # Total conc. = 45e-6 uM
     'AZ':       [1.65e-6] + [0.0 for _ in range(17)],
+    'serca':    [f*868.785075 for f in [0.75554529, 0.18054556, 0.010757505, 0.015718635, 0.026363904, 0.011069105]] #Number of SERCA, Total conc 15e-6M in cytoplasm #Means et al., 2006, Biophys J.
 }
 
 ######################################################
@@ -35,6 +36,25 @@ erArea = 1.58e-12 # ER surf area = 1.58 um^2
 ## Calcium diffusion constant
 diffCa = 2.2e-10 # m^2/s
 
+######################################################
+sercaMolName =['SERCA_X0','SERCA_X1','SERCA_X2','SERCA_Y0','SERCA_Y1','SERCA_Y2']
+#serca_conc_tot = 15e-6
+#serca_number_presynaptic=serca_conc_tot*(erVolVal+cytVolVal)/(1e15/6.02205e23)
+
+
+#Rates
+k_SERCA_X0X1 = 2*1.0e8
+k_SERCA_X1X2 = 1.0e8
+k_SERCA_X1X0 = 83.666
+k_SERCA_X2X1 = 2*83.666
+k_SERCA_X2Y2 = 0.6
+k_SERCA_Y2X2 = 4.118 #corrected
+k_SERCA_Y2Y1 = 2*30.015
+k_SERCA_Y1Y0 = 30.015
+k_SERCA_Y1Y2 = 1.0e5
+k_SERCA_Y0Y1 = 2*1.0e5
+k_SERCA_Y0X0 = 0.4
+k_SERCA_X0Y0 = 1.20e-3
 
 ######################################################
 pmcaMolName = ['PMCA0', 'PMCA1', 'PMCA2']

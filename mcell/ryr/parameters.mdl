@@ -173,10 +173,10 @@
 	*/
 
 /* SERCA pump equilibrium fractions at [Ca]c = 100nM and [Ca]e = 60uM */
-	er_vol=(3.9*0.1*0.1)
-	presynaptic_vol=(4*0.5*0.5-er_vol)
-	er_vfrac=er_vol/presynaptic_vol
-	serca_number_presynaptic=serca_conc_tot*presynaptic_vol/(1e15/6.02205e23)
+    er_vol=(3.9*0.1*0.1)
+    presynaptic_vol=(4*0.5*0.5-er_vol)
+    er_vfrac=er_vol/presynaptic_vol
+    serca_number_presynaptic=serca_conc_tot*presynaptic_vol/(1e15/6.02205e23)
 	/* our numbers: */
 	/*
 	serca_x1_feq=0.798
@@ -219,6 +219,7 @@
 
 	/* ODE solution, new rates K1^2 = Keff^2 100nM Ca, 250uM Cae. IP3R inactive: */
 	
+
 	serca_x1_feq = 0.75554529
 	serca_x1a_feq = 0.18054556
 	serca_x2_feq = 0.010757505

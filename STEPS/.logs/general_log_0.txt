@@ -18,3 +18,7 @@
 [2019-09-09 18:13:05,977][ERROR][/home/kabir/STEPS/STEPS/src/steps/solver/statedef.cpp:662][uint steps::solver::Statedef::getSReacIdx(const string&) const]: ArgErr: Model does not contain sreac with string identifier 'VDCC_C01'. 
 [2019-09-09 18:13:49,015][ERROR][/home/kabir/STEPS/STEPS/src/steps/solver/statedef.cpp:534][uint steps::solver::Statedef::getPatchIdx(const string&) const]: ArgErr: Geometry does not contain patch with string identifier 'cytSurfsys'. 
 [2019-09-09 18:39:31,703][ERROR][/home/kabir/STEPS/STEPS/src/steps/solver/statedef.cpp:534][uint steps::solver::Statedef::getPatchIdx(const string&) const]: ArgErr: Geometry does not contain patch with string identifier 'erSurf'. 
+[2019-09-10 16:55:07,420][ERROR][/home/kabir/STEPS/STEPS/src/steps/solver/statedef.cpp:534][uint steps::solver::Statedef::getPatchIdx(const string&) const]: ArgErr: Geometry does not contain patch with string identifier 'erSurf'. 
+[2019-09-10 16:57:01,089][ERROR][/home/kabir/STEPS/STEPS/src/steps/solver/statedef.cpp:491][uint steps::solver::Statedef::getCompIdx(const string&) const]: ArgErr: Geometry does not contain comp with string identifier 'cerVol'. 
+[2019-09-10 17:14:11,424][ERROR][/home/kabir/STEPS/STEPS/src/steps/wmdirect/wmdirect.cpp:444][virtual void steps::wmdirect::Wmdirect::_setCompCount(uint, uint, double)]: ArgErr: Species undefined in compartment.
+ 
