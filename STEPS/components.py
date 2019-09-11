@@ -296,11 +296,11 @@ def get_RyR(ssys, mdl, Ca):
     R_RyR['RyRLO3Oflux']  = smodel.SReac('R_RyRLO3Oflux', ssys, slhs=[ryrMol['RyRLO3']], ilhs=[Ca], srhs=[ryrMol['RyRLO3']], orhs=[Ca], kcst=kRyRflux)
     R_RyR['RyRH1O1Oflux'] = smodel.SReac('R_RyRH1O1Oflux', ssys, slhs=[ryrMol['RyRH1O1']], ilhs=[Ca], srhs=[ryrMol['RyRH1O1']], orhs=[Ca], kcst=kRyRflux)
     R_RyR['RyRH1O2Oflux'] = smodel.SReac('R_RyRH1O2Oflux', ssys, slhs=[ryrMol['RyRH1O2']], ilhs=[Ca], srhs=[ryrMol['RyRH1O2']], orhs=[Ca], kcst=kRyRflux)
-    R_RyR['RyRLO1Iflux']  = smodel.SReac('R_RyRLO1Iflux', ssys, slhs=[ryrMol['RyRLO1']], orhs=[Ca], srhs=[ryrMol['RyRLO1']], irhs=[Ca], kcst=kRyRflux)
-    R_RyR['RyRLO2Iflux']  = smodel.SReac('R_RyRLO2Iflux', ssys, slhs=[ryrMol['RyRLO2']], orhs=[Ca], srhs=[ryrMol['RyRLO2']], irhs=[Ca], kcst=kRyRflux)
-    R_RyR['RyRLO3Iflux']  = smodel.SReac('R_RyRLO3Iflux', ssys, slhs=[ryrMol['RyRLO3']], orhs=[Ca], srhs=[ryrMol['RyRLO3']], irhs=[Ca], kcst=kRyRflux)
-    R_RyR['RyRH1O1Iflux'] = smodel.SReac('R_RyRH1O1Iflux', ssys, slhs=[ryrMol['RyRH1O1']], orhs=[Ca], srhs=[ryrMol['RyRH1O1']], irhs=[Ca], kcst=kRyRflux)
-    R_RyR['RyRH1O2Iflux'] = smodel.SReac('R_RyRH1O2Iflux', ssys, slhs=[ryrMol['RyRH1O2']], orhs=[Ca], srhs=[ryrMol['RyRH1O2']], irhs=[Ca], kcst=kRyRflux)
+    R_RyR['RyRLO1Iflux']  = smodel.SReac('R_RyRLO1Iflux', ssys, slhs=[ryrMol['RyRLO1']], ilhs=[Ca], srhs=[ryrMol['RyRLO1']], orhs=[Ca], kcst=kRyRflux)
+    R_RyR['RyRLO2Iflux']  = smodel.SReac('R_RyRLO2Iflux', ssys, slhs=[ryrMol['RyRLO2']], ilhs=[Ca], srhs=[ryrMol['RyRLO2']], orhs=[Ca], kcst=kRyRflux)
+    R_RyR['RyRLO3Iflux']  = smodel.SReac('R_RyRLO3Iflux', ssys, slhs=[ryrMol['RyRLO3']], ilhs=[Ca], srhs=[ryrMol['RyRLO3']], orhs=[Ca], kcst=kRyRflux)
+    R_RyR['RyRH1O1Iflux'] = smodel.SReac('R_RyRH1O1Iflux', ssys, slhs=[ryrMol['RyRH1O1']], ilhs=[Ca], srhs=[ryrMol['RyRH1O1']], orhs=[Ca], kcst=kRyRflux)
+    R_RyR['RyRH1O2Iflux'] = smodel.SReac('R_RyRH1O2Iflux', ssys, slhs=[ryrMol['RyRH1O2']], ilhs=[Ca], srhs=[ryrMol['RyRH1O2']], orhs=[Ca], kcst=kRyRflux)
 
     return ryrMol, R_RyR
 
@@ -312,9 +312,9 @@ def get_SERCA(ssys, mdl, Ca):
     for mol in sercaMolName:
         sercaMol.update({mol: smodel.Spec(mol, mdl)})
     R_SERCA = {}
-    R_SERCA['Ca_SERCA_X1']  = smodel.SReac('R_Ca_SERCA_X1', ssys, irhs=[Ca], slhs=[sercaMol['SERCA_X0']], srhs=[sercaMol['SERCA_X1']], kcst=k_SERCA_X0X1)
+    R_SERCA['Ca_SERCA_X1']  = smodel.SReac('R_Ca_SERCA_X1', ssys, olhs=[Ca], slhs=[sercaMol['SERCA_X0']], srhs=[sercaMol['SERCA_X1']], kcst=k_SERCA_X0X1)
     R_SERCA['SERCA_X1_Ca']  = smodel.SReac('R_SERCA_X1_Ca', ssys, slhs=[sercaMol['SERCA_X1']], srhs=[sercaMol['SERCA_X0']], orhs=[Ca], kcst=k_SERCA_X1X0)
-    R_SERCA['Ca_SERCA_X2']  = smodel.SReac('R_Ca_SERCA_X2', ssys, irhs=[Ca], slhs=[sercaMol['SERCA_X1']], srhs=[sercaMol['SERCA_X2']], kcst=k_SERCA_X1X2)
+    R_SERCA['Ca_SERCA_X2']  = smodel.SReac('R_Ca_SERCA_X2', ssys, olhs=[Ca], slhs=[sercaMol['SERCA_X1']], srhs=[sercaMol['SERCA_X2']], kcst=k_SERCA_X1X2)
     R_SERCA['SERCA_X2_Ca']  = smodel.SReac('R_SERCA_X2_Ca', ssys, slhs=[sercaMol['SERCA_X2']], srhs=[sercaMol['SERCA_X1']], orhs=[Ca], kcst=k_SERCA_X2X1)
     R_SERCA['SERCA_X2_Y2']  = smodel.SReac('R_SERCA_X2_SERCA_Y2', ssys, slhs=[sercaMol['SERCA_X2']], srhs=[sercaMol['SERCA_Y2']], kcst=k_SERCA_X2Y2)
     R_SERCA['SERCA_Y2_X2']  = smodel.SReac('R_SERCA_Y2_SERCA_X2', ssys, slhs=[sercaMol['SERCA_Y2']], srhs=[sercaMol['SERCA_X2']], kcst=k_SERCA_Y2X2)

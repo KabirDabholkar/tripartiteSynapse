@@ -22,3 +22,31 @@
 [2019-09-10 16:57:01,089][ERROR][/home/kabir/STEPS/STEPS/src/steps/solver/statedef.cpp:491][uint steps::solver::Statedef::getCompIdx(const string&) const]: ArgErr: Geometry does not contain comp with string identifier 'cerVol'. 
 [2019-09-10 17:14:11,424][ERROR][/home/kabir/STEPS/STEPS/src/steps/wmdirect/wmdirect.cpp:444][virtual void steps::wmdirect::Wmdirect::_setCompCount(uint, uint, double)]: ArgErr: Species undefined in compartment.
  
+[2019-09-11 17:37:39,718][ERROR][/home/kabir/STEPS/STEPS/src/steps/wmrk4/wmrk4.cpp:1093][void steps::wmrk4::Wmrk4::_rksteps(double, double)]: ArgErr: dt is zero or negative. Call setDT() method. 
+[2019-09-11 17:38:02,571][ERROR][/home/kabir/STEPS/STEPS/src/steps/wmrk4/wmrk4.cpp:1093][void steps::wmrk4::Wmrk4::_rksteps(double, double)]: ArgErr: dt is zero or negative. Call setDT() method. 
+[2019-09-11 17:38:31,142][ERROR][/home/kabir/STEPS/STEPS/src/steps/wmrk4/wmrk4.cpp:1093][void steps::wmrk4::Wmrk4::_rksteps(double, double)]: ArgErr: dt is zero or negative. Call setDT() method. 
+[2019-09-11 17:43:40,374][ERROR][/home/kabir/STEPS/STEPS/src/steps/wmrk4/wmrk4.cpp:1093][void steps::wmrk4::Wmrk4::_rksteps(double, double)]: ArgErr: dt is zero or negative. Call setDT() method. 
+[2019-09-11 17:50:45,746][ERROR][/home/kabir/STEPS/STEPS/src/steps/wmrk4/wmrk4.cpp:1100][void steps::wmrk4::Wmrk4::_rksteps(double, double)]: ArgErr: dt is larger than simulation step. 
+[2019-09-11 17:51:03,528][ERROR][/home/kabir/STEPS/STEPS/src/steps/wmrk4/wmrk4.cpp:1100][void steps::wmrk4::Wmrk4::_rksteps(double, double)]: ArgErr: dt is larger than simulation step. 
+[2019-09-11 17:54:08,580][ERROR][/home/kabir/STEPS/STEPS/src/steps/wmrk4/wmrk4.cpp:1100][void steps::wmrk4::Wmrk4::_rksteps(double, double)]: ArgErr: dt is larger than simulation step. 
+[2019-09-11 17:57:11,265][ERROR][/home/kabir/STEPS/STEPS/src/steps/wmrk4/wmrk4.cpp:1100][void steps::wmrk4::Wmrk4::_rksteps(double, double)]: ArgErr: dt is larger than simulation step. 
+[2019-09-11 18:00:30,459][ERROR][/home/kabir/STEPS/STEPS/src/steps/wmrk4/wmrk4.cpp:1100][void steps::wmrk4::Wmrk4::_rksteps(double, double)]: ArgErr: dt is larger than simulation step. 
+[2019-09-11 18:00:48,865][ERROR][/home/kabir/STEPS/STEPS/src/steps/wmrk4/wmrk4.cpp:1100][void steps::wmrk4::Wmrk4::_rksteps(double, double)]: ArgErr: dt is larger than simulation step. 
+[2019-09-11 18:06:22,176][ERROR][/home/kabir/STEPS/STEPS/src/steps/wmrk4/wmrk4.cpp:1100][void steps::wmrk4::Wmrk4::_rksteps(double, double)]: ArgErr: dt is larger than simulation step. 
+[2019-09-11 18:07:51,145][ERROR][/home/kabir/STEPS/STEPS/src/steps/wmrk4/wmrk4.cpp:1100][void steps::wmrk4::Wmrk4::_rksteps(double, double)]: ArgErr: dt is larger than simulation step. 
+[2019-09-11 18:09:02,016][ERROR][/home/kabir/STEPS/STEPS/src/steps/wmrk4/wmrk4.cpp:1100][void steps::wmrk4::Wmrk4::_rksteps(double, double)]: ArgErr: dt is larger than simulation step. 
+[2019-09-11 18:11:26,893][ERROR][/home/kabir/STEPS/STEPS/src/steps/wmrk4/wmrk4.cpp:1100][void steps::wmrk4::Wmrk4::_rksteps(double, double)]: ArgErr: dt is larger than simulation step. 
+[2019-09-11 18:11:44,007][ERROR][/home/kabir/STEPS/STEPS/src/steps/wmrk4/wmrk4.cpp:1100][void steps::wmrk4::Wmrk4::_rksteps(double, double)]: ArgErr: dt is larger than simulation step. 
+[2019-09-11 18:47:05,534][ERROR][/home/kabir/STEPS/STEPS/src/steps/wmrk4/wmrk4.cpp:1100][void steps::wmrk4::Wmrk4::_rksteps(double, double)]: ArgErr: dt is larger than simulation step. 
+[2019-09-11 18:47:19,310][ERROR][/home/kabir/STEPS/STEPS/src/steps/wmrk4/wmrk4.cpp:1100][void steps::wmrk4::Wmrk4::_rksteps(double, double)]: ArgErr: dt is larger than simulation step. 
+[2019-09-11 18:47:53,704][ERROR][/home/kabir/STEPS/STEPS/src/steps/wmrk4/wmrk4.cpp:1100][void steps::wmrk4::Wmrk4::_rksteps(double, double)]: ArgErr: dt is larger than simulation step. 
+[2019-09-11 18:49:25,265][ERROR][/home/kabir/STEPS/STEPS/src/steps/wmrk4/wmrk4.cpp:1100][void steps::wmrk4::Wmrk4::_rksteps(double, double)]: ArgErr: dt is larger than simulation step. 
+[2019-09-11 18:50:40,080][ERROR][/home/kabir/STEPS/STEPS/src/steps/wmrk4/wmrk4.cpp:1100][void steps::wmrk4::Wmrk4::_rksteps(double, double)]: ArgErr: dt is larger than simulation step. 
+[2019-09-12 01:28:11,113][ERROR][/home/kabir/STEPS/STEPS/src/steps/model/model.cpp:237][void steps::model::Model::_checkSpecID(const string&) const]: ArgErr: 'H0M0' is already in use 
+[2019-09-12 01:29:39,107][ERROR][/home/kabir/STEPS/STEPS/src/steps/model/model.cpp:237][void steps::model::Model::_checkSpecID(const string&) const]: ArgErr: 'H0M0' is already in use 
+[2019-09-12 01:31:35,639][ERROR][/home/kabir/STEPS/STEPS/src/steps/model/model.cpp:237][void steps::model::Model::_checkSpecID(const string&) const]: ArgErr: 'H0M0' is already in use 
+[2019-09-12 01:32:23,779][ERROR][/home/kabir/STEPS/STEPS/src/steps/model/model.cpp:237][void steps::model::Model::_checkSpecID(const string&) const]: ArgErr: 'H0M0' is already in use 
+[2019-09-12 01:33:27,160][ERROR][/home/kabir/STEPS/STEPS/src/steps/model/model.cpp:237][void steps::model::Model::_checkSpecID(const string&) const]: ArgErr: 'H0M0' is already in use 
+[2019-09-12 01:55:20,040][ERROR][/home/kabir/STEPS/STEPS/src/steps/model/model.cpp:237][void steps::model::Model::_checkSpecID(const string&) const]: ArgErr: 'H0M0' is already in use 
+[2019-09-12 01:55:32,282][ERROR][/home/kabir/STEPS/STEPS/src/steps/model/model.cpp:237][void steps::model::Model::_checkSpecID(const string&) const]: ArgErr: 'H0M0' is already in use 
+[2019-09-12 01:55:57,860][ERROR][/home/kabir/STEPS/STEPS/src/steps/model/model.cpp:237][void steps::model::Model::_checkSpecID(const string&) const]: ArgErr: 'H0M0' is already in use 
