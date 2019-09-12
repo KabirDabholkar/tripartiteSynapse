@@ -50,3 +50,32 @@
 [2019-09-12 01:55:20,040][ERROR][/home/kabir/STEPS/STEPS/src/steps/model/model.cpp:237][void steps::model::Model::_checkSpecID(const string&) const]: ArgErr: 'H0M0' is already in use 
 [2019-09-12 01:55:32,282][ERROR][/home/kabir/STEPS/STEPS/src/steps/model/model.cpp:237][void steps::model::Model::_checkSpecID(const string&) const]: ArgErr: 'H0M0' is already in use 
 [2019-09-12 01:55:57,860][ERROR][/home/kabir/STEPS/STEPS/src/steps/model/model.cpp:237][void steps::model::Model::_checkSpecID(const string&) const]: ArgErr: 'H0M0' is already in use 
+[2019-09-12 17:18:18,383][ERROR][/home/kabir/STEPS/STEPS/src/steps/wmdirect/wmdirect.cpp:444][virtual void steps::wmdirect::Wmdirect::_setCompCount(uint, uint, double)]: ArgErr: Species undefined in compartment.
+ 
+[2019-09-12 17:21:49,369][ERROR][/home/kabir/STEPS/STEPS/src/steps/wmdirect/wmdirect.cpp:444][virtual void steps::wmdirect::Wmdirect::_setCompCount(uint, uint, double)]: ArgErr: Species undefined in compartment.
+ 
+[2019-09-12 17:21:59,796][ERROR][/home/kabir/STEPS/STEPS/src/steps/wmdirect/wmdirect.cpp:444][virtual void steps::wmdirect::Wmdirect::_setCompCount(uint, uint, double)]: ArgErr: Species undefined in compartment.
+ 
+[2019-09-12 17:24:58,488][ERROR][/home/kabir/STEPS/STEPS/src/steps/wmdirect/wmdirect.cpp:444][virtual void steps::wmdirect::Wmdirect::_setCompCount(uint, uint, double)]: ArgErr: Species undefined in compartment.
+ 
+[2019-09-12 17:40:36,200][ERROR][/home/kabir/STEPS/STEPS/src/steps/wmdirect/wmdirect.cpp:444][virtual void steps::wmdirect::Wmdirect::_setCompCount(uint, uint, double)]: ArgErr: Species undefined in compartment.
+ 
+[2019-09-12 17:40:53,477][ERROR][/home/kabir/STEPS/STEPS/src/steps/wmdirect/wmdirect.cpp:444][virtual void steps::wmdirect::Wmdirect::_setCompCount(uint, uint, double)]: ArgErr: Species undefined in compartment.
+ 
+[2019-09-12 17:41:10,078][ERROR][/home/kabir/STEPS/STEPS/src/steps/wmdirect/wmdirect.cpp:444][virtual void steps::wmdirect::Wmdirect::_setCompCount(uint, uint, double)]: ArgErr: Species undefined in compartment.
+ 
+[2019-09-12 17:41:46,772][ERROR][/home/kabir/STEPS/STEPS/src/steps/wmdirect/wmdirect.cpp:444][virtual void steps::wmdirect::Wmdirect::_setCompCount(uint, uint, double)]: ArgErr: Species undefined in compartment.
+ 
+[2019-09-12 17:42:29,114][ERROR][/home/kabir/STEPS/STEPS/src/steps/wmdirect/wmdirect.cpp:444][virtual void steps::wmdirect::Wmdirect::_setCompCount(uint, uint, double)]: ArgErr: Species undefined in compartment.
+ 
+[2019-09-12 17:43:34,791][ERROR][/home/kabir/STEPS/STEPS/src/steps/wmdirect/wmdirect.cpp:444][virtual void steps::wmdirect::Wmdirect::_setCompCount(uint, uint, double)]: ArgErr: Species undefined in compartment.
+ 
+[2019-09-12 17:46:21,335][ERROR][/home/kabir/STEPS/STEPS/src/steps/wmdirect/wmdirect.cpp:444][virtual void steps::wmdirect::Wmdirect::_setCompCount(uint, uint, double)]: ArgErr: Species undefined in compartment.
+ 
+[2019-09-12 17:51:08,510][ERROR][/home/kabir/STEPS/STEPS/src/steps/model/model.cpp:237][void steps::model::Model::_checkSpecID(const string&) const]: ArgErr: 'H0M0' is already in use 
+[2019-09-12 17:56:46,421][ERROR][/home/kabir/STEPS/STEPS/src/steps/solver/statedef.cpp:491][uint steps::solver::Statedef::getCompIdx(const string&) const]: ArgErr: Geometry does not contain comp with string identifier 'erSurf'. 
+[2019-09-12 18:01:50,588][ERROR][/home/kabir/STEPS/STEPS/src/steps/solver/statedef.cpp:491][uint steps::solver::Statedef::getCompIdx(const string&) const]: ArgErr: Geometry does not contain comp with string identifier 'erSurf'. 
+[2019-09-12 18:02:39,250][ERROR][/home/kabir/STEPS/STEPS/src/steps/solver/statedef.cpp:491][uint steps::solver::Statedef::getCompIdx(const string&) const]: ArgErr: Geometry does not contain comp with string identifier 'erSurf'. 
+[2019-09-12 18:03:06,486][ERROR][/home/kabir/STEPS/STEPS/src/steps/solver/statedef.cpp:491][uint steps::solver::Statedef::getCompIdx(const string&) const]: ArgErr: Geometry does not contain comp with string identifier 'erSurf'. 
+[2019-09-12 18:09:49,206][ERROR][/home/kabir/STEPS/STEPS/src/steps/wmdirect/wmdirect.cpp:811][virtual double steps::wmdirect::Wmdirect::_getPatchCount(uint, uint) const]: ArgErr: Species undefined in patch.
+ 
