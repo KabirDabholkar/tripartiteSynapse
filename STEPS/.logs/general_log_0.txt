@@ -79,3 +79,10 @@
 [2019-09-12 18:03:06,486][ERROR][/home/kabir/STEPS/STEPS/src/steps/solver/statedef.cpp:491][uint steps::solver::Statedef::getCompIdx(const string&) const]: ArgErr: Geometry does not contain comp with string identifier 'erSurf'. 
 [2019-09-12 18:09:49,206][ERROR][/home/kabir/STEPS/STEPS/src/steps/wmdirect/wmdirect.cpp:811][virtual double steps::wmdirect::Wmdirect::_getPatchCount(uint, uint) const]: ArgErr: Species undefined in patch.
  
+[2019-09-19 17:14:27,350][ERROR][/home/kabir/STEPS/STEPS/src/steps/wmrk4/wmrk4.cpp:172][virtual void steps::wmrk4::Wmrk4::step()]: Assertion failed, please send the log files under .logs/ to developer. 
+[2019-09-19 17:15:20,861][ERROR][/home/kabir/STEPS/STEPS/src/steps/wmrk4/wmrk4.cpp:172][virtual void steps::wmrk4::Wmrk4::step()]: Assertion failed, please send the log files under .logs/ to developer. 
+[2019-09-19 17:18:22,794][ERROR][/home/kabir/STEPS/STEPS/src/steps/wmrk4/wmrk4.cpp:1100][void steps::wmrk4::Wmrk4::_rksteps(double, double)]: ArgErr: dt is larger than simulation step. 
+[2019-09-19 17:19:55,339][ERROR][/home/kabir/STEPS/STEPS/src/steps/wmrk4/wmrk4.cpp:1100][void steps::wmrk4::Wmrk4::_rksteps(double, double)]: ArgErr: dt is larger than simulation step. 
+[2019-09-19 17:20:13,066][ERROR][/home/kabir/STEPS/STEPS/src/steps/wmrk4/wmrk4.cpp:147][virtual void steps::wmrk4::Wmrk4::run(double)]: ArgErr: Endtime is before current simulation time 
+[2019-09-19 17:20:25,930][ERROR][/home/kabir/STEPS/STEPS/src/steps/wmrk4/wmrk4.cpp:147][virtual void steps::wmrk4::Wmrk4::run(double)]: ArgErr: Endtime is before current simulation time 
+[2019-09-19 17:21:47,553][ERROR][/home/kabir/STEPS/STEPS/src/steps/wmrk4/wmrk4.cpp:147][virtual void steps::wmrk4::Wmrk4::run(double)]: ArgErr: Endtime is before current simulation time 
