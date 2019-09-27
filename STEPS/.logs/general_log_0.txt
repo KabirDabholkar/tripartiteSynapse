@@ -86,3 +86,13 @@
 [2019-09-19 17:20:13,066][ERROR][/home/kabir/STEPS/STEPS/src/steps/wmrk4/wmrk4.cpp:147][virtual void steps::wmrk4::Wmrk4::run(double)]: ArgErr: Endtime is before current simulation time 
 [2019-09-19 17:20:25,930][ERROR][/home/kabir/STEPS/STEPS/src/steps/wmrk4/wmrk4.cpp:147][virtual void steps::wmrk4::Wmrk4::run(double)]: ArgErr: Endtime is before current simulation time 
 [2019-09-19 17:21:47,553][ERROR][/home/kabir/STEPS/STEPS/src/steps/wmrk4/wmrk4.cpp:147][virtual void steps::wmrk4::Wmrk4::run(double)]: ArgErr: Endtime is before current simulation time 
+[2019-09-28 01:40:14,428][ERROR][/home/kabir/STEPS/STEPS/src/steps/geom/geom.cpp:144][void steps::wm::Geom::_checkCompID(const string&) const]: ArgErr: 'cyto' is already in use.
+ 
+[2019-09-28 02:16:45,596][ERROR][/home/kabir/STEPS/STEPS/src/steps/geom/geom.cpp:224][void steps::wm::Geom::_handlePatchAdd(steps::wm::Patch*)]: ArgErr: 'cytsurf' is already in use.
+ 
+[2019-09-28 02:16:57,465][ERROR][/home/kabir/STEPS/STEPS/src/steps/geom/geom.cpp:224][void steps::wm::Geom::_handlePatchAdd(steps::wm::Patch*)]: ArgErr: 'cytsurf' is already in use.
+ 
+[2019-09-28 02:17:09,074][ERROR][/home/kabir/STEPS/STEPS/src/steps/geom/geom.cpp:144][void steps::wm::Geom::_checkCompID(const string&) const]: ArgErr: 'cyto' is already in use.
+ 
+[2019-09-28 02:17:35,671][ERROR][/home/kabir/STEPS/STEPS/src/steps/geom/geom.cpp:144][void steps::wm::Geom::_checkCompID(const string&) const]: ArgErr: 'cyto' is already in use.
+ 
