@@ -96,3 +96,131 @@
  
 [2019-09-28 02:17:35,671][ERROR][/home/kabir/STEPS/STEPS/src/steps/geom/geom.cpp:144][void steps::wm::Geom::_checkCompID(const string&) const]: ArgErr: 'cyto' is already in use.
  
+[2019-09-30 17:51:00,709][ERROR][/home/kabir/STEPS/STEPS/src/steps/geom/geom.cpp:144][void steps::wm::Geom::_checkCompID(const string&) const]: ArgErr: 'cytVol' is already in use.
+ 
+[2019-09-30 17:51:06,537][ERROR][/home/kabir/STEPS/STEPS/src/steps/geom/geom.cpp:144][void steps::wm::Geom::_checkCompID(const string&) const]: ArgErr: 'cytVol' is already in use.
+ 
+[2019-09-30 17:59:06,894][ERROR][/home/kabir/STEPS/STEPS/src/steps/geom/geom.cpp:144][void steps::wm::Geom::_checkCompID(const string&) const]: ArgErr: 'cytVol' is already in use.
+ 
+[2019-09-30 18:06:25,732][ERROR][/home/kabir/STEPS/STEPS/src/steps/geom/geom.cpp:144][void steps::wm::Geom::_checkCompID(const string&) const]: ArgErr: 'cytVol' is already in use.
+ 
+[2019-09-30 18:06:45,361][ERROR][/home/kabir/STEPS/STEPS/src/steps/geom/geom.cpp:144][void steps::wm::Geom::_checkCompID(const string&) const]: ArgErr: 'cytVol' is already in use.
+ 
+[2019-09-30 18:10:06,740][ERROR][/home/kabir/STEPS/STEPS/src/steps/geom/geom.cpp:144][void steps::wm::Geom::_checkCompID(const string&) const]: ArgErr: 'cytVol' is already in use.
+ 
+[2019-09-30 18:10:56,921][ERROR][/home/kabir/STEPS/STEPS/src/steps/geom/geom.cpp:144][void steps::wm::Geom::_checkCompID(const string&) const]: ArgErr: 'cytVol' is already in use.
+ 
+[2019-09-30 18:11:22,484][ERROR][/home/kabir/STEPS/STEPS/src/steps/geom/geom.cpp:144][void steps::wm::Geom::_checkCompID(const string&) const]: ArgErr: 'cytVol' is already in use.
+ 
+[2019-09-30 18:11:27,251][ERROR][/home/kabir/STEPS/STEPS/src/steps/geom/geom.cpp:144][void steps::wm::Geom::_checkCompID(const string&) const]: ArgErr: 'cytVol' is already in use.
+ 
+[2019-09-30 18:14:34,974][ERROR][/home/kabir/STEPS/STEPS/src/steps/geom/geom.cpp:144][void steps::wm::Geom::_checkCompID(const string&) const]: ArgErr: 'cytVol' is already in use.
+ 
+[2019-09-30 18:23:29,288][ERROR][/home/kabir/STEPS/STEPS/src/steps/tetexact/tetexact.cpp:1203][uint steps::tetexact::Tetexact::specG2L_or_throw(steps::tetexact::Comp*, uint) const]: ArgErr: species undefined in compartment 
+[2019-09-30 18:26:14,312][ERROR][/home/kabir/STEPS/STEPS/src/steps/tetexact/tetexact.cpp:1203][uint steps::tetexact::Tetexact::specG2L_or_throw(steps::tetexact::Comp*, uint) const]: ArgErr: species undefined in compartment 
+[2019-09-30 18:49:15,334][ERROR][/home/kabir/STEPS/STEPS/src/steps/tetexact/tetexact.cpp:1203][uint steps::tetexact::Tetexact::specG2L_or_throw(steps::tetexact::Comp*, uint) const]: ArgErr: species undefined in compartment 
+[2019-09-30 18:58:32,416][ERROR][/home/kabir/STEPS/STEPS/src/steps/tetexact/tetexact.cpp:1259][uint steps::tetexact::Tetexact::diffG2L_or_throw(steps::tetexact::Comp*, uint) const]: ArgErr: diffusion rule undefined in compartment 
+[2019-09-30 18:58:57,820][ERROR][/home/kabir/STEPS/STEPS/src/steps/solver/statedef.cpp:491][uint steps::solver::Statedef::getCompIdx(const string&) const]: ArgErr: Geometry does not contain comp with string identifier 'cytvsys'. 
+[2019-09-30 19:04:05,673][ERROR][/home/kabir/STEPS/STEPS/src/steps/tetexact/tetexact.cpp:2713][virtual void steps::tetexact::Tetexact::_setTetCount(uint, uint, double)]: ArgErr: Species undefined in tetrahedron.
+ 
+[2019-09-30 19:05:10,693][ERROR][/home/kabir/STEPS/STEPS/src/steps/geom/geom.cpp:144][void steps::wm::Geom::_checkCompID(const string&) const]: ArgErr: 'cytVol' is already in use.
+ 
+[2019-09-30 19:15:10,850][ERROR][/home/kabir/STEPS/STEPS/src/steps/model/model.cpp:237][void steps::model::Model::_checkSpecID(const string&) const]: ArgErr: 'H0M0' is already in use 
+[2019-09-30 20:06:59,666][ERROR][/home/kabir/STEPS/STEPS/src/steps/solver/statedef.cpp:534][uint steps::solver::Statedef::getPatchIdx(const string&) const]: ArgErr: Geometry does not contain patch with string identifier 'cytSurf'. 
+[2019-09-30 20:06:59,669][ERROR][/home/kabir/STEPS/STEPS/src/steps/solver/statedef.cpp:534][uint steps::solver::Statedef::getPatchIdx(const string&) const]: ArgErr: Geometry does not contain patch with string identifier 'cytSurf'. 
+[2019-09-30 20:06:59,686][ERROR][/home/kabir/STEPS/STEPS/src/steps/solver/statedef.cpp:534][uint steps::solver::Statedef::getPatchIdx(const string&) const]: ArgErr: Geometry does not contain patch with string identifier 'cytSurf'. 
+[2019-09-30 20:07:01,198][ERROR][/home/kabir/STEPS/STEPS/src/steps/solver/statedef.cpp:534][uint steps::solver::Statedef::getPatchIdx(const string&) const]: ArgErr: Geometry does not contain patch with string identifier 'cytSurf'. 
+[2019-09-30 20:07:01,202][ERROR][/home/kabir/STEPS/STEPS/src/steps/solver/statedef.cpp:534][uint steps::solver::Statedef::getPatchIdx(const string&) const]: ArgErr: Geometry does not contain patch with string identifier 'cytSurf'. 
+[2019-09-30 20:07:02,387][ERROR][/home/kabir/STEPS/STEPS/src/steps/solver/statedef.cpp:534][uint steps::solver::Statedef::getPatchIdx(const string&) const]: ArgErr: Geometry does not contain patch with string identifier 'cytSurf'. 
+[2019-09-30 20:07:02,388][ERROR][/home/kabir/STEPS/STEPS/src/steps/solver/statedef.cpp:534][uint steps::solver::Statedef::getPatchIdx(const string&) const]: ArgErr: Geometry does not contain patch with string identifier 'cytSurf'. 
+[2019-09-30 20:07:02,417][ERROR][/home/kabir/STEPS/STEPS/src/steps/solver/statedef.cpp:534][uint steps::solver::Statedef::getPatchIdx(const string&) const]: ArgErr: Geometry does not contain patch with string identifier 'cytSurf'. 
+[2019-09-30 20:07:04,272][ERROR][/home/kabir/STEPS/STEPS/src/steps/solver/statedef.cpp:534][uint steps::solver::Statedef::getPatchIdx(const string&) const]: ArgErr: Geometry does not contain patch with string identifier 'cytSurf'. 
+[2019-09-30 20:07:04,279][ERROR][/home/kabir/STEPS/STEPS/src/steps/solver/statedef.cpp:534][uint steps::solver::Statedef::getPatchIdx(const string&) const]: ArgErr: Geometry does not contain patch with string identifier 'cytSurf'. 
+[2019-10-01 11:51:22,481][ERROR][/home/kabir/STEPS/STEPS/src/steps/solver/statedef.cpp:534][uint steps::solver::Statedef::getPatchIdx(const string&) const]: ArgErr: Geometry does not contain patch with string identifier 'cytSurf'. 
+[2019-10-01 11:51:22,531][ERROR][/home/kabir/STEPS/STEPS/src/steps/solver/statedef.cpp:534][uint steps::solver::Statedef::getPatchIdx(const string&) const]: ArgErr: Geometry does not contain patch with string identifier 'cytSurf'. 
+[2019-10-01 11:51:22,544][ERROR][/home/kabir/STEPS/STEPS/src/steps/solver/statedef.cpp:534][uint steps::solver::Statedef::getPatchIdx(const string&) const]: ArgErr: Geometry does not contain patch with string identifier 'cytSurf'. 
+[2019-10-01 11:51:24,113][ERROR][/home/kabir/STEPS/STEPS/src/steps/solver/statedef.cpp:534][uint steps::solver::Statedef::getPatchIdx(const string&) const]: ArgErr: Geometry does not contain patch with string identifier 'cytSurf'. 
+[2019-10-01 11:51:24,116][ERROR][/home/kabir/STEPS/STEPS/src/steps/solver/statedef.cpp:534][uint steps::solver::Statedef::getPatchIdx(const string&) const]: ArgErr: Geometry does not contain patch with string identifier 'cytSurf'. 
+[2019-10-01 11:51:25,170][ERROR][/home/kabir/STEPS/STEPS/src/steps/solver/statedef.cpp:534][uint steps::solver::Statedef::getPatchIdx(const string&) const]: ArgErr: Geometry does not contain patch with string identifier 'cytSurf'. 
+[2019-10-01 11:51:25,212][ERROR][/home/kabir/STEPS/STEPS/src/steps/solver/statedef.cpp:534][uint steps::solver::Statedef::getPatchIdx(const string&) const]: ArgErr: Geometry does not contain patch with string identifier 'cytSurf'. 
+[2019-10-01 11:51:25,567][ERROR][/home/kabir/STEPS/STEPS/src/steps/solver/statedef.cpp:534][uint steps::solver::Statedef::getPatchIdx(const string&) const]: ArgErr: Geometry does not contain patch with string identifier 'cytSurf'. 
+[2019-10-01 11:51:26,736][ERROR][/home/kabir/STEPS/STEPS/src/steps/solver/statedef.cpp:534][uint steps::solver::Statedef::getPatchIdx(const string&) const]: ArgErr: Geometry does not contain patch with string identifier 'cytSurf'. 
+[2019-10-01 11:51:27,163][ERROR][/home/kabir/STEPS/STEPS/src/steps/solver/statedef.cpp:534][uint steps::solver::Statedef::getPatchIdx(const string&) const]: ArgErr: Geometry does not contain patch with string identifier 'cytSurf'. 
+[2019-10-01 13:09:28,184][ERROR][/home/kabir/STEPS/STEPS/src/steps/tetode/tetode.cpp:506][virtual void steps::tetode::TetODE::reset()]: NotImplErr: reset() not implemented for steps::solver::TetODE solver 
+[2019-10-01 13:15:10,798][ERROR][/home/kabir/STEPS/STEPS/src/steps/tetode/tetode.cpp:1939][virtual void steps::tetode::TetODE::run(double)]: SysErr: 
+CVODE iteration failed
+
+ 
+[2019-10-01 14:06:20,369][ERROR][/home/kabir/STEPS/STEPS/src/steps/geom/geom.cpp:144][void steps::wm::Geom::_checkCompID(const string&) const]: ArgErr: 'cytVol' is already in use.
+ 
+[2019-10-01 14:21:49,272][ERROR][/home/kabir/STEPS/STEPS/src/steps/tetode/tetode.cpp:2644][virtual void steps::tetode::TetODE::_setTriCount(uint, uint, double)]: ArgErr: Triangle 983 has not been assigned to a patch.
+ 
+[2019-10-01 14:23:42,373][ERROR][/home/kabir/STEPS/STEPS/src/steps/solver/statedef.cpp:577][uint steps::solver::Statedef::getSpecIdx(const string&) const]: ArgErr: Model does not contain species with string identifier 'H0M0'. 
+[2019-10-01 14:23:51,104][ERROR][/home/kabir/STEPS/STEPS/src/steps/tetode/tetode.cpp:1939][virtual void steps::tetode::TetODE::run(double)]: SysErr: 
+CVODE iteration failed
+
+ 
+[2019-10-01 14:23:59,065][ERROR][/home/kabir/STEPS/STEPS/src/steps/tetode/tetode.cpp:1939][virtual void steps::tetode::TetODE::run(double)]: SysErr: 
+CVODE iteration failed
+
+ 
+[2019-10-01 14:25:07,119][ERROR][/home/kabir/STEPS/STEPS/src/steps/tetode/tetode.cpp:1939][virtual void steps::tetode::TetODE::run(double)]: SysErr: 
+CVODE iteration failed
+
+ 
+[2019-10-01 14:31:08,901][ERROR][/home/kabir/STEPS/STEPS/src/steps/geom/geom.cpp:144][void steps::wm::Geom::_checkCompID(const string&) const]: ArgErr: 'cytVol' is already in use.
+ 
+[2019-10-01 14:36:55,331][ERROR][/home/kabir/STEPS/STEPS/src/steps/geom/geom.cpp:144][void steps::wm::Geom::_checkCompID(const string&) const]: ArgErr: 'cytVol' is already in use.
+ 
+[2019-10-01 14:37:41,595][ERROR][/home/kabir/STEPS/STEPS/src/steps/tetode/tetode.cpp:1939][virtual void steps::tetode::TetODE::run(double)]: SysErr: 
+CVODE iteration failed
+
+ 
+[2019-10-01 14:37:51,939][ERROR][/home/kabir/STEPS/STEPS/src/steps/tetode/tetode.cpp:1939][virtual void steps::tetode::TetODE::run(double)]: SysErr: 
+CVODE iteration failed
+
+ 
+[2019-10-01 14:38:01,723][ERROR][/home/kabir/STEPS/STEPS/src/steps/tetode/tetode.cpp:1939][virtual void steps::tetode::TetODE::run(double)]: SysErr: 
+CVODE iteration failed
+
+ 
+[2019-10-01 14:38:08,755][ERROR][/home/kabir/STEPS/STEPS/src/steps/tetode/tetode.cpp:1939][virtual void steps::tetode::TetODE::run(double)]: SysErr: 
+CVODE iteration failed
+
+ 
+[2019-10-01 14:38:45,221][ERROR][/home/kabir/STEPS/STEPS/src/steps/tetode/tetode.cpp:1939][virtual void steps::tetode::TetODE::run(double)]: SysErr: 
+CVODE iteration failed
+
+ 
+[2019-10-01 14:38:56,417][ERROR][/home/kabir/STEPS/STEPS/src/steps/tetode/tetode.cpp:1939][virtual void steps::tetode::TetODE::run(double)]: SysErr: 
+CVODE iteration failed
+
+ 
+[2019-10-01 14:39:51,232][ERROR][/home/kabir/STEPS/STEPS/src/steps/tetode/tetode.cpp:1939][virtual void steps::tetode::TetODE::run(double)]: SysErr: 
+CVODE iteration failed
+
+ 
+[2019-10-01 14:40:26,781][ERROR][/home/kabir/STEPS/STEPS/src/steps/tetode/tetode.cpp:1939][virtual void steps::tetode::TetODE::run(double)]: SysErr: 
+CVODE iteration failed
+
+ 
+[2019-10-01 14:40:36,414][ERROR][/home/kabir/STEPS/STEPS/src/steps/tetode/tetode.cpp:1939][virtual void steps::tetode::TetODE::run(double)]: SysErr: 
+CVODE iteration failed
+
+ 
+[2019-10-01 14:43:23,775][ERROR][/home/kabir/STEPS/STEPS/src/steps/tetode/tetode.cpp:1939][virtual void steps::tetode::TetODE::run(double)]: SysErr: 
+CVODE iteration failed
+
+ 
+[2019-10-01 16:01:24,354][ERROR][/home/kabir/STEPS/STEPS/src/steps/tetexact/tetexact.cpp:3273][virtual void steps::tetexact::Tetexact::_setTriCount(uint, uint, double)]: ArgErr: Triangle 983 has not been assigned to a patch.
+ 
+[2019-10-01 16:01:24,631][ERROR][/home/kabir/STEPS/STEPS/src/steps/tetexact/tetexact.cpp:3273][virtual void steps::tetexact::Tetexact::_setTriCount(uint, uint, double)]: ArgErr: Triangle 983 has not been assigned to a patch.
+ 
+[2019-10-01 16:01:24,648][ERROR][/home/kabir/STEPS/STEPS/src/steps/tetexact/tetexact.cpp:3273][virtual void steps::tetexact::Tetexact::_setTriCount(uint, uint, double)]: ArgErr: Triangle 983 has not been assigned to a patch.
+ 
+[2019-10-01 16:01:24,690][ERROR][/home/kabir/STEPS/STEPS/src/steps/tetexact/tetexact.cpp:3273][virtual void steps::tetexact::Tetexact::_setTriCount(uint, uint, double)]: ArgErr: Triangle 983 has not been assigned to a patch.
+ 
+[2019-10-01 16:01:24,884][ERROR][/home/kabir/STEPS/STEPS/src/steps/tetexact/tetexact.cpp:3273][virtual void steps::tetexact::Tetexact::_setTriCount(uint, uint, double)]: ArgErr: Triangle 983 has not been assigned to a patch.
+ 
+[2019-10-01 18:50:50,125][ERROR][/home/kabir/STEPS/STEPS/src/steps/model/model.cpp:237][void steps::model::Model::_checkSpecID(const string&) const]: ArgErr: 'H0M0' is already in use 
+[2019-10-01 18:51:02,455][ERROR][/home/kabir/STEPS/STEPS/src/steps/model/model.cpp:237][void steps::model::Model::_checkSpecID(const string&) const]: ArgErr: 'H0M0' is already in use 
