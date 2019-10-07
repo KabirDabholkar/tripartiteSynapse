@@ -352,3 +352,5 @@ CVODE iteration failed
 [2019-10-02 00:08:55,625][ERROR][/home/kabir/STEPS/STEPS/src/steps/solver/statedef.cpp:577][uint steps::solver::Statedef::getSpecIdx(const string&) const]: ArgErr: Model does not contain species with string identifier 'H0M0'. 
 [2019-10-02 00:08:55,625][ERROR][/home/kabir/STEPS/STEPS/src/steps/solver/statedef.cpp:577][uint steps::solver::Statedef::getSpecIdx(const string&) const]: ArgErr: Model does not contain species with string identifier 'H0M0'. 
 [2019-10-02 00:08:55,626][ERROR][/home/kabir/STEPS/STEPS/src/steps/solver/statedef.cpp:577][uint steps::solver::Statedef::getSpecIdx(const string&) const]: ArgErr: Model does not contain species with string identifier 'H0M0'. 
+[2019-10-03 16:34:59,575][ERROR][/home/kabir/STEPS/STEPS/src/steps/geom/geom.cpp:144][void steps::wm::Geom::_checkCompID(const string&) const]: ArgErr: 'cytVol' is already in use.
+ 
