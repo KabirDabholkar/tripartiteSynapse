@@ -15,12 +15,11 @@ NA = 6.023e23
 ######################################################
 ### Steady state initial values
 initV = {
-    'Ca':       [100e-9],
+    'Ca':       [100e-9,250e-6],
     'HH':       [-64.0, 0.05, 0.6, 0.32],
-    'PMCA':     [int(8.5*180*i) for i in [0.80, 0.1953, 0.0047]], # Fraction; surface density = 180 num/um^2; Total conc. = 2.98e-6 uM
-    'VDCC':     [80, 0.0, 0.0, 0.0, 0.0, 0.0], # was 80 before
-    'cb':       [i*1 for i in [1.48e-05, 7.00e-06, 8.27e-07, 1.21e-05, 5.74e-06, 6.79e-07,
-                 2.49e-06, 1.18e-06, 1.39e-07]], # Total conc. = 45e-6 uM
+    'pump':     [int(8.5*180)], # Fraction; surface density = 180 num/um^2; Total conc. = 2.98e-6 uM
+    'VDCC':     [80], # was 80 before
+    'buffer':       [i*1 for i in [0.2,0.8]], # Total conc. = 45e-6 uM
     'AZ':       [7] + [0 for _ in range(17)], # was 1.65e-6 
     'serca':    [int(f*8680) for f in [0.75554529, 0.18054556, 0.010757505, 0.015718635, 0.026363904, 0.011069105]], #Number of SERCA, Total conc 15e-6M in cytoplasm #Means et al., 2006, Biophys J.
     'ryr':      [150]+[0]*13
@@ -94,7 +93,9 @@ kspont = 0.417e-3       # /s
 
 
 ######################################################
-vdccMolName = ['0']
+vdccMolName = ['VDCC_O']
+
+k_VDCC_flux=0
 
 ### pqVDCC
 pq_a10, pq_a20, pq_a30, pq_a40, pq_a = 5890, 9210, 5200, 1823180, 247710 # /sec

@@ -1,0 +1,26 @@
+[2020-01-26 16:36:37,055][ERROR][/home/kabir/STEPS/STEPS/src/steps/util/checkid.cpp:63][void steps::util::checkID(const string&)]: ArgErr: '0' is not a valid id. 
+[2020-01-26 16:39:00,118][ERROR][/home/kabir/STEPS/STEPS/src/steps/util/checkid.cpp:63][void steps::util::checkID(const string&)]: ArgErr: '0' is not a valid id. 
+[2020-01-26 16:39:38,366][ERROR][/home/kabir/STEPS/STEPS/src/steps/util/checkid.cpp:63][void steps::util::checkID(const string&)]: ArgErr: '0' is not a valid id. 
+[2020-01-26 16:39:59,648][ERROR][/home/kabir/STEPS/STEPS/src/steps/util/checkid.cpp:63][void steps::util::checkID(const string&)]: ArgErr: '0' is not a valid id. 
+[2020-01-26 16:41:11,307][ERROR][/home/kabir/STEPS/STEPS/src/steps/util/checkid.cpp:63][void steps::util::checkID(const string&)]: ArgErr: '0' is not a valid id. 
+[2020-01-26 16:41:26,240][ERROR][/home/kabir/STEPS/STEPS/src/steps/util/checkid.cpp:63][void steps::util::checkID(const string&)]: ArgErr: '0' is not a valid id. 
+[2020-01-26 16:41:58,607][ERROR][/home/kabir/STEPS/STEPS/src/steps/util/checkid.cpp:63][void steps::util::checkID(const string&)]: ArgErr: '0' is not a valid id. 
+[2020-01-26 16:42:30,676][ERROR][/home/kabir/STEPS/STEPS/src/steps/util/checkid.cpp:63][void steps::util::checkID(const string&)]: ArgErr: '0' is not a valid id. 
+[2020-01-26 16:43:43,411][ERROR][/home/kabir/STEPS/STEPS/src/steps/util/checkid.cpp:63][void steps::util::checkID(const string&)]: ArgErr: '0' is not a valid id. 
+[2020-01-26 16:45:00,547][ERROR][/home/kabir/STEPS/STEPS/src/steps/model/volsys.cpp:268][void steps::model::Volsys::_checkReacID(const string&) const]: ArgErr: 'R_buffer_bind' is already in use 
+[2020-01-26 16:45:29,773][ERROR][/home/kabir/STEPS/STEPS/src/steps/model/volsys.cpp:268][void steps::model::Volsys::_checkReacID(const string&) const]: ArgErr: 'R_buffer_bind' is already in use 
+[2020-01-26 16:47:16,784][ERROR][/home/kabir/STEPS/STEPS/src/steps/model/model.cpp:237][void steps::model::Model::_checkSpecID(const string&) const]: ArgErr: 'bound' is already in use 
+[2020-01-26 16:49:41,100][ERROR][/home/kabir/STEPS/STEPS/src/steps/model/model.cpp:237][void steps::model::Model::_checkSpecID(const string&) const]: ArgErr: 'bound' is already in use 
+[2020-01-26 16:53:43,596][ERROR][/home/kabir/STEPS/STEPS/src/steps/solver/statedef.cpp:662][uint steps::solver::Statedef::getSReacIdx(const string&) const]: ArgErr: Model does not contain sreac with string identifier 'R_VDCCflux'. 
+[2020-01-26 16:59:27,066][ERROR][/home/kabir/STEPS/STEPS/src/steps/solver/api_main.cpp:86][steps::solver::API::API(steps::model::Model*, steps::wm::Geom*, steps::rng::RNG*)]: ArgErr: Cannot create solver object with this steps.geom.Geom geometry description object. Geometry must contain at least one Compartment. 
+[2020-01-26 17:01:49,777][ERROR][/home/kabir/STEPS/STEPS/src/steps/solver/statedef.cpp:577][uint steps::solver::Statedef::getSpecIdx(const string&) const]: ArgErr: Model does not contain species with string identifier 'bound'. 
+[2020-01-26 17:04:41,346][ERROR][/home/kabir/STEPS/STEPS/src/steps/solver/api_tri.cpp:172][void steps::solver::API::setTriCount(uint, const string&, double)]: NotImplErr:  
+[2020-01-26 17:06:39,852][ERROR][/home/kabir/STEPS/STEPS/src/steps/solver/api_tri.cpp:172][void steps::solver::API::setTriCount(uint, const string&, double)]: NotImplErr:  
+[2020-01-27 11:21:30,639][ERROR][/home/kabir/STEPS/STEPS/src/steps/solver/api_tri.cpp:172][void steps::solver::API::setTriCount(uint, const string&, double)]: NotImplErr:  
+[2020-01-27 11:34:19,901][ERROR][/home/kabir/STEPS/STEPS/src/steps/solver/api_tet.cpp:172][void steps::solver::API::setTetCount(uint, const string&, double)]: NotImplErr:  
+[2020-01-27 11:40:27,392][ERROR][/home/kabir/STEPS/STEPS/src/steps/solver/api_tri.cpp:172][void steps::solver::API::setTriCount(uint, const string&, double)]: NotImplErr:  
+[2020-01-27 11:41:46,176][ERROR][/home/kabir/STEPS/STEPS/src/steps/solver/api_tet.cpp:172][void steps::solver::API::setTetCount(uint, const string&, double)]: NotImplErr:  
+[2020-01-27 11:41:51,869][ERROR][/home/kabir/STEPS/STEPS/src/steps/solver/api_tet.cpp:172][void steps::solver::API::setTetCount(uint, const string&, double)]: NotImplErr:  
+[2020-01-27 11:43:04,976][ERROR][/home/kabir/STEPS/STEPS/src/steps/solver/api_tet.cpp:172][void steps::solver::API::setTetCount(uint, const string&, double)]: NotImplErr:  
+[2020-01-27 11:43:37,252][ERROR][/home/kabir/STEPS/STEPS/src/steps/solver/api_tri.cpp:172][void steps::solver::API::setTriCount(uint, const string&, double)]: NotImplErr:  
+[2020-01-27 12:03:55,570][ERROR][/home/kabir/STEPS/STEPS/src/steps/solver/statedef.cpp:534][uint steps::solver::Statedef::getPatchIdx(const string&) const]: ArgErr: Geometry does not contain patch with string identifier 'cytSurf'. 

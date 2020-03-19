@@ -7,6 +7,7 @@ import steps.rng as srng
 from parameters import *
 from misc import *
 
+
 ######################################################
 ### Calbindin
 def get_buffer(vsys, mdl, Ca):
@@ -16,7 +17,7 @@ def get_buffer(vsys, mdl, Ca):
         
     R_buffer = {}
     R_buffer['buffer_binding'] = smodel.Reac('R_buffer_bind', vsys, lhs=[bufferMol['free'], Ca], rhs=[bufferMol['bound']], kcst=k_buffer_on)
-    R_buffer['buffer_binding'] = smodel.Reac('R_buffer_bind', vsys, lhs=[bufferMol['bound']], rhs=[bufferMol['free'], Ca], kcst=k_buffer_off)
+    R_buffer['buffer_unbinding'] = smodel.Reac('R_buffer_unbind', vsys, lhs=[bufferMol['bound']], rhs=[bufferMol['free'], Ca], kcst=k_buffer_off)
     
     return bufferMol, R_buffer
 
@@ -25,11 +26,11 @@ def get_buffer(vsys, mdl, Ca):
 ### PMCA
 def get_pump(ssys, mdl, Ca):
     pumpMol = {}
-    for mol in pmcaMolName:
+    for mol in pumpMolName:
         pumpMol.update({mol: smodel.Spec(mol, mdl)})
-
+    
     R_pump = {}
-    R_pump['out'] = smodel.SReac('R_pump', ssys, ilhs=[Ca], slhs=[pmcaMol['pump']], srhs=[pmcaMol['pump']], kcst=k_pump)
+    R_pump['out'] = smodel.SReac('R_pump', ssys, ilhs=[Ca], slhs=[pumpMol['pump']], srhs=[pumpMol['pump']], kcst=k_pump)
     
     
     return pumpMol, R_pump
@@ -42,19 +43,8 @@ def get_VDCC(ssys, mdl, Ca):
     for mol in vdccMolName:
         vdccMol.update({mol: smodel.Spec(mol, mdl)})
 
-    # Temporarily
-    kpq_a1 = 1
-    kpq_b1 = 1
-    kpq_a2 = 1
-    kpq_b2 = 1
-    kpq_a3 = 1
-    kpq_b3 = 1
-    kpq_a4 = 1
-    kpq_b4 = 1
-    kVDCCflux = 100
-
     R_VDCC = {}
-    R_VDCC['in'] = smodel.SReac('R_in', ssys, slhs=[vdccMol['0']], srhs=[vdccMol['0']], irhs=[Ca], kcst=k_flux)
+    R_VDCC['VDCCflux'] = smodel.SReac('R_VDCCflux', ssys, slhs=[vdccMol['VDCC_O']], srhs=[vdccMol['VDCC_O']], irhs=[Ca], kcst=k_VDCC_flux)
     
     
     return vdccMol, R_VDCC
