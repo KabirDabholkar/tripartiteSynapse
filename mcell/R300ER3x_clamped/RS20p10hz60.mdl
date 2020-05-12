@@ -1,0 +1,37 @@
+//
+sprintf(my_seed,"%05g",SEED)
+iterations = 2000e3
+
+INCLUDE_FILE = "../outputLoc.mdl"
+INCLUDE_FILE = "../initialization.mdl"
+INCLUDE_FILE = "parameters.mdl"
+/* Modifications in Parameters */
+	VDCC_number_presynaptic = 60
+	n_Glu_neuron =  1 //2000
+	GluT_density_astrocyte = 0.1 //1000
+
+
+INCLUDE_FILE = "rxn_rate_constants.mdl"
+/* Modifications in Reaction Rate Constants */
+
+
+/* Output Folder */
+	f = "10"
+	fname = "freq/R300ER3x/RS20p" & f & "hz"
+	output_folder = outputLoc & fname & "/v60/" & "s_" & my_seed
+
+/* Rates for P/Q-type Voltage Dependent Calcium Channels */
+/* From Bischoffberger et al., 2005, , Biophys. J.*/
+	k_VDCC_PQ_C01 = "../vdcc_dat/VDCC_PQ_C01_20_" & f & "hz_train.dat"
+	k_VDCC_PQ_C12 = "../vdcc_dat/VDCC_PQ_C12_20_" & f & "hz_train.dat"
+	k_VDCC_PQ_C23 = "../vdcc_dat/VDCC_PQ_C23_20_" & f & "hz_train.dat"
+	k_VDCC_PQ_C34 = "../vdcc_dat/VDCC_PQ_C34_20_" & f & "hz_train.dat"
+	k_VDCC_PQ_C43 = "../vdcc_dat/VDCC_PQ_C43_20_" & f & "hz_train.dat"
+	k_VDCC_PQ_C32 = "../vdcc_dat/VDCC_PQ_C32_20_" & f & "hz_train.dat"
+	k_VDCC_PQ_C21 = "../vdcc_dat/VDCC_PQ_C21_20_" & f & "hz_train.dat"
+	k_VDCC_PQ_C10 = "../vdcc_dat/VDCC_PQ_C10_20_" & f & "hz_train.dat"
+	k_VDCC_PQ_Ca  = "../vdcc_dat/VDCC_PQ_Ca_20_"  & f & "hz_train.dat"
+
+INCLUDE_FILE = "triggered_release.inc.mdl"
+INCLUDE_FILE = "rxn_outputRS.mdl"
+//INCLUDE_FILE = "viz_output.mdl"

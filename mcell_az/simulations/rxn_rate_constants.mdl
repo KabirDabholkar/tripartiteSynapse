@@ -1,0 +1,46 @@
+/* Rates for Ca-dependent transmitter release */
+/* from Pattillo et al., Design principles of Neurotransmitter Exocytosis ... */
+/* manuscript submitted */
+/* forward and backward rates from Davis et al., 1999, Neuron */
+	k_reltrig_f = 1e8
+	k_reltrig_b = 6e3
+	fusion_rate = 6e3
+	k_reltrig_pre_reset = 158  /* 6.33ms reset Dobrunz & Stevens, 1997, PNAS */
+	// k_reltrig_pre_reset = 1e100  /* no lateral inhibition */
+	// k_reltrig_pre_reset = 66.667  /* 15ms reset Chuck Stevens & consistent with Sun et al., 2007, Nature */
+	k_reltrig_astro_reset = 0.1  /* rate we deduced from release refractory period */
+
+	/* Neher parameters */
+	k_reltrig_neher_f = 4*9e7
+	k_reltrig_neher_b = 9.5e3
+	beta_neher = 0.25
+	fusion_rate_neher = 3*(6e3/5)
+
+	/* Sudhof parameters, Sun et al., 2007, Nature */
+	/* Parameters with () adjusted to fit, Goda & Stevens, 1994, PNAS */
+	//k_reltrig_pre_redock = 1/30.0  /* Chuck Stevens, personal communication */
+	k_reltrig_pre_redock = 1/2.8  /* Dobrunz and Stevens 1997, Neuron; Tsien 2009 ? k&r */
+	//k_reltrig_pre_redock = 1/4.9  /* Stevens & Sullivan, manuscript */
+	//k_reltrig_pre_redock = 0  /* disable redocking */
+	k_reltrig_sudhof_f = (0.4*1.53e8)
+	//k_reltrig_sudhof_f = 0 /* SytKO */
+	k_reltrig_sudhof_b = (0.4*5.8e3)
+	//k_reltrig_sudhof_af = 2.94e6
+	//k_reltrig_sudhof_ab = 130
+	k_reltrig_sudhof_af = (1.3*2.94e6)
+	k_reltrig_sudhof_ab = (0.5*130/5)
+	b_sudhof = 0.25
+	//fusion_rate_sync_sudhof = 2000
+	fusion_rate_sync_sudhof = 6000
+	fusion_rate_async_sudhof = 50
+	//fusion_rate_sync_sudhof = 6000
+	//fusion_rate_async_sudhof = 6000
+	fusion_rate_sync_facilitated_sudhof = fusion_rate_sync_sudhof * fusion_rate_async_sudhof
+	fusion_rate_sudhof_spont = 0.417e-3
+
+	k_reltrig_sakmann_f = 3e8
+	k_reltrig_sakmann_b = 3e3
+	gamma_sakmann = 30e3/5
+	delta_sakmann = 8e3
+	fusion_rate_sakmann = 40e3
+

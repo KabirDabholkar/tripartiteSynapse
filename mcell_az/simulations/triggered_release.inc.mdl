@@ -1,0 +1,117 @@
+//
+DEFINE_MOLECULES {
+    Glu {DIFFUSION_CONSTANT_3D = D_Glu}
+}
+
+INCLUDE_FILE = "../az_surf.mdl"
+
+INCLUDE_FILE = "../transmitter_trigger_complex_mol_15d7_sudhof_v2.mdl"
+
+INCLUDE_FILE = "../transmitter_trigger_complex_rxn_sudhof_v2.mdl"
+
+
+
+presynaptic_active_zone RELEASE_SITE {
+  SHAPE = LIST
+  MOLECULE_POSITIONS{
+    az_sudhof' [0,0,0]
+  }
+  SITE_DIAMETER = 0.02
+}
+
+synchronous_release_sites OBJECT {
+  synchronous_release_site_0 RELEASE_SITE {
+    SHAPE = SPHERICAL
+    LOCATION = [0,0,1e-3]
+    MOLECULE = Glu
+    SITE_DIAMETER = 0
+    NUMBER_TO_RELEASE = n_Glu_neuron
+    RELEASE_PATTERN = synchronous_release_0
+  }
+  synchronous_release_site_1 RELEASE_SITE {
+    SHAPE = SPHERICAL
+    LOCATION = [0,0,1e-3]
+    MOLECULE = Glu
+    SITE_DIAMETER = 0
+    NUMBER_TO_RELEASE = n_Glu_neuron
+    RELEASE_PATTERN = synchronous_release_1
+  }
+  synchronous_release_site_2 RELEASE_SITE {
+    SHAPE = SPHERICAL
+    LOCATION = [0,0,1e-3]
+    MOLECULE = Glu
+    SITE_DIAMETER = 0
+    NUMBER_TO_RELEASE = n_Glu_neuron
+    RELEASE_PATTERN = synchronous_release_2
+  }
+}
+
+asynchronous_release_sites OBJECT {
+  asynchronous_release_site_0 RELEASE_SITE {
+    SHAPE = SPHERICAL
+    LOCATION = [0,0,1e-3]
+    MOLECULE = Glu
+    SITE_DIAMETER = 0
+    NUMBER_TO_RELEASE = n_Glu_neuron
+    RELEASE_PATTERN = asynchronous_release_0
+  }
+  asynchronous_release_site_1 RELEASE_SITE {
+    SHAPE = SPHERICAL
+    LOCATION = [0,0,1e-3]
+    MOLECULE = Glu
+    SITE_DIAMETER = 0
+    NUMBER_TO_RELEASE = n_Glu_neuron
+    RELEASE_PATTERN = asynchronous_release_1
+  }
+  asynchronous_release_site_2 RELEASE_SITE {
+    SHAPE = SPHERICAL
+    LOCATION = [0,0,1e-3]
+    MOLECULE = Glu
+    SITE_DIAMETER = 0
+    NUMBER_TO_RELEASE = n_Glu_neuron
+    RELEASE_PATTERN = asynchronous_release_2
+  }
+  asynchronous_release_site_3 RELEASE_SITE {
+    SHAPE = SPHERICAL
+    LOCATION = [0,0,1e-3]
+    MOLECULE = Glu
+    SITE_DIAMETER = 0
+    NUMBER_TO_RELEASE = n_Glu_neuron
+    RELEASE_PATTERN = asynchronous_release_3
+  }
+  asynchronous_release_site_4 RELEASE_SITE {
+    SHAPE = SPHERICAL
+    LOCATION = [0,0,1e-3]
+    MOLECULE = Glu
+    SITE_DIAMETER = 0
+    NUMBER_TO_RELEASE = n_Glu_neuron
+    RELEASE_PATTERN = asynchronous_release_4
+  }
+}
+
+spontaneous_release_site RELEASE_SITE {
+  SHAPE = SPHERICAL
+  LOCATION = [0,0,1e-3]
+  MOLECULE = Glu
+  SITE_DIAMETER = 0
+  NUMBER_TO_RELEASE = n_Glu_neuron
+  RELEASE_PATTERN = spontaneous_release
+}
+
+
+INSTANTIATE tripartite_synapse_model OBJECT {
+  tripartite_synapse OBJECT tripartite_synapse {}
+
+//  presynaptic_release OBJECT presynaptic_release {}
+  synchronous_release_sites OBJECT synchronous_release_sites {}
+  asynchronous_release_sites OBJECT asynchronous_release_sites {}
+  spontaneous_release_site OBJECT spontaneous_release_site {}
+  //astrocytic_release OBJECT astrocytic_release {}
+
+  //presynaptic_forced_release OBJECT presynaptic_forced_release {}
+
+  //vdcc_release_disk OBJECT vdcc_release_disk {}
+  //ryr_release_disk OBJECT ryr_release_disk {}
+  presynaptic_active_zone OBJECT presynaptic_active_zone {}
+  //astrocyte_active_zone OBJECT astrocyte_active_zone {}
+}

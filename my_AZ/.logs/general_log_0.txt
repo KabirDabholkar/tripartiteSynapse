@@ -1,0 +1,2 @@
+[2020-05-01 02:57:35,426][ERROR][/home/kabir/STEPS/STEPS/src/steps/model/model.cpp:190][steps::model::Volsys* steps::model::Model::getVolsys(const string&) const]: ArgErr: Model does not contain volume system with name 'cytvsys' 
+[2020-05-01 12:33:26,391][ERROR][/home/kabir/STEPS/STEPS/src/steps/solver/api_patch.cpp:89][void steps::solver::API::setPatchCount(const string&, const string&, double)]: ArgErr: Number of molecules cannot be negative. 

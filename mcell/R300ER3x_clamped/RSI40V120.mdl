@@ -1,4 +1,3 @@
-//
 sprintf(my_seed,"%05g",SEED)
 
 iterations = 70e3
@@ -8,7 +7,7 @@ INCLUDE_FILE = "../initialization.mdl"
 INCLUDE_FILE = "parameters.mdl"
 /* Modifications in Parameters */
 	VDCC_number_presynaptic = 120
-	
+
 	n_Glu_neuron =  1 //2000
 	GluT_density_astrocyte = 0.1 //1000
 

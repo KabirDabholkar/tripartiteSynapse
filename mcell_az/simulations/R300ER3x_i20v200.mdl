@@ -1,0 +1,107 @@
+//
+sprintf(my_seed,"%05g",SEED)
+
+iterations = 50e3
+
+INCLUDE_FILE = "../outputLoc.mdl"
+INCLUDE_FILE = "../initialization.mdl"
+INCLUDE_FILE = "parameters.mdl"
+/* Modifications in Parameters */
+//	VDCC_number_presynaptic = 129
+	
+	n_Glu_neuron =  1 //2000
+//	GluT_density_astrocyte = 0.1 //1000
+
+
+INCLUDE_FILE = "rxn_rate_constants.mdl"
+/* Modifications in Reaction Rate Constants */
+
+
+/* Output Folder */
+    isi = "20"
+    VDCC = "200"
+    //sprintf(VDCC, "%g", VDCC_number_presynaptic)
+    sim = "R300ER3x"
+    fname = "RSI" & isi & "V" & VDCC
+    directory=sim & "/" & fname
+    output_folder = outputLoc & "ppf/onlyAZ/"& directory & "/s_" & my_seed
+
+/* Rates for P/Q-type Voltage Dependent Calcium Channels */
+/* From Bischoffberger et al., 2005, , Biophys. J.*/
+/*
+	k_VDCC_PQ_C01 = "../vdcc_dat/VDCC_PQ_C01_" & isi & "ms_ppf.dat"
+	k_VDCC_PQ_C12 = "../vdcc_dat/VDCC_PQ_C12_" & isi & "ms_ppf.dat"
+	k_VDCC_PQ_C23 = "../vdcc_dat/VDCC_PQ_C23_" & isi & "ms_ppf.dat"
+	k_VDCC_PQ_C34 = "../vdcc_dat/VDCC_PQ_C34_" & isi & "ms_ppf.dat"
+	k_VDCC_PQ_C43 = "../vdcc_dat/VDCC_PQ_C43_" & isi & "ms_ppf.dat"
+	k_VDCC_PQ_C32 = "../vdcc_dat/VDCC_PQ_C32_" & isi & "ms_ppf.dat"
+	k_VDCC_PQ_C21 = "../vdcc_dat/VDCC_PQ_C21_" & isi & "ms_ppf.dat"
+	k_VDCC_PQ_C10 = "../vdcc_dat/VDCC_PQ_C10_" & isi & "ms_ppf.dat"
+	k_VDCC_PQ_Ca = "../vdcc_dat/VDCC_PQ_Ca_" & isi & "ms_ppf.dat"
+*/
+
+
+/* These unimolecular rate constants are calculated using averaged local AZ conc
+    traces from bulk simulations multiplied by appropriate bimolecular rate constants.*/
+    
+    
+    k_ca_binding_1 =  "./binding_rates/" & directory & "/ca_bind1.dat"
+    k_ca_binding_2 =  "./binding_rates/" & directory & "/ca_bind2.dat"
+    k_ca_binding_3 =  "./binding_rates/" & directory & "/ca_bind3.dat"
+    k_ca_binding_4 =  "./binding_rates/" & directory & "/ca_bind4.dat"
+    k_ca_binding_5 =  "./binding_rates/" & directory & "/ca_bind5.dat"
+    k_ca_binding_6 =  "./binding_rates/" & directory & "/ca_bind6.dat"
+    k_ca_binding_7 =  "./binding_rates/" & directory & "/ca_bind7.dat"
+    k_ca_binding_8 =  "./binding_rates/" & directory & "/ca_bind8.dat"
+    k_ca_binding_9 =  "./binding_rates/" & directory & "/ca_bind9.dat"
+    k_ca_binding_10 = "./binding_rates/" & directory & "/ca_bind10.dat"
+    k_ca_binding_11 = "./binding_rates/" & directory & "/ca_bind11.dat"
+    k_ca_binding_12 = "./binding_rates/" & directory & "/ca_bind12.dat"
+    k_ca_binding_13 = "./binding_rates/" & directory & "/ca_bind13.dat"
+    k_ca_binding_14 = "./binding_rates/" & directory & "/ca_bind14.dat"
+    k_ca_binding_15 = "./binding_rates/" & directory & "/ca_bind15.dat"
+    k_ca_binding_16 = "./binding_rates/" & directory & "/ca_bind16.dat"
+    k_ca_binding_17 = "./binding_rates/" & directory & "/ca_bind17.dat"
+    k_ca_binding_18 = "./binding_rates/" & directory & "/ca_bind18.dat"
+    k_ca_binding_19 = "./binding_rates/" & directory & "/ca_bind19.dat"
+    k_ca_binding_20 = "./binding_rates/" & directory & "/ca_bind20.dat"
+    k_ca_binding_21 = "./binding_rates/" & directory & "/ca_bind21.dat"
+    k_ca_binding_22 = "./binding_rates/" & directory & "/ca_bind22.dat"
+    k_ca_binding_23 = "./binding_rates/" & directory & "/ca_bind23.dat"
+    k_ca_binding_24 = "./binding_rates/" & directory & "/ca_bind24.dat"
+    k_ca_binding_25 = "./binding_rates/" & directory & "/ca_bind25.dat"
+    k_ca_binding_26 = "./binding_rates/" & directory & "/ca_bind26.dat"
+    k_ca_binding_27 = "./binding_rates/" & directory & "/ca_bind27.dat"
+    k_ca_binding_28 = "./binding_rates/" & directory & "/ca_bind28.dat"
+    k_ca_binding_29 = "./binding_rates/" & directory & "/ca_bind29.dat"
+    k_ca_binding_30 = "./binding_rates/" & directory & "/ca_bind30.dat"
+    k_ca_binding_31 = "./binding_rates/" & directory & "/ca_bind31.dat"
+    k_ca_binding_32 = "./binding_rates/" & directory & "/ca_bind32.dat"
+    k_ca_binding_33 = "./binding_rates/" & directory & "/ca_bind33.dat"
+    k_ca_binding_34 = "./binding_rates/" & directory & "/ca_bind34.dat"
+    k_ca_binding_35 = "./binding_rates/" & directory & "/ca_bind35.dat"
+    k_ca_binding_36 = "./binding_rates/" & directory & "/ca_bind36.dat"
+    k_ca_binding_37 = "./binding_rates/" & directory & "/ca_bind37.dat"
+    k_ca_binding_38 = "./binding_rates/" & directory & "/ca_bind38.dat"
+    k_ca_binding_39 = "./binding_rates/" & directory & "/ca_bind39.dat"
+    k_ca_binding_40 = "./binding_rates/" & directory & "/ca_bind40.dat"
+    k_ca_binding_41 = "./binding_rates/" & directory & "/ca_bind41.dat"
+    k_ca_binding_42 = "./binding_rates/" & directory & "/ca_bind42.dat"
+    k_ca_binding_43 = "./binding_rates/" & directory & "/ca_bind43.dat"
+    k_ca_binding_44 = "./binding_rates/" & directory & "/ca_bind44.dat"
+    k_ca_binding_45 = "./binding_rates/" & directory & "/ca_bind45.dat"
+    k_ca_binding_46 = "./binding_rates/" & directory & "/ca_bind46.dat"
+    k_ca_binding_47 = "./binding_rates/" & directory & "/ca_bind47.dat"
+    k_ca_binding_48 = "./binding_rates/" & directory & "/ca_bind48.dat"
+    k_ca_binding_49 = "./binding_rates/" & directory & "/ca_bind49.dat"
+    k_ca_binding_50 = "./binding_rates/" & directory & "/ca_bind50.dat"
+    k_ca_binding_51 = "./binding_rates/" & directory & "/ca_bind51.dat"
+    k_ca_binding_52 = "./binding_rates/" & directory & "/ca_bind52.dat"
+    k_ca_binding_53 = "./binding_rates/" & directory & "/ca_bind53.dat"
+    k_ca_binding_54 = "./binding_rates/" & directory & "/ca_bind54.dat"
+
+
+INCLUDE_FILE = "triggered_release.inc.mdl"
+
+INCLUDE_FILE = "rxn_outputRS.mdl"
+/*INCLUDE_FILE = "viz_output.mdl"*/

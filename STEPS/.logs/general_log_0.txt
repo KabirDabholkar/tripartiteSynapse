@@ -356,3 +356,8 @@ CVODE iteration failed
  
 [2020-01-27 11:59:22,775][ERROR][/home/kabir/STEPS/STEPS/src/steps/geom/geom.cpp:73][steps::wm::Comp* steps::wm::Geom::getComp(const string&) const]: ArgErr: Container does not contain compartment with name 'cytvsys'
  
+[2020-05-01 00:24:00,272][ERROR][/home/kabir/STEPS/STEPS/src/steps/solver/statedef.cpp:534][uint steps::solver::Statedef::getPatchIdx(const string&) const]: ArgErr: Geometry does not contain patch with string identifier 'cytssys'. 
+[2020-05-01 00:24:23,194][ERROR][/home/kabir/STEPS/STEPS/src/steps/solver/statedef.cpp:534][uint steps::solver::Statedef::getPatchIdx(const string&) const]: ArgErr: Geometry does not contain patch with string identifier 'cytSurf'. 
+[2020-05-01 00:25:43,994][ERROR][/home/kabir/STEPS/STEPS/src/steps/solver/statedef.cpp:534][uint steps::solver::Statedef::getPatchIdx(const string&) const]: ArgErr: Geometry does not contain patch with string identifier 'cytSurf'. 
+[2020-05-01 00:26:37,017][ERROR][/home/kabir/STEPS/STEPS/src/steps/solver/statedef.cpp:534][uint steps::solver::Statedef::getPatchIdx(const string&) const]: ArgErr: Geometry does not contain patch with string identifier 'cytvsys'. 
+[2020-05-01 00:30:14,472][ERROR][/home/kabir/STEPS/STEPS/src/steps/solver/statedef.cpp:516][steps::solver::Patchdef* steps::solver::Statedef::patchdef(uint) const]: Assertion failed, please send the log files under .logs/ to developer. 

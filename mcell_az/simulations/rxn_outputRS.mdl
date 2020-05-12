@@ -1,0 +1,142 @@
+// Reaction Output
+REACTION_DATA_OUTPUT {
+
+	OUTPUT_BUFFER_SIZE = 1000
+	STEP = 10*dt
+	SHOW_EXACT_TIME = OFF
+	HEADER = "#"
+	
+
+
+/* AZ */
+	{   COUNT[X0Y0, WORLD],
+        COUNT[X1Y0, WORLD],
+        COUNT[X2Y0, WORLD],
+        COUNT[X3Y0, WORLD],
+        COUNT[X4Y0, WORLD],
+        COUNT[X5Y0, WORLD],
+        COUNT[X0Y1, WORLD],
+        COUNT[X1Y1, WORLD],
+        COUNT[X2Y1, WORLD],
+        COUNT[X3Y1, WORLD],
+        COUNT[X4Y1, WORLD],
+        COUNT[X5Y1, WORLD],
+        COUNT[X0Y2, WORLD],
+        COUNT[X1Y2, WORLD],
+        COUNT[X2Y2, WORLD],
+        COUNT[X3Y2, WORLD],
+        COUNT[X4Y2, WORLD],
+        COUNT[X5Y2, WORLD]
+    }	=> output_folder &"/dat/az.dat"
+
+/*	VDCC sync, async and spont Glu release */
+
+	{TRIGGER[synchronous_release_0, tripartite_synapse_model.tripartite_synapse]}
+		=> output_folder & "/dat/vdcc.sync_0.dat"
+	{TRIGGER[synchronous_release_1, tripartite_synapse_model.tripartite_synapse]}
+		=> output_folder & "/dat/vdcc.sync_1.dat"
+	{TRIGGER[synchronous_release_2, tripartite_synapse_model.tripartite_synapse]}
+		=> output_folder & "/dat/vdcc.sync_2.dat"
+	{TRIGGER[asynchronous_release_0, tripartite_synapse_model.tripartite_synapse]}
+		=> output_folder & "/dat/vdcc.async_0.dat"
+	{TRIGGER[asynchronous_release_1, tripartite_synapse_model.tripartite_synapse]}
+		=> output_folder & "/dat/vdcc.async_1.dat"
+	{TRIGGER[asynchronous_release_2, tripartite_synapse_model.tripartite_synapse]}
+		=> output_folder & "/dat/vdcc.async_2.dat"
+	{TRIGGER[asynchronous_release_3, tripartite_synapse_model.tripartite_synapse]}
+		=> output_folder & "/dat/vdcc.async_3.dat"
+	{TRIGGER[asynchronous_release_4, tripartite_synapse_model.tripartite_synapse]}
+		=> output_folder & "/dat/vdcc.async_4.dat"
+	{TRIGGER[spontaneous_release, tripartite_synapse_model.tripartite_synapse]}
+		=> output_folder & "/dat/vdcc.spont.dat"
+
+
+/*	Readily Releasable Pool (RRP)*/
+	{
+		EXPRESSION[15] 
+		- COUNT[X0Y0e, tripartite_synapse_model.tripartite_synapse]
+		- COUNT[X1Y0e, tripartite_synapse_model.tripartite_synapse]
+		- COUNT[X2Y0e, tripartite_synapse_model.tripartite_synapse]
+		- COUNT[X3Y0e, tripartite_synapse_model.tripartite_synapse]
+		- COUNT[X4Y0e, tripartite_synapse_model.tripartite_synapse]
+		- COUNT[X5Y0e, tripartite_synapse_model.tripartite_synapse]
+		- COUNT[X0Y1e, tripartite_synapse_model.tripartite_synapse]
+		- COUNT[X1Y1e, tripartite_synapse_model.tripartite_synapse]
+		- COUNT[X2Y1e, tripartite_synapse_model.tripartite_synapse]
+		- COUNT[X3Y1e, tripartite_synapse_model.tripartite_synapse]
+		- COUNT[X4Y1e, tripartite_synapse_model.tripartite_synapse]
+		- COUNT[X5Y1e, tripartite_synapse_model.tripartite_synapse]
+		- COUNT[X0Y2e, tripartite_synapse_model.tripartite_synapse]
+		- COUNT[X1Y2e, tripartite_synapse_model.tripartite_synapse]
+		- COUNT[X2Y2e, tripartite_synapse_model.tripartite_synapse]
+		- COUNT[X3Y2e, tripartite_synapse_model.tripartite_synapse]
+		- COUNT[X4Y2e, tripartite_synapse_model.tripartite_synapse]
+		- COUNT[X5Y2e, tripartite_synapse_model.tripartite_synapse]
+		- COUNT[X5Y0r, tripartite_synapse_model.tripartite_synapse]
+		- COUNT[X5Y1r, tripartite_synapse_model.tripartite_synapse]
+		- COUNT[X0Y2r, tripartite_synapse_model.tripartite_synapse]
+		- COUNT[X1Y2r, tripartite_synapse_model.tripartite_synapse]
+		- COUNT[X2Y2r, tripartite_synapse_model.tripartite_synapse]
+		- COUNT[X3Y2r, tripartite_synapse_model.tripartite_synapse]
+		- COUNT[X4Y2r, tripartite_synapse_model.tripartite_synapse]
+		- COUNT[X5Y2r, tripartite_synapse_model.tripartite_synapse] : "RRP"
+	}	=> output_folder &"/dat/rrp.dat"
+
+/* Ca Sensor Binding */
+
+{	COUNT[ca_binding_1 ,  tripartite_synapse_model.tripartite_synapse] : "1",
+	COUNT[ca_binding_2 ,  tripartite_synapse_model.tripartite_synapse] : "2",
+    COUNT[ca_binding_3 ,  tripartite_synapse_model.tripartite_synapse] : "3",
+    COUNT[ca_binding_4 ,  tripartite_synapse_model.tripartite_synapse] : "4",
+    COUNT[ca_binding_5 ,  tripartite_synapse_model.tripartite_synapse] : "5",
+    COUNT[ca_binding_6 ,  tripartite_synapse_model.tripartite_synapse] : "6",
+    COUNT[ca_binding_7 ,  tripartite_synapse_model.tripartite_synapse] : "7",
+    COUNT[ca_binding_8 ,  tripartite_synapse_model.tripartite_synapse] : "8",
+    COUNT[ca_binding_9 ,  tripartite_synapse_model.tripartite_synapse] : "9",
+    COUNT[ca_binding_10 , tripartite_synapse_model.tripartite_synapse] : "10",
+    COUNT[ca_binding_11 , tripartite_synapse_model.tripartite_synapse] : "11",
+    COUNT[ca_binding_12 , tripartite_synapse_model.tripartite_synapse] : "12",
+    COUNT[ca_binding_13 , tripartite_synapse_model.tripartite_synapse] : "13",
+    COUNT[ca_binding_14 , tripartite_synapse_model.tripartite_synapse] : "14",
+    COUNT[ca_binding_15 , tripartite_synapse_model.tripartite_synapse] : "15",
+    COUNT[ca_binding_16 , tripartite_synapse_model.tripartite_synapse] : "16",
+    COUNT[ca_binding_17 , tripartite_synapse_model.tripartite_synapse] : "17",
+    COUNT[ca_binding_18 , tripartite_synapse_model.tripartite_synapse] : "18",
+    COUNT[ca_binding_19 , tripartite_synapse_model.tripartite_synapse] : "19",
+    COUNT[ca_binding_20 , tripartite_synapse_model.tripartite_synapse] : "20",
+    COUNT[ca_binding_21 , tripartite_synapse_model.tripartite_synapse] : "21",
+    COUNT[ca_binding_22 , tripartite_synapse_model.tripartite_synapse] : "22",
+    COUNT[ca_binding_23 , tripartite_synapse_model.tripartite_synapse] : "23",
+    COUNT[ca_binding_24 , tripartite_synapse_model.tripartite_synapse] : "24",
+    COUNT[ca_binding_25 , tripartite_synapse_model.tripartite_synapse] : "25",
+    COUNT[ca_binding_26 , tripartite_synapse_model.tripartite_synapse] : "26",
+    COUNT[ca_binding_27 , tripartite_synapse_model.tripartite_synapse] : "27",
+    COUNT[ca_binding_28 , tripartite_synapse_model.tripartite_synapse] : "28",
+    COUNT[ca_binding_29 , tripartite_synapse_model.tripartite_synapse] : "29",
+    COUNT[ca_binding_30 , tripartite_synapse_model.tripartite_synapse] : "30",
+    COUNT[ca_binding_31 , tripartite_synapse_model.tripartite_synapse] : "31",
+    COUNT[ca_binding_32 , tripartite_synapse_model.tripartite_synapse] : "32",
+    COUNT[ca_binding_33 , tripartite_synapse_model.tripartite_synapse] : "33",
+    COUNT[ca_binding_34 , tripartite_synapse_model.tripartite_synapse] : "34",
+    COUNT[ca_binding_35 , tripartite_synapse_model.tripartite_synapse] : "35",
+    COUNT[ca_binding_36 , tripartite_synapse_model.tripartite_synapse] : "36",
+    COUNT[ca_binding_37 , tripartite_synapse_model.tripartite_synapse] : "37",
+    COUNT[ca_binding_38 , tripartite_synapse_model.tripartite_synapse] : "38",
+    COUNT[ca_binding_39 , tripartite_synapse_model.tripartite_synapse] : "39",
+    COUNT[ca_binding_40 , tripartite_synapse_model.tripartite_synapse] : "40",
+    COUNT[ca_binding_41 , tripartite_synapse_model.tripartite_synapse] : "41",
+    COUNT[ca_binding_42 , tripartite_synapse_model.tripartite_synapse] : "42",
+    COUNT[ca_binding_43 , tripartite_synapse_model.tripartite_synapse] : "43",
+    COUNT[ca_binding_44 , tripartite_synapse_model.tripartite_synapse] : "44",
+    COUNT[ca_binding_45 , tripartite_synapse_model.tripartite_synapse] : "45",
+    COUNT[ca_binding_46 , tripartite_synapse_model.tripartite_synapse] : "46",
+    COUNT[ca_binding_47 , tripartite_synapse_model.tripartite_synapse] : "47",
+    COUNT[ca_binding_48 , tripartite_synapse_model.tripartite_synapse] : "48",
+    COUNT[ca_binding_49 , tripartite_synapse_model.tripartite_synapse] : "49",
+    COUNT[ca_binding_50 , tripartite_synapse_model.tripartite_synapse] : "50",
+    COUNT[ca_binding_51 , tripartite_synapse_model.tripartite_synapse] : "51",
+    COUNT[ca_binding_52 , tripartite_synapse_model.tripartite_synapse] : "52",
+    COUNT[ca_binding_53 , tripartite_synapse_model.tripartite_synapse] : "53",
+    COUNT[ca_binding_54 , tripartite_synapse_model.tripartite_synapse] : "54"
+    } => output_folder & "/dat/ca_sensor_binding.dat"  
+}
